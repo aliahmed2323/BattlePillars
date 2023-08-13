@@ -10,6 +10,8 @@ public class Caterpillar : MonoBehaviour
     [SerializeField] Button btn;
     [SerializeField] float _caterPillarSpeed;
 
+    bool _canMove;
+
     [HideInInspector]
     public delegate void MoveAnim();
     public event MoveAnim _moveAnim;
@@ -26,6 +28,7 @@ public class Caterpillar : MonoBehaviour
 
     private void Update()
     {
+        if(_canMove)
         Move();
     }
     private void Move()
@@ -37,7 +40,7 @@ public class Caterpillar : MonoBehaviour
     public void AddExtension(int type)
     {
         Vector2 newPos = new Vector2(_extensions[_extensions.Count - 1].transform.position.x - 1.7f, transform.position.y);
-        GameObject ext = Instantiate(_extensionTypes[0], newPos, Quaternion.identity, transform);
+        GameObject ext = Instantiate(_extensionTypes[type], newPos, Quaternion.identity, transform);
         _extensions.Add(ext);
         if(_extensions.Count % 2 == 0)
         ext.GetComponent<CaterpillarExtension>().animUp = true;
@@ -46,5 +49,6 @@ public class Caterpillar : MonoBehaviour
     public void ReleaseCaterPillar()
     {
         _moveAnim.Invoke();
+        _canMove = true;
     }
 }
