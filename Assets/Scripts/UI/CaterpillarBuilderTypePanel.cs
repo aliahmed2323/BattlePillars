@@ -9,11 +9,12 @@ public class CaterpillarBuilderTypePanel : MonoBehaviour
 
     private void Start()
     {
-        GetComponentInChildren<Button>().onClick.AddListener(() => GameManager.Instance.AddExtensionToCurrentCaterpillar(_type));
+        GetComponentInChildren<Button>().onClick.AddListener(() => AddInBuilder());
     }
 
     void AddInBuilder()
     {
-        GetComponentInParent<CaterpillarBuilderPanel>().AddExtension(GetComponent<Image>().sprite);
+        GetComponentInParent<CaterpillarBuilderPanel>().AddExtension(_type);
+        GameManager.Instance.AddExtensionToCurrentCaterpillar(_type);
     }
 }

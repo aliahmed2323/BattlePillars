@@ -60,7 +60,7 @@ MonoBehaviour:
   - {fileID: 116651285235294998, guid: f6cafb8f1eeb8794bbb9e08f4d8e3441, type: 3}
   - {fileID: 2161034570853745996, guid: b46081d0d06411b479c192dcd740b179, type: 3}
   btn: {fileID: 0}
-  _caterPillarSpeed: 2
+  _caterPillarSpeed: 4
 --- !u!1 &1676660589829998004
 GameObject:
   m_ObjectHideFlags: 0

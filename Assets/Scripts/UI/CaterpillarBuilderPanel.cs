@@ -7,12 +7,12 @@ using DG.Tweening;
 public class CaterpillarBuilderPanel : MonoBehaviour
 {
     [Header("UI Refs")]
-    [SerializeField] GameObject _caterPillarPanelHead;
+    public GameObject _caterPillarPanelHead;
 
-    public void AddExtension(Sprite img)
+    public void AddExtension(int id)
     {
-        GameObject ext = Instantiate(_caterPillarPanelHead, _caterPillarPanelHead.transform);
-        ext.transform.DOMoveX(-2, 0f);
+        GameObject ext = Instantiate(_caterPillarPanelHead, _caterPillarPanelHead.transform.parent);
+        Sprite img = GameManager.Instance._caterPillars[GameManager.Instance._caterPillarType].GetCaterpillarExtension(id)._img;
         ext.GetComponent<Image>().sprite = img;
     }
 }

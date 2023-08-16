@@ -28,6 +28,12 @@ public class GameManager : Singleton<GameManager>
     public void ReleaseCaterpillar()
     {
         _currentCaterpillar.GetComponent<Caterpillar>().ReleaseCaterPillar();
+        Transform t = UIManager.Instance._caterPillarBuilderPanel._caterPillarPanelHead.transform.parent;
+        foreach(Transform child in t)
+        {
+            if (child.name != "Head")
+                Destroy(child.gameObject);
+        }
         CreateCaterpillar(0);
     }
 
