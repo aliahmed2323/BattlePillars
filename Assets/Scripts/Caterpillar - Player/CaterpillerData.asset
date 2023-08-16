@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fc6098ec792cb34f949d655fef0ff25, type: 3}
+  m_Name: CaterpillerData
+  m_EditorClassIdentifier: 
+  _id: 0
+  _name: Basic
+  _headImg: {fileID: 21300000, guid: b22d7144b30d8534ca81692ec1cf38c3, type: 3}
+  _headPrefab: {fileID: 1676660589421364698, guid: 5ba3dbf864574c24d93f7e7beb6c8a7b, type: 3}
+  _canon:
+    _name: Canon
+    _img: {fileID: 21300000, guid: c7436d9953d81ae44ac7a34ee8c3b960, type: 3}
+    prefab: {fileID: 8803275453571237709, guid: 9474f5052653f4746a7dc3da97350e76, type: 3}
+  _healer:
+    _name: Health
+    _img: {fileID: 21300000, guid: 96b3ba74a33b2bb4cbd512b44effbb75, type: 3}
+    prefab: {fileID: 811595614745786998, guid: 0e48c8db49c38f14cbdb81a2252e2ea4, type: 3}
+  _shield:
+    _name: Shield
+    _img: {fileID: 21300000, guid: 8025d26f45cb6654db31fee1a5e9d93e, type: 3}
+    prefab: {fileID: 5975754426281317891, guid: e724f81d0c77eee4ca937830201f1ea9, type: 3}
+  _spikeArmor:
+    _name: Spike Armor
+    _img: {fileID: 21300000, guid: 73589de90b73bcb4cb2fcd0360293e40, type: 3}
+    prefab: {fileID: 2161034570853745996, guid: b46081d0d06411b479c192dcd740b179, type: 3}

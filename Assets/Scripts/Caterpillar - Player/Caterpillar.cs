@@ -23,7 +23,6 @@ public class Caterpillar : MonoBehaviour
     private void Start()
     {
         _extensions.Add(transform.GetChild(0).gameObject);
-        btn.onClick.AddListener(() => AddExtension(0));
     }
 
     private void Update()
@@ -40,7 +39,8 @@ public class Caterpillar : MonoBehaviour
     public void AddExtension(int type)
     {
         Vector2 newPos = new Vector2(_extensions[_extensions.Count - 1].transform.position.x - 1.7f, transform.position.y);
-        GameObject ext = Instantiate(_extensionTypes[type], newPos, Quaternion.identity, transform);
+        CaterpillarsScriptableObject.Extension extension = GameManager.Instance._caterPillars[GameManager.Instance._caterPillarType].GetCaterpillarExtension(type);
+        GameObject ext = Instantiate(extension.prefab, newPos, Quaternion.identity, transform);
         _extensions.Add(ext);
         if(_extensions.Count % 2 == 0)
         ext.GetComponent<CaterpillarExtension>().animUp = true;
