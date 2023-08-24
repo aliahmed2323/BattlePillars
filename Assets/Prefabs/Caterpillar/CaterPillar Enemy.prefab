@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 1676660589421364696}
   - component: {fileID: 3287216618450662182}
   - component: {fileID: 7992991511848416619}
-  - component: {fileID: 9148627577343691822}
-  - component: {fileID: -5194381585998151656}
+  - component: {fileID: 5161660065751094453}
+  - component: {fileID: -3138582242055242526}
   m_Layer: 0
-  m_Name: CaterPillar
-  m_TagString: Player
+  m_Name: CaterPillar Enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.717658, y: 9.897437}
   m_EdgeRadius: 0
---- !u!114 &9148627577343691822
+--- !u!114 &5161660065751094453
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,17 +85,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1676660589421364698}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34faf4b9e42b8e640b2778a1589fdeaa, type: 3}
+  m_Script: {fileID: 11500000, guid: f56d9c1bbf09fbb468c0a1c0ce9cf44f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _extensions: []
   _caterPillarSpeed: 5
-  _extensionGap: 1.7
+  _extensionGap: -1.7
   _canMove: 0
   _enemy: {fileID: 0}
   _isEnemyInRange: 0
   _rayDirecton: {x: 0, y: 0}
---- !u!50 &-5194381585998151656
+--- !u!50 &-3138582242055242526
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

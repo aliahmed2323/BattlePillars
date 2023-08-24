@@ -11,18 +11,34 @@ public class GameManager : Singleton<GameManager>
     [Header("Gameplay refs")]
     [SerializeField] List<Transform> _spawnPoints = new();
 
+   //temp
+    [SerializeField] Transform enemyspawn;
+    [SerializeField] GameObject enemycaterpillar;
+
     //Functionality vars
     GameObject _currentCaterpillar;
 
     private void Start()
     {
         CreateCaterpillar(0);
+        StartCoroutine(InstantiateEnemyCaterpillar());
     }
 
     void CreateCaterpillar(int id)
     {
         int randomSpawn = Random.Range(0, _spawnPoints.Count - 1);
         _currentCaterpillar = Instantiate(_caterPillars[id]._headPrefab, _spawnPoints[randomSpawn].position, Quaternion.identity);
+    }
+
+    //temp
+    IEnumerator InstantiateEnemyCaterpillar()
+    {
+        GameObject ct = Instantiate(enemycaterpillar, enemyspawn.transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(1f);
+        ct.GetComponent<Caterpillar>().AddExtension(0);
+        ct.GetComponent<Caterpillar>().AddExtension(1);
+        ct.GetComponent<Caterpillar>().AddExtension(2);
+        ct.GetComponent<Caterpillar>().ReleaseCaterPillar();
     }
 
     public void ReleaseCaterpillar()

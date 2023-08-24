@@ -5,12 +5,14 @@ using UnityEngine.UI;
 
 public class Caterpillar : MonoBehaviour
 {
-    [SerializeField] List<GameObject> _extensions = new();
-    [SerializeField] GameObject[] _extensionTypes;
-    [SerializeField] Button btn;
-    [SerializeField] float _caterPillarSpeed;
+    public List<GameObject> _extensions = new();
 
-    bool _canMove;
+    public float _caterPillarSpeed;
+
+    [SerializeField] float _extensionGap;
+
+    [HideInInspector]
+    public bool _canMove;
 
     [HideInInspector]
     public delegate void MoveAnim();
@@ -20,35 +22,42 @@ public class Caterpillar : MonoBehaviour
     public delegate void StopMoveAnim();
     public event StopMoveAnim _stopMoveAnim;
 
+
+    public GameObject _enemy;
+    public bool _isEnemyInRange;
+
+    [HideInInspector]
+    public Vector2 _rayDirecton;
+
     private void Start()
     {
-        _extensions.Add(transform.GetChild(0).gameObject);
+
     }
 
     private void Update()
     {
-        if(_canMove)
-        Move();
-    }
-    private void Move()
-    {
-        Vector2 newPos = Vector2.Lerp(transform.position, new Vector2(transform.position.x + 0.5f, transform.position.y), Time.deltaTime * _caterPillarSpeed);
-        transform.position = newPos;
+        /*       if (_enemy == null)
+                   CheckForEnemy();*/
     }
 
     public void AddExtension(int type)
     {
-        Vector2 newPos = new Vector2(_extensions[_extensions.Count - 1].transform.position.x - 1.7f, transform.position.y);
+        Vector2 newPos = new Vector2(_extensions[_extensions.Count - 1].transform.position.x - _extensionGap, transform.position.y);
         CaterpillarsScriptableObject.Extension extension = GameManager.Instance._caterPillars[GameManager.Instance._caterPillarType].GetCaterpillarExtension(type);
         GameObject ext = Instantiate(extension.prefab, newPos, Quaternion.identity, transform);
         _extensions.Add(ext);
-        if(_extensions.Count % 2 == 0)
-        ext.GetComponent<CaterpillarExtension>().animUp = true;
+        if (_extensions.Count % 2 == 0)
+            ext.GetComponent<CaterpillarExtension>().animUp = true;
     }
 
     public void ReleaseCaterPillar()
     {
         _moveAnim.Invoke();
         _canMove = true;
+    }
+
+    public void InvokeStopAnim()
+    {
+        _stopMoveAnim.Invoke();
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6287619841993154622}
   - component: {fileID: 8799373270597139135}
   - component: {fileID: 5942219938840242961}
+  - component: {fileID: -3993371550509639589}
   m_Layer: 0
   m_Name: cannon (merged)
   m_TagString: Untagged
@@ -97,3 +98,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27472929e8063b645aeee0c5dfdd492a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animUp: 0
+--- !u!114 &-3993371550509639589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8803275453571237709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13fb7e2b56bf2b499d091dce7a20bda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _range: 20
+  _fireRate: 1
