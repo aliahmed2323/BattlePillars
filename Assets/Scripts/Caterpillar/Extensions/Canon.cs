@@ -5,6 +5,7 @@ using UnityEngine;
 public class Canon : MonoBehaviour
 {
     Caterpillar cp;
+    [SerializeField] float _damage;
     [SerializeField] float _range;
     [Tooltip("Attack per second")]
     [SerializeField] float _fireRate;
@@ -26,7 +27,8 @@ public class Canon : MonoBehaviour
     {
         if (!_canAttack) return;
         _canAttack = false;
-        cp._enemy.GetComponent<CaterpillarHealthManager>().DecreaseHealth(1);
+        float damage = ((_damage / 10) * GetComponentInParent<Caterpillar>()._caterPillarDamageModifier) * cp._enemy.GetComponent<Caterpillar>()._caterPillarDamageTakenModifier;
+        cp._enemy.GetComponent<CaterpillarHealthManager>().DecreaseHealth(damage);
         Invoke("EnableAttack", _fireRate);
     }
 

@@ -6,6 +6,7 @@ using DG.Tweening;
 public class CaterpillarExtension : MonoBehaviour
 {
     public bool animUp;
+    Tween _moveAnim;
 
     private void Start()
     {
@@ -15,14 +16,16 @@ public class CaterpillarExtension : MonoBehaviour
 
     void MoveAnim()
     {
+        _moveAnim.Kill();
+
         if (animUp)
-            transform.DOLocalMoveY(0.7f, 0.25f).SetLoops(-1, LoopType.Yoyo);
+            _moveAnim = transform.DOLocalMoveY(0.7f, 0.25f).SetLoops(-1, LoopType.Yoyo);
         else
-            transform.DOLocalMoveY(0.7f, 0.25f).SetDelay(0.4f).SetLoops(-1, LoopType.Yoyo);
+            _moveAnim = transform.DOLocalMoveY(0.7f, 0.25f).SetDelay(0.4f).SetLoops(-1, LoopType.Yoyo);
     }
 
     void StopMoveAnim()
     {
-        DOTween.KillAll();
+        _moveAnim.SmoothRewind();
     }
 }

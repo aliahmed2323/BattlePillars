@@ -7,7 +7,11 @@ public class Caterpillar : MonoBehaviour
 {
     public List<GameObject> _extensions = new();
 
+    [Header("Caterpillar Modifiers")]
     public float _caterPillarSpeed;
+    public float _caterPillarHealth;
+    public float _caterPillarDamageModifier;
+    public float _caterPillarDamageTakenModifier;
 
     [SerializeField] float _extensionGap;
 
@@ -21,7 +25,6 @@ public class Caterpillar : MonoBehaviour
     [HideInInspector]
     public delegate void StopMoveAnim();
     public event StopMoveAnim _stopMoveAnim;
-
 
     public GameObject _enemy;
     public bool _isEnemyInRange;
