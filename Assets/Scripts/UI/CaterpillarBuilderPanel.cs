@@ -8,6 +8,10 @@ public class CaterpillarBuilderPanel : MonoBehaviour
 {
     [Header("UI Refs")]
     public GameObject _caterPillarPanelHead;
+    private void Start()
+    {
+        UIManager.Instance._caterPillarBuilderPanel = this;
+    }
 
     public void AddExtension(int id)
     {
