@@ -20,15 +20,19 @@ MonoBehaviour:
     _name: Canon
     _img: {fileID: 21300000, guid: c7436d9953d81ae44ac7a34ee8c3b960, type: 3}
     prefab: {fileID: 8803275453571237709, guid: 9474f5052653f4746a7dc3da97350e76, type: 3}
+    _leafCost: 50
   _healer:
     _name: Health
     _img: {fileID: 21300000, guid: 96b3ba74a33b2bb4cbd512b44effbb75, type: 3}
     prefab: {fileID: 811595614745786998, guid: 0e48c8db49c38f14cbdb81a2252e2ea4, type: 3}
+    _leafCost: 70
   _shield:
     _name: Shield
     _img: {fileID: 21300000, guid: 8025d26f45cb6654db31fee1a5e9d93e, type: 3}
     prefab: {fileID: 5975754426281317891, guid: e724f81d0c77eee4ca937830201f1ea9, type: 3}
+    _leafCost: 60
   _spikeArmor:
     _name: Spike Armor
     _img: {fileID: 21300000, guid: 73589de90b73bcb4cb2fcd0360293e40, type: 3}
     prefab: {fileID: 2161034570853745996, guid: b46081d0d06411b479c192dcd740b179, type: 3}
+    _leafCost: 60

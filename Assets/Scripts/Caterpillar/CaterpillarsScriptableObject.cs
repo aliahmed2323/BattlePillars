@@ -25,6 +25,7 @@ public class CaterpillarsScriptableObject : ScriptableObject
         public string _name;
         public Sprite _img;
         public GameObject prefab;
+        public int _leafCost;
     }
 
     public Extension GetCaterpillarExtension(int id)

@@ -8,10 +8,10 @@ public class Caterpillar : MonoBehaviour
     public List<GameObject> _extensions = new();
 
     [Header("Caterpillar Modifiers")]
-    public float _caterPillarSpeed;
-    public float _caterPillarHealth;
-    public float _caterPillarDamageModifier;
-    public float _caterPillarDamageTakenModifier;
+    public float _caterPillarSpeed = 5;
+    public float _caterPillarHealth = 1;
+    public float _caterPillarDamageModifier = 1;
+    public float _caterPillarDamageTakenModifier = 1;
 
     [SerializeField] float _extensionGap;
 

@@ -8,9 +8,15 @@ public class CaterpillarBuilderPanel : MonoBehaviour
 {
     [Header("UI Refs")]
     public GameObject _caterPillarPanelHead;
+    [SerializeField] Text _leafCountText;
     private void Start()
     {
         UIManager.Instance._caterPillarBuilderPanel = this;
+    }
+
+    private void Update()
+    {
+        _leafCountText.text = GameManager.Instance.GetLeafs().ToString() + "/ 250 Leafs";
     }
 
     public void AddExtension(int id)

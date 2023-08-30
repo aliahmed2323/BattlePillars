@@ -1269,7 +1269,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.42302847, y: 0.3396616}
   m_AnchorMax: {x: 0.57697153, y: 0.53617454}
-  m_AnchoredPosition: {x: 0, y: -0.0000076293945}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1273239819
@@ -1366,6 +1366,7 @@ GameObject:
   - component: {fileID: 1396209023}
   - component: {fileID: 1396209022}
   - component: {fileID: 1396209021}
+  - component: {fileID: 1396209025}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1456,6 +1457,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1396209025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396209020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 360f9c5797280d047a2e40c797c38ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _caterPillarBuilderPanel: {fileID: 0}
+  _mainMenuPanel: {fileID: 1987506585}
+  _gamemodeSelectionPanel: {fileID: 1495653818}
 --- !u!1 &1430791575
 GameObject:
   m_ObjectHideFlags: 0
@@ -1678,13 +1694,14 @@ GameObject:
   - component: {fileID: 1495653815}
   - component: {fileID: 1495653817}
   - component: {fileID: 1495653816}
+  - component: {fileID: 1495653818}
   m_Layer: 5
   m_Name: Gamemode Selection Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1495653815
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1748,6 +1765,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495653814}
   m_CullTransparentMesh: 1
+--- !u!114 &1495653818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495653814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 307c7d6075eea18448ee6c1f495f4620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _campaignButton: {fileID: 1161842525}
 --- !u!1 &1659775506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1881,13 +1911,14 @@ GameObject:
   - component: {fileID: 1987506582}
   - component: {fileID: 1987506584}
   - component: {fileID: 1987506583}
+  - component: {fileID: 1987506585}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1987506582
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1950,6 +1981,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987506581}
   m_CullTransparentMesh: 1
+--- !u!114 &1987506585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987506581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b349ed29fc5834093c02478ab0ea98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playButton: {fileID: 1273239819}
 --- !u!1 &2095068699
 GameObject:
   m_ObjectHideFlags: 0

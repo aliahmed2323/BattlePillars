@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
+
+    [SerializeField] int _leafs;
+
     [Header("Caterpillar Refs")]
-    public  List<CaterpillarsScriptableObject> _caterPillars = new();
+    public List<CaterpillarsScriptableObject> _caterPillars = new();
     public int _caterPillarType;
 
     [Header("Gameplay refs")]
     [SerializeField] List<Transform> _spawnPoints = new();
 
-   //temp
+    //temp
     [SerializeField] Transform enemyspawn;
     [SerializeField] GameObject enemycaterpillar;
 
@@ -45,7 +48,7 @@ public class GameManager : Singleton<GameManager>
     {
         _currentCaterpillar.GetComponent<Caterpillar>().ReleaseCaterPillar();
         Transform t = UIManager.Instance._caterPillarBuilderPanel._caterPillarPanelHead.transform.parent;
-        foreach(Transform child in t)
+        foreach (Transform child in t)
         {
             if (child.name != "Head")
                 Destroy(child.gameObject);
@@ -58,4 +61,17 @@ public class GameManager : Singleton<GameManager>
         _currentCaterpillar.GetComponent<Caterpillar>().AddExtension(type);
     }
 
+    public bool DeductLeafs(int amount)
+    {
+        if (_leafs >= amount)
+        {
+            _leafs -= amount;
+            return true;
+        }
+        return false;
+    }
+    public int GetLeafs()
+    {
+        return _leafs;
+    }
 }
