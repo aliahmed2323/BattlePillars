@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4669223218825795248}
   - component: {fileID: 1646581698175634214}
   - component: {fileID: -1444221479900534030}
+  - component: {fileID: 7644533640678888710}
   m_Layer: 0
   m_Name: spike armor (merged)
   m_TagString: Untagged
@@ -97,3 +98,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27472929e8063b645aeee0c5dfdd492a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animUp: 0
+--- !u!114 &7644533640678888710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2161034570853745996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5405af0606c43a04db82ff902522b376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shieldModifier: 0.15

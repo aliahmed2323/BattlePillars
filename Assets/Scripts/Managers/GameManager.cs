@@ -42,7 +42,14 @@ public class GameManager : Singleton<GameManager>
         ct.GetComponent<Caterpillar>().AddExtension(1);
         ct.GetComponent<Caterpillar>().AddExtension(2);
         ct.GetComponent<Caterpillar>().ReleaseCaterPillar();
+
+        Invoke("instantenemcat", 3f);
     }
+    void instantenemcat()
+    {
+        StartCoroutine(InstantiateEnemyCaterpillar());
+    }
+    // temp end
 
     public void ReleaseCaterpillar()
     {

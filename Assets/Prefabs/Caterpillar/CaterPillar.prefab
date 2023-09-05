@@ -48,8 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5ccd44632e5975419966d34c931bf0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 5
-  _damagePunchEffectModifier: 0
+  _damagePunchEffectModifier: 0.02
 --- !u!61 &7992991511848416619
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -90,6 +89,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _extensions: []
   _caterPillarSpeed: 5
+  _caterPillarHealth: 1
+  _caterPillarDamageModifier: 1
+  _caterPillarDamageTakenModifier: 1
   _extensionGap: 1.7
   _canMove: 0
   _enemy: {fileID: 0}

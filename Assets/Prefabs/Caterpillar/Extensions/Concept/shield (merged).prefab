@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7982567860750204473}
   - component: {fileID: 2638330819990763064}
   - component: {fileID: 2024469520769730700}
+  - component: {fileID: -1248843221716951645}
   m_Layer: 0
   m_Name: shield (merged)
   m_TagString: Untagged
@@ -97,3 +98,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27472929e8063b645aeee0c5dfdd492a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animUp: 0
+--- !u!114 &-1248843221716951645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5975754426281317891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5405af0606c43a04db82ff902522b376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shieldModifier: 0.07

@@ -29,6 +29,7 @@ public class EnemyCaterpillar : Caterpillar
         {
             _enemy = collision.gameObject;
             _canMove = false;
+            collision.gameObject.GetComponent<CaterpillarHealthManager>()._onDeath += ReleaseCaterPillar;
             InvokeStopAnim();
         }
     }
