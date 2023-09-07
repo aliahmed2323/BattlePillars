@@ -41,6 +41,7 @@ public class GameManager : Singleton<GameManager>
         ct.GetComponent<Caterpillar>().AddExtension(0);
         ct.GetComponent<Caterpillar>().AddExtension(1);
         ct.GetComponent<Caterpillar>().AddExtension(2);
+        yield return new WaitForSeconds(0.1f);
         ct.GetComponent<Caterpillar>().ReleaseCaterPillar();
 
         Invoke("instantenemcat", 3f);
