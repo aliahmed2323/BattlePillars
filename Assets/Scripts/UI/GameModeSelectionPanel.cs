@@ -10,7 +10,7 @@ public class GameModeSelectionPanel : MonoBehaviour
     void Start()
     {
         UIManager.Instance._gamemodeSelectionPanel = this;
-        _campaignButton.onClick.AddListener(() =>LoadSinglePlayer());
+        _campaignButton.onClick.AddListener(() =>Invoke("LoadSinglePlayer",0.2f));
     }
 
     void LoadSinglePlayer()
