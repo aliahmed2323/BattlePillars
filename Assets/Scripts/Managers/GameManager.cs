@@ -6,6 +6,7 @@ public class GameManager : Singleton<GameManager>
 {
 
     [SerializeField] int _leafs;
+    [SerializeField] int _apples;
 
     [Header("Caterpillar Refs")]
     public List<CaterpillarsScriptableObject> _caterPillars = new();
@@ -20,6 +21,14 @@ public class GameManager : Singleton<GameManager>
 
     //Functionality vars
     GameObject _currentCaterpillar;
+
+    public enum ExtensionTypes
+    {
+        Cannon,
+        Medic,
+        Shield,
+        SpikeArmour
+    }
 
     private void Start()
     {
@@ -81,5 +90,18 @@ public class GameManager : Singleton<GameManager>
     public int GetLeafs()
     {
         return _leafs;
+    }
+    public bool DeductApples(int amount)
+    {
+        if (_apples >= amount)
+        {
+            _apples -= amount;
+            return true;
+        }
+        else return false;
+    }
+    public int GetApples()
+    {
+        return _apples;
     }
 }

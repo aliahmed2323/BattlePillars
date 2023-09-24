@@ -1109,6 +1109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 717155538}
+  - component: {fileID: 717155539}
   m_Layer: 0
   m_Name: Movement Paths
   m_TagString: Untagged
@@ -1134,6 +1135,25 @@ Transform:
   m_Father: {fileID: 1755663049}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &717155539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717155537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b05803caa9d35b498d2d6080e56af52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _aggressionLevel: 0
+  _desperationLevel: 0
+  _resourcesAvailable: 0
+  _maxCaterpillarSpawns: 0
+  _difficultySettings:
+    ExtensionLevel: 0
+    AllowedExtensions: 
 --- !u!1 &720913465
 GameObject:
   m_ObjectHideFlags: 0
@@ -2307,6 +2327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _leafs: 10000
+  _apples: 0
   _caterPillars:
   - {fileID: 11400000, guid: cf94178b7812c2d42bb6b6892ee0c5d1, type: 2}
   _caterPillarType: 0
