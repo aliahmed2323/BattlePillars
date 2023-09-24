@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class PlayerCaterpillar : Caterpillar
 {
+
+    LayerMask _playerLayer;
+
     private void Start()
     {
+        _playerLayer = (1 << 8); // bit shifts to create a layermask containing players layer
         _extensions.Add(transform.GetChild(0).gameObject);
-        _rayDirecton = Vector2.right;
     }
 
-    private void Move()
+    protected override void Update()
     {
-        Vector2 newPos = Vector2.Lerp(transform.position, new Vector2(transform.position.x + 0.5f, transform.position.y), Time.deltaTime * _caterPillarSpeed);
-        transform.position = newPos;
-    }
-
-    private void Update()
-    {
-        if (_canMove)
-            Move();
+        base.Update();
+           if(_enemy == null)
+              CheckForEnemy();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -28,9 +26,23 @@ public class PlayerCaterpillar : Caterpillar
         {
             _enemy = collision.gameObject;
             _canMove = false;
-            collision.gameObject.GetComponent<CaterpillarHealthManager>()._onDeath += ReleaseCaterPillar;
             InvokeStopAnim();
+            LockCaterpillar(true);
         }
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+            LockCaterpillar(false);
+    }
 
+    void CheckForEnemy()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * _dir, Mathf.Infinity, ~_playerLayer); //~_playerLayer means all layers except _playerLayer
+        if (hit)
+        {
+            if (hit.collider.gameObject.CompareTag("Enemy"))
+                _enemy = hit.collider.gameObject;
+        }
+    }
 }

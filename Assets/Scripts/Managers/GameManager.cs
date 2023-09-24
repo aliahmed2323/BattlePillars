@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
 
+    public bool _debugRays;
+
     [SerializeField] int _leafs;
 
     [Header("Caterpillar Refs")]

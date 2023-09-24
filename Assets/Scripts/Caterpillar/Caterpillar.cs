@@ -13,6 +13,9 @@ public class Caterpillar : MonoBehaviour
     public float _caterPillarDamageModifier = 1;
     public float _caterPillarDamageTakenModifier = 1;
 
+    [Tooltip("1 for right and -1 for left")]
+    public float _dir;
+
     [SerializeField] float _extensionGap;
 
     [HideInInspector]
@@ -29,18 +32,19 @@ public class Caterpillar : MonoBehaviour
     public GameObject _enemy;
     public bool _isEnemyInRange;
 
-    [HideInInspector]
-    public Vector2 _rayDirecton;
+    private bool _lockCaterpillarMovement;
 
-    private void Start()
-    {
 
+    private void Move()
+    { 
+        Vector2 newPos = Vector2.Lerp(transform.position, new Vector2(transform.position.x +  0.5f * _dir , transform.position.y), Time.deltaTime * _caterPillarSpeed);
+        transform.position = newPos;
     }
 
-    private void Update()
+    protected virtual void Update()
     {
-        /*       if (_enemy == null)
-                   CheckForEnemy();*/
+        if (_canMove)
+            Move();
     }
 
     public void AddExtension(int type)
@@ -55,6 +59,7 @@ public class Caterpillar : MonoBehaviour
 
     public void ReleaseCaterPillar()
     {
+        if (_lockCaterpillarMovement) return; //return if movement locked
         _moveAnim.Invoke();
         _canMove = true;
     }
@@ -62,5 +67,10 @@ public class Caterpillar : MonoBehaviour
     public void InvokeStopAnim()
     {
         _stopMoveAnim.Invoke();
+    }
+
+    public void LockCaterpillar(bool state)
+    {
+        _lockCaterpillarMovement = state;
     }
 }

@@ -1,0 +1,1929 @@
+fileFormatVersion: 2
+guid: f929a4db83c9c234a986dd23402ab53e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 10, y: 10, z: 10, w: 10}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: creme_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72.888885
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c5bb621009f2e4a9e7b64cf7161ee1
+      internalID: -1952702784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_1
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 72.888885
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4fc3fa83eb856b4fb66a3df3b59831d
+      internalID: 1592234213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_2
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 72.888885
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3123c5aeb76fe841963a0ccbd62e599
+      internalID: -1339515470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_3
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 72.888885
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb12979b23f15f4c9362433c738360c
+      internalID: 1553946372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_4
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 72.888885
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d810f7e15d8b8e64e9b9dd1bf65bd27f
+      internalID: 1819154629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_5
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 72.888885
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e277affd14a1d404592eb6da19d261bd
+      internalID: -1894885193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_6
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 72.888885
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5695b537778dc4448b279e758f5d842e
+      internalID: -148443690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_7
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 72.888885
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ac75c39eb948f64a9ea576b821692fc
+      internalID: -1446282335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_8
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 72.888885
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a7622ba4be5c842ae232273268100d
+      internalID: 2009485758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 63.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55e5852ffff2b64d9eb98950091f110
+      internalID: -1012822494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_10
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 63.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397b93bd7d3417d40ac40c8b28d2b81f
+      internalID: 1801147266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_11
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 63.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a21a072232f823247aec8eda595dc25e
+      internalID: -2049067849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_12
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 63.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6030f8b0873b0264fb2e4665eff380c3
+      internalID: 1867253363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_13
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 63.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a3d8b8547ca11469c85614a40354c3
+      internalID: 1868641109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_14
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 63.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0323354513c6c484fab8ec26d73307a1
+      internalID: -904605305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_15
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 63.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8eb34a0b99e744dabea122a9b7aab2
+      internalID: -2030213664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_16
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 63.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a5a1120ec79c345ba029bc958840fc
+      internalID: -209799707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_17
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 63.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b532a5da65f52cd4581e6388adf2728f
+      internalID: -1711353302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 54.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee72b0f4fdb7534ba269986011eb02e
+      internalID: 827891469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_19
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 54.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac126b74066ebec4386a27b703893633
+      internalID: -1331504555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_20
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 54.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16149bd5f99e5d04a838ca8050b1fb95
+      internalID: -164773691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_21
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 54.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8861d5b3ac6bea4794893e22e441728
+      internalID: -1144284628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_22
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 54.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d870d3c71bc424c991d54be67e8399
+      internalID: -1990439097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_23
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 54.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f75c10be45e4d44cb65f123055c7c43
+      internalID: 388439106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_24
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 54.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46581366313740c4ebe4d5d19f673cde
+      internalID: -1636133544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_25
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 54.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edadb85e0285c534b9b8a987703d7a33
+      internalID: 942935222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_26
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 54.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c942793f41742f34589a1bb4bb2e2513
+      internalID: -1501028030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 45.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3413b2f17e745d946816c26b25e5e95a
+      internalID: 482730908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_28
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 45.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9498dc136c2aef847b5ee21020e76af8
+      internalID: -458754078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_29
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 45.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b1088d62ab986a4ca5ab7bc0988d0d3
+      internalID: -970455274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_30
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 45.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33d78a129bf03284ca67986e3a53595d
+      internalID: -579037551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_31
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 45.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 945d25a0bbc9b264eb306ee82663af8d
+      internalID: -1571075702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_32
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 45.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dfda08757783084282607a0826f172f
+      internalID: 1925758561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_33
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 45.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a3b4c15cd231e549b3bf2bd869ee316
+      internalID: 1744155953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_34
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 45.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe917f01ded23746bbd5ac43b8159b5
+      internalID: -81991439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_35
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 45.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf1ffb4c4786ecf49ac60aafe5f62c36
+      internalID: 1355217635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2149e7437131f643bac10249fa53eda
+      internalID: -1014288716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_37
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 36.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66512a9acc65d3d4eb9cdbd7463e1680
+      internalID: 553226896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_38
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 36.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5af1eadc6f6072439bb5f56320eb3c5
+      internalID: -2135739177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_39
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 36.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06830b1dd25336148be4f616bd3a3c99
+      internalID: -1522484666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_40
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 36.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7bf3ec970e65e4fb8b6e63254a17ed
+      internalID: -1977775952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_41
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 36.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1333908097cbda94d8d68346279ba039
+      internalID: 493482519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_42
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 36.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e902598929170d4fb834a3b096687f5
+      internalID: -1714660101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_43
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 36.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de3927fbc1645a49b84afb4915c0459
+      internalID: 1781041654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_44
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 36.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dca77238847da449b69e99fb897a1de
+      internalID: 2009872254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 27.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad29cefd5780ce4b9cc0111c1976670
+      internalID: 573398057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_46
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 27.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2d7c07d2f03b94788b0c0d9c8220f3
+      internalID: 1341435853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_47
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 27.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b23ba1e7c645e4d87c71644419129a
+      internalID: 2123938803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_48
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 27.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96eddad6fab52c446a4697ea5be0ff7f
+      internalID: 874535729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_49
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 27.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9f72947722f7340815a24e505255bf
+      internalID: 1789919343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_50
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 27.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e0db5be899c9143bc7f2dd48d7b2aa
+      internalID: -1662471099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_51
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 27.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3311919b3a8b5ed4ab9796e0df1d63e6
+      internalID: 56704763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_52
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 27.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4b741c704740994397f72e4b999132f
+      internalID: 441272075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_53
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 27.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf3603cf469c3449a06e6bbcf0dfb4a
+      internalID: -691739907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd924c881b6533b4d8b761d4908ce3e9
+      internalID: -1302174099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_55
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 18.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d2b80825d49ad540a1fb8c894f3c1ee
+      internalID: 725962026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_56
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 18.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80b4655a1fe50bc4783093ffa7e06c14
+      internalID: 474643360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_57
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 18.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86dd60dd9a2dbcb46b6477fe72faffff
+      internalID: -2029844424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_58
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 18.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e235c745d82c344a0157f7c1c66fbb
+      internalID: -2054239892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_59
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 18.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c366a6443c9eeb478c6b08382625d68
+      internalID: -1899091054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_60
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 18.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e27a9215a64f3814dba53d19081e66cb
+      internalID: 556318461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_61
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 18.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ea18f2462224d4b8d8d9bb7821348b
+      internalID: -1071337037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_62
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 18.88889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f729fae24a40e574291f32a7480b0fe0
+      internalID: -1695780831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9.888889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e2461d137811574f86282595227821e
+      internalID: -2079707312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_64
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 9.888889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e192daf69a2a84d8ff0a5f253e288f
+      internalID: 1113078496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_65
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 9.888889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b5f4ae58f5e6f4ea496365532d96b3
+      internalID: -537344570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_66
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 9.888889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f1b13bc6f2833b44bc0bdbfbd579e35
+      internalID: -1694065582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_67
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 9.888889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3952a2ab9359f124abd79fe0fe874b18
+      internalID: -751758925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_68
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 9.888889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 246cc2bb66ef95442812956bf24de8fd
+      internalID: 1730385433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_69
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 9.888889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25352e14a45522f4ab7a532fda8270da
+      internalID: -1069465793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_70
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 9.888889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee5926b07f11cd49aadebb7390c0bdb
+      internalID: -457961687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_71
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 9.888889
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b3fcccd8ce6d641a3981ac00988082
+      internalID: 1205626624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.8888893
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe4c9c8ded906e429fed6090ab49ba2
+      internalID: 622473999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_73
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 0.8888893
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a879cc66fd5604bba3de5e48c6e1d3
+      internalID: 1207610224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_74
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 0.8888893
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2209540d46f69e54cb0b73bec1dd88b3
+      internalID: 1896076206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_75
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 0.8888893
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2effcefabe3b33408abf1b77721bfd1
+      internalID: 797086779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_76
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 0.8888893
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747656488f0e72b46aa5058361389726
+      internalID: 1757413307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_77
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0.8888893
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eccc21a9392d3f04ab2e5537749c4184
+      internalID: 626125592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_78
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 0.8888893
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2177dfb4fe19f249819ac48a3f6b9ef
+      internalID: -961143145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_79
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 0.8888893
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9df3aa60a8dc4b345ada4669a03c2da3
+      internalID: -470169692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: creme_80
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0.8888893
+        width: 14.777778
+        height: 9.111111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6814d1997b73541ba234488f6bc322
+      internalID: -1128179631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      creme_0: -1952702784
+      creme_1: 1592234213
+      creme_10: 1801147266
+      creme_11: -2049067849
+      creme_12: 1867253363
+      creme_13: 1868641109
+      creme_14: -904605305
+      creme_15: -2030213664
+      creme_16: -209799707
+      creme_17: -1711353302
+      creme_18: 827891469
+      creme_19: -1331504555
+      creme_2: -1339515470
+      creme_20: -164773691
+      creme_21: -1144284628
+      creme_22: -1990439097
+      creme_23: 388439106
+      creme_24: -1636133544
+      creme_25: 942935222
+      creme_26: -1501028030
+      creme_27: 482730908
+      creme_28: -458754078
+      creme_29: -970455274
+      creme_3: 1553946372
+      creme_30: -579037551
+      creme_31: -1571075702
+      creme_32: 1925758561
+      creme_33: 1744155953
+      creme_34: -81991439
+      creme_35: 1355217635
+      creme_36: -1014288716
+      creme_37: 553226896
+      creme_38: -2135739177
+      creme_39: -1522484666
+      creme_4: 1819154629
+      creme_40: -1977775952
+      creme_41: 493482519
+      creme_42: -1714660101
+      creme_43: 1781041654
+      creme_44: 2009872254
+      creme_45: 573398057
+      creme_46: 1341435853
+      creme_47: 2123938803
+      creme_48: 874535729
+      creme_49: 1789919343
+      creme_5: -1894885193
+      creme_50: -1662471099
+      creme_51: 56704763
+      creme_52: 441272075
+      creme_53: -691739907
+      creme_54: -1302174099
+      creme_55: 725962026
+      creme_56: 474643360
+      creme_57: -2029844424
+      creme_58: -2054239892
+      creme_59: -1899091054
+      creme_6: -148443690
+      creme_60: 556318461
+      creme_61: -1071337037
+      creme_62: -1695780831
+      creme_63: -2079707312
+      creme_64: 1113078496
+      creme_65: -537344570
+      creme_66: -1694065582
+      creme_67: -751758925
+      creme_68: 1730385433
+      creme_69: -1069465793
+      creme_7: -1446282335
+      creme_70: -457961687
+      creme_71: 1205626624
+      creme_72: 622473999
+      creme_73: 1207610224
+      creme_74: 1896076206
+      creme_75: 797086779
+      creme_76: 1757413307
+      creme_77: 626125592
+      creme_78: -961143145
+      creme_79: -470169692
+      creme_8: 2009485758
+      creme_80: -1128179631
+      creme_9: -1012822494
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
