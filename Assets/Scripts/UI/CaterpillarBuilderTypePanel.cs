@@ -16,7 +16,8 @@ public class CaterpillarBuilderTypePanel : MonoBehaviour
 
     void AddInBuilder()
     {
-        if (!GameManager.Instance.DeductLeafs(cost)) return;
+        if (GameManager.Instance.GetCurrentCaterpillarLength() >= 10) return;
+            if (!GameManager.Instance.DeductLeafs(cost)) return;
         GetComponentInParent<CaterpillarBuilderPanel>().AddExtension(_type);
         GameManager.Instance.AddExtensionToCurrentCaterpillar(_type);
     }

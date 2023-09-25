@@ -10,9 +10,8 @@ public class EnemyCaterpillar : Caterpillar
     // Start is called before the first frame update
     void Start()
     {
-        _enemyLayer = (1 << 8); // bit shifts to create a layermask containing players layer
+        _enemyLayer = (1 << 9); // bit shifts to create a layermask containing players layer
         _extensions.Add(transform.GetChild(0).gameObject);
-        transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
     }
     protected override void Update()
     {

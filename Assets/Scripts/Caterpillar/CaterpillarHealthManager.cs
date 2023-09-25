@@ -2,16 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class CaterpillarHealthManager : MonoBehaviour
 {
      private float _health;
     [SerializeField] float _damagePunchEffectModifier;
+    [SerializeField] Slider _healthSlider;
 
-    [HideInInspector]
-    public delegate void onDeath();
-    [HideInInspector]
-    public event onDeath _onDeath;
 
     private void Start()
     {
@@ -25,7 +23,9 @@ public class CaterpillarHealthManager : MonoBehaviour
 
     public void DecreaseHealth(float amount)
     {
+        _healthSlider.gameObject.SetActive(true);
         _health -= amount;
+        _healthSlider.value = Mathf.Lerp(_health + amount, _health, Time.deltaTime * 3);
         HurtAnim();
 
         if (_health <= 0)
@@ -39,7 +39,7 @@ public class CaterpillarHealthManager : MonoBehaviour
 
     void Die()
     {
-        _onDeath.Invoke();
+        Debug.Log(gameObject.name + " died");
         Destroy(gameObject);
     }
 }

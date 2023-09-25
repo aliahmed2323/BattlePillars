@@ -47,10 +47,18 @@ public class Caterpillar : MonoBehaviour
             Move();
     }
 
-    public void AddExtension(int type)
+    public void AddExtension(int type, bool isEnemy)
     {
         Vector2 newPos = new Vector2(_extensions[_extensions.Count - 1].transform.position.x - _extensionGap, transform.position.y);
-        CaterpillarsScriptableObject.Extension extension = GameManager.Instance._caterPillars[GameManager.Instance._caterPillarType].GetCaterpillarExtension(type);
+        CaterpillarsScriptableObject.Extension extension;
+        if (!isEnemy)
+        {
+        extension = GameManager.Instance._caterPillars[GameManager.Instance._caterPillarType].GetCaterpillarExtension(type);
+        }
+        else
+        {
+             extension = GameManager.Instance._enemyCaterPillars[0].GetCaterpillarExtension(type);
+        }
         GameObject ext = Instantiate(extension.prefab, newPos, Quaternion.identity, transform);
         _extensions.Add(ext);
         if (_extensions.Count % 2 == 0)
@@ -66,11 +74,15 @@ public class Caterpillar : MonoBehaviour
 
     public void InvokeStopAnim()
     {
-        _stopMoveAnim.Invoke();
+        _stopMoveAnim.Invoke(); 
     }
 
     public void LockCaterpillar(bool state)
     {
         _lockCaterpillarMovement = state;
     }
+   public void SetEnemyNull()
+    {
+        _enemy = null;
+    }    
 }

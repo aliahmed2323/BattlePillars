@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fc6098ec792cb34f949d655fef0ff25, type: 3}
+  m_Name: CaterpillarEnemyData
+  m_EditorClassIdentifier: 
+  _id: 0
+  _name: Enemy Default
+  _headImg: {fileID: 0}
+  _headPrefab: {fileID: 1676660589421364698, guid: aa0ff28f42638c649ba69f7a3615a469, type: 3}
+  _canon:
+    _name: Cannon
+    _img: {fileID: 0}
+    prefab: {fileID: 8803275453571237709, guid: a8c96f66f04788b49ab334d6ed127849, type: 3}
+    _leafCost: 0
+  _healer:
+    _name: Healer
+    _img: {fileID: 0}
+    prefab: {fileID: 811595614745786998, guid: 42f52e29e9e358546af6fa63b6afe9f7, type: 3}
+    _leafCost: 0
+  _shield:
+    _name: Shield
+    _img: {fileID: 0}
+    prefab: {fileID: 0}
+    _leafCost: 0
+  _spikeArmor:
+    _name: Spike Armor
+    _img: {fileID: 0}
+    prefab: {fileID: 2161034570853745996, guid: 4e05efabf7f273d4b83e268d6c6b91cf, type: 3}
+    _leafCost: 0

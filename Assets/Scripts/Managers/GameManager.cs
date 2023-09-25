@@ -11,6 +11,7 @@ public class GameManager : Singleton<GameManager>
 
     [Header("Caterpillar Refs")]
     public List<CaterpillarsScriptableObject> _caterPillars = new();
+    public List<CaterpillarsScriptableObject> _enemyCaterPillars = new();
     public int _caterPillarType;
 
     [Header("Gameplay refs")]
@@ -40,13 +41,14 @@ public class GameManager : Singleton<GameManager>
     {
         GameObject ct = Instantiate(enemycaterpillar, enemyspawn.transform.position, Quaternion.identity);
         yield return new WaitForSeconds(1f);
-        ct.GetComponent<Caterpillar>().AddExtension(0);
-        ct.GetComponent<Caterpillar>().AddExtension(1);
-        ct.GetComponent<Caterpillar>().AddExtension(2);
+        ct.GetComponent<Caterpillar>().AddExtension(0, true);
+        ct.GetComponent<Caterpillar>().AddExtension(0, true);
+        ct.GetComponent<Caterpillar>().AddExtension(1, true);
+        ct.GetComponent<Caterpillar>().AddExtension(0, true);
         yield return new WaitForSeconds(0.1f);
         ct.GetComponent<Caterpillar>().ReleaseCaterPillar();
 
-        Invoke("instantenemcat", 3f);
+        Invoke("instantenemcat", 20f);
     }
     void instantenemcat()
     {
@@ -68,7 +70,11 @@ public class GameManager : Singleton<GameManager>
 
     public void AddExtensionToCurrentCaterpillar(int type)
     {
-        _currentCaterpillar.GetComponent<Caterpillar>().AddExtension(type);
+        _currentCaterpillar.GetComponent<Caterpillar>().AddExtension(type, false);
+    }
+    public int GetCurrentCaterpillarLength()
+    {
+        return _currentCaterpillar.GetComponent<Caterpillar>()._extensions.Count;
     }
 
     public bool DeductLeafs(int amount)

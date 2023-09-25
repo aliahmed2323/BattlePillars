@@ -24,7 +24,7 @@ MonoBehaviour:
   _healer:
     _name: Health
     _img: {fileID: 21300000, guid: 96b3ba74a33b2bb4cbd512b44effbb75, type: 3}
-    prefab: {fileID: 811595614745786998, guid: 0e48c8db49c38f14cbdb81a2252e2ea4, type: 3}
+    prefab: {fileID: 811595614745786998, guid: 512c4ceef39649d48a137aa24059997f, type: 3}
     _leafCost: 70
   _shield:
     _name: Shield

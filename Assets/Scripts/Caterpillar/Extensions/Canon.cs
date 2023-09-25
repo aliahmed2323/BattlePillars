@@ -38,7 +38,7 @@ public class Canon : MonoBehaviour
         cp.InvokeStopAnim();
         _canAttack = false;
         float damage = ((_damage / 10) * GetComponentInParent<Caterpillar>()._caterPillarDamageModifier) * cp._enemy.GetComponent<Caterpillar>()._caterPillarDamageTakenModifier;
-        cp._enemy.GetComponent<CaterpillarHealthManager>().DecreaseHealth(damage);
+        cp._enemy?.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
         AttackAnim();
 
         GameObject cb = Instantiate(_cannonBall, transform.position, Quaternion.identity);
