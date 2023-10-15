@@ -90,4 +90,8 @@ public class GameManager : Singleton<GameManager>
     {
         return _leafs;
     }
+    public void SetLeafs(int amount)
+    {
+        _leafs = amount;
+    }
 }

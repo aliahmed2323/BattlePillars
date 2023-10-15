@@ -51,14 +51,12 @@ public class Caterpillar : MonoBehaviour
     {
         Vector2 newPos = new Vector2(_extensions[_extensions.Count - 1].transform.position.x - _extensionGap, transform.position.y);
         CaterpillarsScriptableObject.Extension extension;
+
         if (!isEnemy)
-        {
         extension = GameManager.Instance._caterPillars[GameManager.Instance._caterPillarType].GetCaterpillarExtension(type);
-        }
         else
-        {
              extension = GameManager.Instance._enemyCaterPillars[0].GetCaterpillarExtension(type);
-        }
+
         GameObject ext = Instantiate(extension.prefab, newPos, Quaternion.identity, transform);
         _extensions.Add(ext);
         if (_extensions.Count % 2 == 0)
