@@ -17,22 +17,32 @@ MonoBehaviour:
   _headImg: {fileID: 21300000, guid: b22d7144b30d8534ca81692ec1cf38c3, type: 3}
   _headPrefab: {fileID: 1676660589421364698, guid: 5ba3dbf864574c24d93f7e7beb6c8a7b, type: 3}
   _canon:
-    _name: Canon
+    _name: Cannon
     _img: {fileID: 21300000, guid: c7436d9953d81ae44ac7a34ee8c3b960, type: 3}
     prefab: {fileID: 8803275453571237709, guid: 1a1d35bb48f359e49a4db678731d1f50, type: 3}
     _leafCost: 50
+    _icon: {fileID: 21300000, guid: 67f72127b1aa8bc4c84e2f4c5de8e8c3, type: 3}
   _healer:
     _name: Health
     _img: {fileID: 21300000, guid: 96b3ba74a33b2bb4cbd512b44effbb75, type: 3}
     prefab: {fileID: 811595614745786998, guid: 512c4ceef39649d48a137aa24059997f, type: 3}
     _leafCost: 70
-  _shield:
-    _name: Shield
-    _img: {fileID: 21300000, guid: 8025d26f45cb6654db31fee1a5e9d93e, type: 3}
-    prefab: {fileID: 5975754426281317891, guid: e724f81d0c77eee4ca937830201f1ea9, type: 3}
-    _leafCost: 60
+    _icon: {fileID: 21300000, guid: b435a8900b6d8084c8839da457188752, type: 3}
   _spikeArmor:
     _name: Spike Armor
     _img: {fileID: 21300000, guid: 73589de90b73bcb4cb2fcd0360293e40, type: 3}
     prefab: {fileID: 2161034570853745996, guid: 49caf11120f569249b22c55ab3f45383, type: 3}
     _leafCost: 60
+    _icon: {fileID: 21300000, guid: 41b6fecc0c68cbe4da2b61cb8a250f1a, type: 3}
+  _pistolier:
+    _name: Pistolier
+    _img: {fileID: 21300000, guid: 73589de90b73bcb4cb2fcd0360293e40, type: 3}
+    prefab: {fileID: 8803275453571237709, guid: a9270ed01fcc12b42a6f4abe4705e640, type: 3}
+    _leafCost: 50
+    _icon: {fileID: 21300000, guid: a8327ba614dfd2b42b2159fb25311709, type: 3}
+  _rocketier:
+    _name: Rocketier
+    _img: {fileID: 21300000, guid: 73589de90b73bcb4cb2fcd0360293e40, type: 3}
+    prefab: {fileID: 8803275453571237709, guid: 8c0a3fa07c531f940b034a7e5253558b, type: 3}
+    _leafCost: 80
+    _icon: {fileID: 21300000, guid: bd2dc358bf03dcf499b8cd476c579522, type: 3}

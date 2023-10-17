@@ -24,6 +24,18 @@ public class GameManager : Singleton<GameManager>
     //Functionality vars
     GameObject _currentCaterpillar;
 
+
+    // Segment Types
+    public enum SegmentType
+    {
+        SpikeyArmor = 0,
+        Cannon = 1,
+        Grenadier = 2,
+        Pistolier = 3,
+        HealthSnail = 4,
+        Rocketier = 5
+    }
+
     private void Start()
     {
         CreateCaterpillar(0);
@@ -41,10 +53,9 @@ public class GameManager : Singleton<GameManager>
     {
         GameObject ct = Instantiate(enemycaterpillar, enemyspawn.transform.position, Quaternion.identity);
         yield return new WaitForSeconds(1f);
-        ct.GetComponent<Caterpillar>().AddExtension(0, true);
-        ct.GetComponent<Caterpillar>().AddExtension(0, true);
-        ct.GetComponent<Caterpillar>().AddExtension(1, true);
-        ct.GetComponent<Caterpillar>().AddExtension(0, true);
+        ct.GetComponent<Caterpillar>().AddExtension(SegmentType.Cannon, true);
+        ct.GetComponent<Caterpillar>().AddExtension(SegmentType.Cannon, true);
+        ct.GetComponent<Caterpillar>().AddExtension(SegmentType.Cannon, true);
         yield return new WaitForSeconds(0.1f);
         ct.GetComponent<Caterpillar>().ReleaseCaterPillar();
 
@@ -68,7 +79,7 @@ public class GameManager : Singleton<GameManager>
         CreateCaterpillar(0);
     }
 
-    public void AddExtensionToCurrentCaterpillar(int type)
+    public void AddExtensionToCurrentCaterpillar(GameManager.SegmentType type)
     {
         _currentCaterpillar.GetComponent<Caterpillar>().AddExtension(type, false);
     }

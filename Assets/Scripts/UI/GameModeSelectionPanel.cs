@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class GameModeSelectionPanel : MonoBehaviour
 {
     [SerializeField] Button _campaignButton;
+    [SerializeField] Button _endlessButton;
     void Start()
     {
         UIManager.Instance._gamemodeSelectionPanel = this;
-        _campaignButton.onClick.AddListener(() =>Invoke("LoadSinglePlayer",0.2f));
+        _endlessButton.onClick.AddListener(() =>Invoke("LoadEndless",0.2f));
     }
 
-    void LoadSinglePlayer()
+    void LoadEndless()
     {
-        SceneManager.LoadScene("Singplayer");
+        UIManager.Instance._segmentSelectionPanel.gameObject.SetActive(true);
     }
 }

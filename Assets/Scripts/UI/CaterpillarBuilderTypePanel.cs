@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CaterpillarBuilderTypePanel : MonoBehaviour
 {
-    [SerializeField] int _type;
+    public GameManager.SegmentType _type;
     int cost;
 
     private void Start()

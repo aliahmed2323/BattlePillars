@@ -47,7 +47,7 @@ public class Caterpillar : MonoBehaviour
             Move();
     }
 
-    public void AddExtension(int type, bool isEnemy)
+    public void AddExtension(GameManager.SegmentType type, bool isEnemy)
     {
         Vector2 newPos = new Vector2(_extensions[_extensions.Count - 1].transform.position.x - _extensionGap, transform.position.y);
         CaterpillarsScriptableObject.Extension extension;

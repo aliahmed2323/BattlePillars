@@ -15,8 +15,9 @@ public class CaterpillarsScriptableObject : ScriptableObject
     [Header("Extensions")]
     public Extension _canon;
     public Extension _healer;
-    public Extension _shield;
     public Extension _spikeArmor;
+    public Extension _pistolier;
+    public Extension _rocketier;
 
 
     [System.Serializable]
@@ -26,20 +27,23 @@ public class CaterpillarsScriptableObject : ScriptableObject
         public Sprite _img;
         public GameObject prefab;
         public int _leafCost;
+        public Sprite _icon;
     }
 
-    public Extension GetCaterpillarExtension(int id)
+    public Extension GetCaterpillarExtension(GameManager.SegmentType type)
     {
-        switch(id)
+        switch(type)
         {
-            case 0:
+            case GameManager.SegmentType.Cannon:
                 return _canon;
-            case 1:
+            case GameManager.SegmentType.HealthSnail:
                 return _healer;
-            case 2:
-                return _shield;
-            case 3:
+            case GameManager.SegmentType.SpikeyArmor:
                 return _spikeArmor;
+            case GameManager.SegmentType.Pistolier:
+                return _pistolier;
+            case GameManager.SegmentType.Rocketier:
+                return _rocketier;
             default: 
                 return _canon;
         }
