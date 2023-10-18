@@ -16,12 +16,15 @@ public class MainMenuPanel : MonoBehaviour
     [SerializeField] Image _enemyPillarGunBody;
     [SerializeField] Image _enemyPillarBody;
 
+    [SerializeField] AudioSource _as;
+
     List<Tween> _battlePillarAnims = new();
     private void Start()
     {
         _playButton.onClick.AddListener(() => Invoke("OpenMainMenuPanel", 0.25f));
         UIManager.Instance._mainMenuPanel = this;
         AnimateBattlePillars();
+        _as.Play();
     }
     private void OnEnable()
     {
@@ -29,6 +32,7 @@ public class MainMenuPanel : MonoBehaviour
         {
             t.Play();
         }
+        _as.Play();
     }
     private void OnDisable()
     {

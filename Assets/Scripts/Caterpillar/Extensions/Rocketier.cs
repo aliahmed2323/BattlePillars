@@ -13,7 +13,9 @@ public class Rocketier : MonoBehaviour
     [SerializeField] float _fireRate;
     [SerializeField]GameObject _rocket;
     [SerializeField] float _rocketSpeed;
+    [SerializeField] GameObject _explosionEffect;
     bool _canAttack = true;
+    [SerializeField] AudioSource _as;
     private void Start()
     {
         cp = GetComponentInParent<Caterpillar>();
@@ -41,15 +43,24 @@ public class Rocketier : MonoBehaviour
         _canAttack = false;
         float damage = ((_damage / 10) * GetComponentInParent<Caterpillar>()._caterPillarDamageModifier) * cp._enemy.GetComponent<Caterpillar>()._caterPillarDamageTakenModifier;
         cp._enemy?.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
-
+        _as.Play();
         GameObject cb = Instantiate(_rocket, transform.position, Quaternion.identity);
         float timeToHit = Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _rocketSpeed;
-        cb.transform.DOJump(cp._enemy.transform.position, 4, 1, timeToHit).OnComplete(() => Destroy(cb));
-        /*cb.transform.DOLookAt(cp._enemy.transform.position, timeToHit, AxisConstraint.Z);*/
+        cb.transform.DOJump(cp._enemy.transform.position, 4, 1, timeToHit).OnComplete(() =>
+        {
+            ExplosionEffect(cb.transform.position);
+            Destroy(cb);
+        });
+        
         Invoke("EnableAttack", _fireRate);
     }
 
-
+    void ExplosionEffect(Vector3 pos)
+    {
+        GameObject e = Instantiate(_explosionEffect, pos, Quaternion.identity);
+        e.GetComponent<Animator>().Play("Explosion");
+        Destroy(e, 1.1f);
+    }
     void EnableAttack()
     {
         _canAttack = true;

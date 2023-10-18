@@ -13,6 +13,7 @@ public class Pistolier : MonoBehaviour
     [SerializeField]GameObject _bullet;
     [SerializeField] float _bulletSpeed;
     bool _canAttack = true;
+    [SerializeField] AudioSource _as;
     private void Start()
     {
         cp = GetComponentInParent<Caterpillar>();
@@ -40,7 +41,7 @@ public class Pistolier : MonoBehaviour
         float damage = ((_damage / 10) * GetComponentInParent<Caterpillar>()._caterPillarDamageModifier) * cp._enemy.GetComponent<Caterpillar>()._caterPillarDamageTakenModifier;
         cp._enemy?.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
         AttackAnim();
-
+        _as.Play();
         GameObject cb = Instantiate(_bullet, transform.position, Quaternion.identity);
         cb.transform.DOMove(cp._enemy.transform.position, Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _bulletSpeed).OnComplete(() => Destroy(cb));
         Invoke("EnableAttack", _fireRate);

@@ -7,5 +7,6 @@ public class UIManager : Singleton<UIManager>
     public CaterpillarBuilderPanel _caterPillarBuilderPanel;
     public MainMenuPanel _mainMenuPanel;
     public GameModeSelectionPanel _gamemodeSelectionPanel;
+    public CampaignScreen _campaignScreen;
     public SegmentSelection _segmentSelectionPanel;
 }

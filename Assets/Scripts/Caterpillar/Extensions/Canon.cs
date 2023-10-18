@@ -12,6 +12,7 @@ public class Canon : MonoBehaviour
     [SerializeField] float _fireRate;
     [SerializeField]GameObject _cannonBall;
     [SerializeField] float _cannonBallSpeed;
+    [SerializeField] AudioSource _as;
     bool _canAttack = true;
     private void Start()
     {
@@ -40,7 +41,7 @@ public class Canon : MonoBehaviour
         float damage = ((_damage / 10) * GetComponentInParent<Caterpillar>()._caterPillarDamageModifier) * cp._enemy.GetComponent<Caterpillar>()._caterPillarDamageTakenModifier;
         cp._enemy?.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
         AttackAnim();
-
+        _as.Play();
         GameObject cb = Instantiate(_cannonBall, transform.position, Quaternion.identity);
         cb.transform.DOJump(cp._enemy.transform.position, 2, 1, Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _cannonBallSpeed).OnComplete(() => Destroy(cb));
         Invoke("EnableAttack", _fireRate);
