@@ -38,13 +38,25 @@ public class Canon : MonoBehaviour
         cp._canMove = false;
         cp.InvokeStopAnim();
         _canAttack = false;
-        float damage = ((_damage / 10) * GetComponentInParent<Caterpillar>()._caterPillarDamageModifier) * cp._enemy.GetComponent<Caterpillar>()._caterPillarDamageTakenModifier;
-        cp._enemy?.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
+        DamageEnemy();
         AttackAnim();
         _as.Play();
         GameObject cb = Instantiate(_cannonBall, transform.position, Quaternion.identity);
         cb.transform.DOJump(cp._enemy.transform.position, 2, 1, Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _cannonBallSpeed).OnComplete(() => Destroy(cb));
         Invoke("EnableAttack", _fireRate);
+    }
+    void DamageEnemy()
+    {
+        if(cp._enemy.CompareTag("Enemy") || cp._enemy.CompareTag("Player"))
+        {
+            float damage = ((_damage / 10) * GetComponentInParent<Caterpillar>()._caterPillarDamageModifier) * cp._enemy.GetComponent<Caterpillar>()._caterPillarDamageTakenModifier;
+            cp._enemy?.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
+        }
+        if (cp._enemy.CompareTag("EnemyBase") || cp._enemy.CompareTag("PlayerBase"))
+        {
+            float damage = ((_damage / 10) * GetComponentInParent<Caterpillar>()._caterPillarDamageModifier);
+            cp._enemy?.GetComponent<CaterpillarBase>()?.ReduceHealth(damage);
+        }
     }
 
     void AttackAnim()

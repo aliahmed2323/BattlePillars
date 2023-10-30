@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class CaterpillarHealthManager : MonoBehaviour
 {
-     private float _health;
+     [SerializeField] float _health;
     [SerializeField] float _damagePunchEffectModifier;
     [SerializeField] Slider _healthSlider;
 

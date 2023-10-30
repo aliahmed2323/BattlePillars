@@ -38,15 +38,26 @@ public class Pistolier : MonoBehaviour
         cp._canMove = false;
         cp.InvokeStopAnim();
         _canAttack = false;
-        float damage = ((_damage / 10) * GetComponentInParent<Caterpillar>()._caterPillarDamageModifier) * cp._enemy.GetComponent<Caterpillar>()._caterPillarDamageTakenModifier;
-        cp._enemy?.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
+        DamageEnemy();
         AttackAnim();
         _as.Play();
         GameObject cb = Instantiate(_bullet, transform.position, Quaternion.identity);
         cb.transform.DOMove(cp._enemy.transform.position, Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _bulletSpeed).OnComplete(() => Destroy(cb));
         Invoke("EnableAttack", _fireRate);
     }
-
+    void DamageEnemy()
+    {
+        if (cp._enemy.CompareTag("Enemy") || cp._enemy.CompareTag("Player"))
+        {
+            float damage = ((_damage / 10) * GetComponentInParent<Caterpillar>()._caterPillarDamageModifier) * cp._enemy.GetComponent<Caterpillar>()._caterPillarDamageTakenModifier;
+            cp._enemy?.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
+        }
+        if (cp._enemy.CompareTag("EnemyBase") || cp._enemy.CompareTag("PlayerBase"))
+        {
+            float damage = ((_damage / 10) * GetComponentInParent<Caterpillar>()._caterPillarDamageModifier);
+            cp._enemy?.GetComponent<CaterpillarBase>()?.ReduceHealth(damage);
+        }
+    }
     void AttackAnim()
     {
         transform.DOLocalMoveX(-0.26f, 0.18f).SetEase(Ease.InOutBack).SetLoops(2, LoopType.Yoyo).OnComplete(()=> {

@@ -9,7 +9,7 @@ public class PlayerCaterpillar : Caterpillar
 
     private void Start()
     {
-        _playerLayer = (1 << 8); // bit shifts to create a layermask containing players layer
+        _playerLayer = (1 << 8); // bit shifts to create a layermask containing player's layer
         _extensions.Add(transform.GetChild(0).gameObject);
     }
 
@@ -22,7 +22,7 @@ public class PlayerCaterpillar : Caterpillar
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("EnemyBase"))
         {
             _enemy = collision.gameObject;
             _canMove = false;
@@ -32,7 +32,7 @@ public class PlayerCaterpillar : Caterpillar
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("EnemyBase"))
             LockCaterpillar(false);
     }
 
@@ -41,7 +41,7 @@ public class PlayerCaterpillar : Caterpillar
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * _dir, Mathf.Infinity, ~_playerLayer); //~_playerLayer means all layers except _playerLayer
         if (hit)
         {
-            if (hit.collider.gameObject.CompareTag("Enemy"))
+            if (hit.collider.gameObject.CompareTag("Enemy") || hit.collider.gameObject.CompareTag("EnemyBase"))
                 _enemy = hit.collider.gameObject;
         }
     }

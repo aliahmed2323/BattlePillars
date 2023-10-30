@@ -18,8 +18,8 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] List<Transform> _spawnPoints = new();
 
     //temp
-    [SerializeField] Transform enemyspawn;
-    [SerializeField] GameObject enemycaterpillar;
+    public Transform enemyspawn;
+    public GameObject enemycaterpillar;
 
     //Functionality vars
     GameObject _currentCaterpillar;
@@ -39,7 +39,6 @@ public class GameManager : Singleton<GameManager>
     private void Start()
     {
         CreateCaterpillar(0);
-        StartCoroutine(InstantiateEnemyCaterpillar());
     }
 
     void CreateCaterpillar(int id)
@@ -48,7 +47,7 @@ public class GameManager : Singleton<GameManager>
         _currentCaterpillar = Instantiate(_caterPillars[id]._headPrefab, _spawnPoints[randomSpawn].position, Quaternion.identity);
     }
 
-    //temp
+    /*//temp
     IEnumerator InstantiateEnemyCaterpillar()
     {
         GameObject ct = Instantiate(enemycaterpillar, enemyspawn.transform.position, Quaternion.identity);
@@ -65,7 +64,7 @@ public class GameManager : Singleton<GameManager>
     {
         StartCoroutine(InstantiateEnemyCaterpillar());
     }
-    // temp end
+    // temp end*/
 
     public void ReleaseCaterpillar()
     {

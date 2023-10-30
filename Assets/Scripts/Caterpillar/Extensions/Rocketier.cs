@@ -41,8 +41,7 @@ public class Rocketier : MonoBehaviour
         cp._canMove = false;
         cp.InvokeStopAnim();
         _canAttack = false;
-        float damage = ((_damage / 10) * GetComponentInParent<Caterpillar>()._caterPillarDamageModifier) * cp._enemy.GetComponent<Caterpillar>()._caterPillarDamageTakenModifier;
-        cp._enemy?.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
+        DamageEnemy();
         _as.Play();
         GameObject cb = Instantiate(_rocket, transform.position, Quaternion.identity);
         float timeToHit = Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _rocketSpeed;
@@ -54,7 +53,19 @@ public class Rocketier : MonoBehaviour
         
         Invoke("EnableAttack", _fireRate);
     }
-
+    void DamageEnemy()
+    {
+        if (cp._enemy.CompareTag("Enemy") || cp._enemy.CompareTag("Player"))
+        {
+            float damage = ((_damage / 10) * GetComponentInParent<Caterpillar>()._caterPillarDamageModifier) * cp._enemy.GetComponent<Caterpillar>()._caterPillarDamageTakenModifier;
+            cp._enemy?.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
+        }
+        if (cp._enemy.CompareTag("EnemyBase") || cp._enemy.CompareTag("PlayerBase"))
+        {
+            float damage = ((_damage / 10) * GetComponentInParent<Caterpillar>()._caterPillarDamageModifier);
+            cp._enemy?.GetComponent<CaterpillarBase>()?.ReduceHealth(damage);
+        }
+    }
     void ExplosionEffect(Vector3 pos)
     {
         GameObject e = Instantiate(_explosionEffect, pos, Quaternion.identity);
