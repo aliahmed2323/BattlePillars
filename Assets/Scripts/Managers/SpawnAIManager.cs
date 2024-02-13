@@ -20,6 +20,8 @@ public class SpawnAIManager : MonoBehaviour
 
     public int _currentLevel;
 
+    [SerializeField] Transform _enemySpawns;
+
     [SerializeField] Levels[] _levels;
 
     [System.Serializable]
@@ -46,7 +48,8 @@ public class SpawnAIManager : MonoBehaviour
     {
         foreach(Pillars pillar in _levels[_currentLevel-1].pillar)
         {
-            GameObject ct = Instantiate(GameManager.Instance.enemycaterpillar, GameManager.Instance.enemyspawn.transform.position, Quaternion.identity);
+            int randSpawn = Random.Range(0, 2);
+            GameObject ct = Instantiate(GameManager.Instance.enemycaterpillar, _enemySpawns.transform.GetChild(randSpawn).position, Quaternion.identity);
             yield return new WaitForSeconds(1f);
             foreach(GameManager.SegmentType type in pillar.Segments)
             {

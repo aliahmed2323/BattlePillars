@@ -6,14 +6,19 @@ using UnityEngine.UI;
 
 public class CaterpillarHealthManager : MonoBehaviour
 {
-     [SerializeField] float _health;
+     public float _health;
     [SerializeField] float _damagePunchEffectModifier;
     [SerializeField] Slider _healthSlider;
 
 
     private void Start()
     {
+        Invoke(nameof(SetVals), 0.1f);
+    }
+    void SetVals()
+    {
         _health = GetComponent<Caterpillar>()._caterPillarHealth;
+        _healthSlider.maxValue = _health;
     }
 
     public float GetHealth()
@@ -30,6 +35,13 @@ public class CaterpillarHealthManager : MonoBehaviour
 
         if (_health <= 0)
             Die();
+    }
+
+    public void AddHealth(float amount)
+    {
+        _healthSlider.gameObject.SetActive(true);
+        _health += amount;
+        _healthSlider.value = Mathf.Lerp(_health - amount, _health, Time.deltaTime * 3);
     }
 
     void HurtAnim()

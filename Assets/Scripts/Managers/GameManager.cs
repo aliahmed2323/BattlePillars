@@ -33,7 +33,9 @@ public class GameManager : Singleton<GameManager>
         Grenadier = 2,
         Pistolier = 3,
         HealthSnail = 4,
-        Rocketier = 5
+        Rocketier = 5,
+        Caraspace = 6,
+        Mine = 7
     }
 
     private void Start()

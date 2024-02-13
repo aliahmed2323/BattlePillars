@@ -18,6 +18,8 @@ public class CaterpillarsScriptableObject : ScriptableObject
     public Extension _spikeArmor;
     public Extension _pistolier;
     public Extension _rocketier;
+    public Extension _caraspace;
+    public Extension _mine;
 
 
     [System.Serializable]
@@ -44,6 +46,10 @@ public class CaterpillarsScriptableObject : ScriptableObject
                 return _pistolier;
             case GameManager.SegmentType.Rocketier:
                 return _rocketier;
+            case GameManager.SegmentType.Caraspace:
+                return _caraspace;
+            case GameManager.SegmentType.Mine:
+                return _mine;
             default: 
                 return _canon;
         }

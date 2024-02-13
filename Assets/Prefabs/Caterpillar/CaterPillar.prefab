@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5ccd44632e5975419966d34c931bf0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _health: 0
   _damagePunchEffectModifier: 0.02
   _healthSlider: {fileID: 80892713548655934}
 --- !u!61 &7992991511848416619
@@ -382,7 +383,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 1.36
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -443,6 +444,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0

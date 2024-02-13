@@ -21,18 +21,34 @@ MonoBehaviour:
     _img: {fileID: 0}
     prefab: {fileID: 8803275453571237709, guid: a8c96f66f04788b49ab334d6ed127849, type: 3}
     _leafCost: 0
+    _icon: {fileID: 0}
   _healer:
     _name: Healer
     _img: {fileID: 0}
     prefab: {fileID: 811595614745786998, guid: 42f52e29e9e358546af6fa63b6afe9f7, type: 3}
     _leafCost: 0
-  _shield:
-    _name: Shield
-    _img: {fileID: 0}
-    prefab: {fileID: 0}
-    _leafCost: 0
+    _icon: {fileID: 0}
   _spikeArmor:
     _name: Spike Armor
     _img: {fileID: 0}
     prefab: {fileID: 2161034570853745996, guid: 4e05efabf7f273d4b83e268d6c6b91cf, type: 3}
     _leafCost: 0
+    _icon: {fileID: 0}
+  _pistolier:
+    _name: 
+    _img: {fileID: 0}
+    prefab: {fileID: 0}
+    _leafCost: 0
+    _icon: {fileID: 0}
+  _rocketier:
+    _name: 
+    _img: {fileID: 0}
+    prefab: {fileID: 0}
+    _leafCost: 0
+    _icon: {fileID: 0}
+  _caraspace:
+    _name: Caraspace
+    _img: {fileID: 0}
+    prefab: {fileID: 811595614745786998, guid: b17e69617ce31034ca80b1e4a0097ae1, type: 3}
+    _leafCost: 0
+    _icon: {fileID: 0}

@@ -46,3 +46,15 @@ MonoBehaviour:
     prefab: {fileID: 8803275453571237709, guid: 8c0a3fa07c531f940b034a7e5253558b, type: 3}
     _leafCost: 80
     _icon: {fileID: 21300000, guid: bd2dc358bf03dcf499b8cd476c579522, type: 3}
+  _caraspace:
+    _name: Caraspace
+    _img: {fileID: 21300000, guid: 73589de90b73bcb4cb2fcd0360293e40, type: 3}
+    prefab: {fileID: 811595614745786998, guid: b17e69617ce31034ca80b1e4a0097ae1, type: 3}
+    _leafCost: 60
+    _icon: {fileID: 21300000, guid: 6528cce7e8c7abd4ead79224406351f5, type: 3}
+  _mine:
+    _name: Mine
+    _img: {fileID: 21300000, guid: 73589de90b73bcb4cb2fcd0360293e40, type: 3}
+    prefab: {fileID: 811595614745786998, guid: 4781a2bf546d54a40a797f114064cdc8, type: 3}
+    _leafCost: 70
+    _icon: {fileID: 21300000, guid: 4dc3b0b484a7e5f47acdcfe6ac11f335, type: 3}
