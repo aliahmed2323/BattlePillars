@@ -36,8 +36,8 @@ public class Caterpillar : MonoBehaviour
 
 
     private void Move()
-    { 
-        Vector2 newPos = Vector2.Lerp(transform.position, new Vector2(transform.position.x +  0.5f * _dir , transform.position.y), Time.deltaTime * _caterPillarSpeed);
+    {
+        Vector2 newPos = Vector2.Lerp(transform.position, new Vector2(transform.position.x + 0.5f * _dir, transform.position.y), Time.deltaTime * _caterPillarSpeed);
         transform.position = newPos;
     }
 
@@ -52,10 +52,16 @@ public class Caterpillar : MonoBehaviour
         Vector2 newPos = new Vector2(_extensions[_extensions.Count - 1].transform.position.x - _extensionGap, transform.position.y);
         CaterpillarsScriptableObject.Extension extension;
 
+        GameManager.SegmentType adjustedType;
+        if (type == GameManager.SegmentType.Caraspace || type == GameManager.SegmentType.Mine || type == GameManager.SegmentType.Rocketier || type == GameManager.SegmentType.Pistolier)
+            adjustedType = GameManager.SegmentType.Cannon;
+        else
+            adjustedType = type;
+
         if (!isEnemy)
         extension = GameManager.Instance._caterPillars[GameManager.Instance._caterPillarType].GetCaterpillarExtension(type);
         else
-             extension = GameManager.Instance._enemyCaterPillars[0].GetCaterpillarExtension(type);
+             extension = GameManager.Instance._enemyCaterPillars[0].GetCaterpillarExtension(adjustedType);
 
         GameObject ext = Instantiate(extension.prefab, newPos, Quaternion.identity, transform);
         _extensions.Add(ext);

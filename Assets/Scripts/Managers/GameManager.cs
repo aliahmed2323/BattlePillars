@@ -30,7 +30,6 @@ public class GameManager : Singleton<GameManager>
     {
         SpikeyArmor = 0,
         Cannon = 1,
-        Grenadier = 2,
         Pistolier = 3,
         HealthSnail = 4,
         Rocketier = 5,

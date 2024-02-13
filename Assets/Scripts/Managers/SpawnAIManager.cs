@@ -46,6 +46,7 @@ public class SpawnAIManager : MonoBehaviour
 
     IEnumerator SpawnPillars()
     {
+        Debug.Log("Spawning battlepillars for level: " + _currentLevel);
         foreach(Pillars pillar in _levels[_currentLevel-1].pillar)
         {
             int randSpawn = Random.Range(0, 2);
