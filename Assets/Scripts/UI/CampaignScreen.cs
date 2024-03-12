@@ -6,6 +6,8 @@ using DG.Tweening;
 public class CampaignScreen : MonoBehaviour
 {
     [SerializeField] Transform[] _trees;
+    [SerializeField] GameObject _popup;
+    public GameObject _selectedLevel;
     List<Tween> _treeAnim = new();
 
     private void Start()
@@ -21,6 +23,11 @@ public class CampaignScreen : MonoBehaviour
     private void OnDisable()
     {
         DOTween.PauseAll();
+    }
+
+    public void EnablePopup()
+    {
+        _popup.SetActive(true);
     }
 
     void AnimateTree()
