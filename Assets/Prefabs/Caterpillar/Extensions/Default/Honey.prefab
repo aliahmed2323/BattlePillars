@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 5910508758434279298}
   - component: {fileID: 2121978239133905509}
   - component: {fileID: -5335135932042014880}
-  - component: {fileID: -967798140132918098}
+  - component: {fileID: 5576854179575926626}
   m_Layer: 0
   m_Name: Honey
   m_TagString: Untagged
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animUp: 0
---- !u!114 &-967798140132918098
+--- !u!114 &5576854179575926626
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -195,11 +195,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 811595614745786998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d3b0123a851f4046ad5095d2e62c0cd, type: 3}
+  m_Script: {fileID: 11500000, guid: aa79db1bcf2ded3449cd0b456ca423f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minePrefab: {fileID: 8128864974178554370, guid: 8d8b9091ba6d6264e9da79e4b8d52e87, type: 3}
-  _dropRate: 4
+  _honeyEffectTime: 6
+  _honeyReduceSpeedAmount: 2
+  _range: 30
+  _fireRate: 10
+  _honey: {fileID: 4249626401797841784, guid: 2f4ad13e1b464da49ab51489fd65408b, type: 3}
+  _honeySpeed: 5
+  _honeyObject: {fileID: 4155306893347007765, guid: 7831f717d8f876b4183eb5b5105d4b6e, type: 3}
 --- !u!1 &4810499335473027138
 GameObject:
   m_ObjectHideFlags: 0
