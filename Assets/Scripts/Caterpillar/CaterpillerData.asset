@@ -58,3 +58,27 @@ MonoBehaviour:
     prefab: {fileID: 811595614745786998, guid: 4781a2bf546d54a40a797f114064cdc8, type: 3}
     _leafCost: 70
     _icon: {fileID: 21300000, guid: 4dc3b0b484a7e5f47acdcfe6ac11f335, type: 3}
+  _honey:
+    _name: Honey
+    _img: {fileID: 21300000, guid: 73589de90b73bcb4cb2fcd0360293e40, type: 3}
+    prefab: {fileID: 811595614745786998, guid: 470dc7d822755c14db4335147541432e, type: 3}
+    _leafCost: 60
+    _icon: {fileID: 21300000, guid: c40dc510bab49af48b5422ac445c7a9c, type: 3}
+  _grenadier:
+    _name: Grenadier
+    _img: {fileID: 21300000, guid: 73589de90b73bcb4cb2fcd0360293e40, type: 3}
+    prefab: {fileID: 8803275453571237709, guid: c966ea8577fdd1847bbdd2886e2fb899, type: 3}
+    _leafCost: 60
+    _icon: {fileID: 21300000, guid: ede4975fdbf31a945a3a6cf54262425c, type: 3}
+  _feet:
+    _name: Feet
+    _img: {fileID: 21300000, guid: 73589de90b73bcb4cb2fcd0360293e40, type: 3}
+    prefab: {fileID: 811595614745786998, guid: 765a24ac0aee8e54eb5e9644bce8226e, type: 3}
+    _leafCost: 60
+    _icon: {fileID: 21300000, guid: 4e6bc072254d9ea4692f77f8e880dbbf, type: 3}
+  _bellows:
+    _name: Bellows
+    _img: {fileID: 21300000, guid: 73589de90b73bcb4cb2fcd0360293e40, type: 3}
+    prefab: {fileID: 811595614745786998, guid: 5f8e2c55d1aee914eacaeec1afa87723, type: 3}
+    _leafCost: 60
+    _icon: {fileID: 21300000, guid: 23353a768c682b2469452f9183720f63, type: 3}

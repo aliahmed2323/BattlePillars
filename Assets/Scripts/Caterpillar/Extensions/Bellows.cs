@@ -18,7 +18,7 @@ public class Bellows : MonoBehaviour
     [SerializeField] float _rangeMaximum;
     [SerializeField] float _rangeMinimum;
 
-    bool _canAttack;
+    bool _canAttack = true;
 
     private void Start()
     {
@@ -35,7 +35,7 @@ public class Bellows : MonoBehaviour
 
         if (Vector2.Distance(transform.position, cp._enemy.transform.position) < _rangeMaximum && Vector2.Distance(transform.position, cp._enemy.transform.position) > _rangeMinimum)
             if (_canAttack)
-                StartCoroutine(Attack());
+                StartCoroutine(Attack());   
 
 
     }

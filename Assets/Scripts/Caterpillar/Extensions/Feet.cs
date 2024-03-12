@@ -9,6 +9,6 @@ public class Feet : MonoBehaviour
 
     private void Start()
     {
-        GetComponent<Caterpillar>()._caterPillarSpeed += _moveSpeedBoost;
+        GetComponentInParent<Caterpillar>()._caterPillarSpeed += _moveSpeedBoost;
     }
 }

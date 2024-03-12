@@ -20,6 +20,10 @@ public class CaterpillarsScriptableObject : ScriptableObject
     public Extension _rocketier;
     public Extension _caraspace;
     public Extension _mine;
+    public Extension _honey;
+    public Extension _grenadier;
+    public Extension _feet;
+    public Extension _bellows;
 
 
     [System.Serializable]
@@ -50,6 +54,14 @@ public class CaterpillarsScriptableObject : ScriptableObject
                 return _caraspace;
             case GameManager.SegmentType.Mine:
                 return _mine;
+            case GameManager.SegmentType.Honey:
+                return _honey;
+            case GameManager.SegmentType.Feet:
+                return _feet;
+            case GameManager.SegmentType.Grenadier:
+                return _grenadier;
+            case GameManager.SegmentType.Bellows:
+                return _bellows;
             default: 
                 return _canon;
         }
