@@ -7,11 +7,13 @@ public class Grenadier : MonoBehaviour
 {
     Caterpillar cp;
     [SerializeField] float _damage;
-    [SerializeField] float _range;
+    [SerializeField] float _rangeMaximum;
+    [SerializeField] float _rangeMinimum;
     [Tooltip("Delay between every attack")]
     [SerializeField] float _fireRate;
-    [SerializeField]GameObject _bullet;
-    [SerializeField] float _bulletSpeed;
+    [SerializeField] GameObject _grenade;
+    [SerializeField] float _grenadeSpeed;
+    [SerializeField] GameObject _explosionEffect;
     bool _canAttack = true;
     [SerializeField] AudioSource _as;
     private void Start()
@@ -20,16 +22,17 @@ public class Grenadier : MonoBehaviour
     }
     private void Update()
     {
-        if(GameManager.Instance._debugRays)
+        if (GameManager.Instance._debugRays)
         {
-            Vector3 range = transform.TransformDirection(Vector3.right) * _range;
+            Vector3 range = transform.TransformDirection(Vector3.right) * _rangeMaximum;
             Debug.DrawRay(transform.position, range, Color.green);
         }
         if (cp._enemy == null) return;
 
-        if (Vector2.Distance(transform.position, cp._enemy.transform.position) < _range)
+        if (Vector2.Distance(transform.position, cp._enemy.transform.position) < _rangeMaximum && Vector2.Distance(transform.position, cp._enemy.transform.position) > _rangeMinimum)
             Attack();
-        
+
+
     }
 
     void Attack()
@@ -39,10 +42,16 @@ public class Grenadier : MonoBehaviour
         cp.InvokeStopAnim();
         _canAttack = false;
         DamageEnemy();
-        AttackAnim();
         _as.Play();
-        GameObject cb = Instantiate(_bullet, transform.position, Quaternion.identity);
-        cb.transform.DOMove(cp._enemy.transform.position, Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _bulletSpeed).OnComplete(() => Destroy(cb));
+        GameObject cb = Instantiate(_grenade, _grenade.transform.position, _grenade.transform.rotation);
+        _grenade.SetActive(false);
+        float timeToHit = Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _grenadeSpeed;
+        cb.transform.DOJump(cp._enemy.transform.position, 4, 1, timeToHit).OnComplete(() =>
+        {
+            ExplosionEffect(cb.transform.position);
+            Destroy(cb);
+        });
+
         Invoke("EnableAttack", _fireRate);
     }
     void DamageEnemy()
@@ -58,15 +67,15 @@ public class Grenadier : MonoBehaviour
             cp._enemy?.GetComponent<CaterpillarBase>()?.ReduceHealth(damage);
         }
     }
-    void AttackAnim()
+    void ExplosionEffect(Vector3 pos)
     {
-        transform.DOLocalMoveX(-0.26f, 0.18f).SetEase(Ease.InOutBack).SetLoops(2, LoopType.Yoyo).OnComplete(()=> {
-            cp.ReleaseCaterPillar();
-        });   
+        GameObject e = Instantiate(_explosionEffect, pos, Quaternion.identity);
+        e.GetComponent<Animator>().Play("Explosion");
+        Destroy(e, 1.1f);
     }
-
     void EnableAttack()
     {
         _canAttack = true;
+        _grenade.SetActive(true);
     }
 }
