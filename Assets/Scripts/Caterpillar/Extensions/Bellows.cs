@@ -47,6 +47,7 @@ public class Bellows : MonoBehaviour
         yield return new WaitForSeconds(0.8f);
 
         GameObject air = Instantiate(_airObject, _shootPoint.position, Quaternion.identity);
+        air.GetComponent<ProjectileDestroyer>()._destroyType = ProjectileDestroyer.DestroyType.Enemy;
         air.GetComponent<SpriteRenderer>().DOFade(0, 0);
 
         float timeToReachTarget = Vector2.Distance(air.transform.position, cp._enemy.transform.position) / _attackSpeed;
@@ -54,15 +55,13 @@ public class Bellows : MonoBehaviour
         air.transform.DOMoveX(cp._enemy.transform.position.x, timeToReachTarget);
         air.GetComponent<SpriteRenderer>().DOFade(255, timeToReachTarget);
 
-        yield return new WaitForSeconds(timeToReachTarget - 0.2f);
+        yield return new WaitUntil(()=> air == null);
 
         cp._enemy.GetComponent<EnemyCaterpillar>()._canMove = false;
         cp._enemy.transform.DOJump(new Vector3(cp._enemy.transform.position.x + _pushDistance, cp._enemy.transform.position.y, cp._enemy.transform.position.z), 2, 1, 1.2f).OnComplete
             (
             ()=> cp._enemy.GetComponent<EnemyCaterpillar>()._canMove = true
             );
-       
-        air.GetComponent<SpriteRenderer>().DOFade(0, 0.5f).OnComplete(()=>Destroy(air));
         Invoke(nameof(EnableAttack), _rateOfFire);
     }
 

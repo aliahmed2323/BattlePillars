@@ -200,10 +200,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _honeyEffectTime: 6
   _honeyReduceSpeedAmount: 2
-  _range: 30
+  _range: 40
   _fireRate: 10
   _honey: {fileID: 4249626401797841784, guid: 2f4ad13e1b464da49ab51489fd65408b, type: 3}
-  _honeySpeed: 5
+  _honeySpeed: 16
   _honeyObject: {fileID: 4155306893347007765, guid: 7831f717d8f876b4183eb5b5105d4b6e, type: 3}
 --- !u!1 &4810499335473027138
 GameObject:

@@ -144,8 +144,8 @@ MonoBehaviour:
   _rateOfFire: 6
   _attackSpeed: 7
   _pushDistance: 3
-  _rangeMaximum: 45
-  _rangeMinimum: 16
+  _rangeMaximum: 25
+  _rangeMinimum: 5
 --- !u!1 &1506524375323860024
 GameObject:
   m_ObjectHideFlags: 0

@@ -41,9 +41,8 @@ public class Grenadier : MonoBehaviour
         cp._canMove = false;
         cp.InvokeStopAnim();
         _canAttack = false;
-        DamageEnemy();
-        _as.Play();
-        GameObject cb = Instantiate(_grenade, _grenade.transform.position, _grenade.transform.rotation);
+        
+        GameObject cb = Instantiate(_grenade, _grenade.transform.position, Quaternion.identity);
         _grenade.SetActive(false);
         float timeToHit = Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _grenadeSpeed;
         cb.transform.DOJump(cp._enemy.transform.position, 4, 1, timeToHit).OnComplete(() =>
@@ -71,6 +70,7 @@ public class Grenadier : MonoBehaviour
     {
         GameObject e = Instantiate(_explosionEffect, pos, Quaternion.identity);
         e.GetComponent<Animator>().Play("Explosion");
+        DamageEnemy();
         Destroy(e, 1.1f);
     }
     void EnableAttack()
