@@ -4,30 +4,52 @@ using UnityEngine;
 using System;
 using System.Linq;
 
-public class LeafManager : MonoBehaviour
+public class LeafManager : Singleton<LeafManager>
 {
     [Tooltip("Time it takes for leafs bar to be full")]
-    [SerializeField] int _leafFullTime = 30;
-    LeafLevels _leafLevel = LeafLevels.Level1;
+    [HideInInspector]
+    public LeafLevels _leafLevel = LeafLevels.Level1;
+    [SerializeField] List<LeafUpgrades> _leafUpgrades = new();
     float timeUntilLeafAdd;
+
+    [HideInInspector]
+    public LeafUpgrades _currentLeafLevelData;
 
     public enum LeafLevels
     {
-        Level1 = 220,
-        Level2 = 350,
-        Level4 = 520,
-        Level5 = 600
+        Level1,
+        Level2,
+        Level3,
+        Level4,
+        Level5
+    }
+
+    [System.Serializable]
+    public struct LeafUpgrades
+    {
+        public LeafLevels _leafLevel;
+        public int _maxLeafs;
+        public int _timeToFullLeafs;
+        public int _upgradeCost;
+    }
+
+    private void Awake()
+    {
+        _currentLeafLevelData = GetLeafLevelData(LeafLevels.Level1);
     }
 
     private void Start()
     {
+        timeUntilLeafAdd = (float)_currentLeafLevelData._timeToFullLeafs / (float)_currentLeafLevelData._maxLeafs;
         AddLeafs();
-        timeUntilLeafAdd = _leafFullTime / ((int)_leafLevel);
     }
 
     void AddLeafs()
     {
-        GameManager.Instance.SetLeafs(1);
+        if (GameManager.Instance.GetLeafs() >= _currentLeafLevelData._maxLeafs)
+            return;
+
+            GameManager.Instance.AddLeafs(1);
         Invoke("AddLeafs", timeUntilLeafAdd);
     }
 
@@ -37,10 +59,24 @@ public class LeafManager : MonoBehaviour
     {
         if (_leafLevel == LeafLevels.Level5) return;
 
+        if (!GameManager.Instance.DeductLeafs(_currentLeafLevelData._upgradeCost))
+            return;
+
         _leafLevel = Enum.GetValues(typeof(LeafLevels)).Cast<LeafLevels>()
         .SkipWhile(e => e != _leafLevel).Skip(1).First();
 
-        timeUntilLeafAdd = _leafFullTime / ((int)_leafLevel);
+        _currentLeafLevelData = GetLeafLevelData(_leafLevel);
+        timeUntilLeafAdd = (float)_currentLeafLevelData._timeToFullLeafs / (float)_currentLeafLevelData._maxLeafs;
+    }
+
+    LeafUpgrades GetLeafLevelData(LeafLevels level)
+    {
+        foreach(LeafUpgrades l in _leafUpgrades)
+        {
+            if (l._leafLevel == level)
+                return l;
+        }
+        return _leafUpgrades[0];
     }
 
 }

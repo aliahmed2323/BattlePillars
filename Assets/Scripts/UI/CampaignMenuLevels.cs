@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class CampaignMenuLevels : MonoBehaviour
 {
     [SerializeField] int _level;
+    [SerializeField] string _mapName;
+    [SerializeField] int _reward;
     public bool _isLocked;
 
     private void Start()
@@ -16,12 +18,12 @@ public class CampaignMenuLevels : MonoBehaviour
 
     void LoadLevel()
     {
-       /* if (_isLocked)
+        if (_isLocked)
             return;
 
         GetComponentInParent<CampaignScreen>()._selectedLevel = gameObject;
-        GetComponentInParent<CampaignScreen>().EnablePopup();*/
-        PlayerPrefs.SetInt("Level", _level);
-        UIManager.Instance._segmentSelectionPanel.gameObject.SetActive(true);
+        GetComponentInParent<CampaignScreen>().EnablePopup(_mapName, _level, _reward);
+        /*PlayerPrefs.SetInt("Level", _level);
+        UIManager.Instance._segmentSelectionPanel.gameObject.SetActive(true);*/
     }
 }

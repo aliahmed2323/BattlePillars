@@ -109,4 +109,8 @@ public class GameManager : Singleton<GameManager>
     {
         _leafs = amount;
     }
+    public void AddLeafs(int amount)
+    {
+        _leafs += amount;
+    }
 }

@@ -10,15 +10,28 @@ public class CaterpillarBuilderPanel : MonoBehaviour
     public GameObject _caterPillarPanelHead;
     [SerializeField] Text _leafCountText;
     [SerializeField] GameObject _extensionTypePanel;
+    [SerializeField] Button _upgradeLeafButton;
     private void Start()
     {
         UIManager.Instance._caterPillarBuilderPanel = this;
+        _upgradeLeafButton.onClick.AddListener(() => UpgradeLeafs());
+        _upgradeLeafButton.transform.GetChild(0).gameObject.GetComponent<Text>().text = LeafManager.Instance._currentLeafLevelData._upgradeCost.ToString();
         AddSegmentsToScrollView();
+    }
+
+    void UpgradeLeafs()
+    {
+        Debug.Log("upgrade leaf called");
+        LeafManager.Instance.UpgradeLeaf();
+        if (LeafManager.Instance._leafLevel == LeafManager.LeafLevels.Level5)
+            _upgradeLeafButton.transform.GetChild(0).gameObject.GetComponent<Text>().text = "MAX";
+        else
+            _upgradeLeafButton.transform.GetChild(0).gameObject.GetComponent<Text>().text = LeafManager.Instance._currentLeafLevelData._upgradeCost.ToString();
     }
 
     private void Update()
     {
-        _leafCountText.text = GameManager.Instance.GetLeafs().ToString() + "/ 250 Leafs";
+        _leafCountText.text = GameManager.Instance.GetLeafs().ToString() + " / " + LeafManager.Instance._currentLeafLevelData._maxLeafs.ToString();
     }
 
     public void AddExtension(GameManager.SegmentType type)

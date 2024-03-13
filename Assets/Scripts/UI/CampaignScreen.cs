@@ -25,9 +25,10 @@ public class CampaignScreen : MonoBehaviour
         DOTween.PauseAll();
     }
 
-    public void EnablePopup()
+    public void EnablePopup(string mapname, int level, int reward)
     {
         _popup.SetActive(true);
+        _popup.GetComponent<CampiagnLevelPopup>().UpdatePopup(mapname, level, reward);
     }
 
     void AnimateTree()

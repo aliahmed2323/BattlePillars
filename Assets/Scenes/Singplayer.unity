@@ -316,7 +316,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: MAX
+  m_Text: 20
 --- !u!222 &98440346
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2933,6 +2933,7 @@ MonoBehaviour:
   _caterPillarPanelHead: {fileID: 852712189}
   _leafCountText: {fileID: 1421009046}
   _extensionTypePanel: {fileID: 7374948929567112640, guid: a1f9d965e11db0d4993834722149d31d, type: 3}
+  _upgradeLeafButton: {fileID: 214733512}
 --- !u!1 &935520545
 GameObject:
   m_ObjectHideFlags: 0
@@ -4080,6 +4081,77 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796431098}
   m_CullTransparentMesh: 1
+--- !u!1 &1805750428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1805750430}
+  - component: {fileID: 1805750429}
+  m_Layer: 0
+  m_Name: LeafManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1805750429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805750428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5600f0c9ae85ec24f907ad86679f24c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _leafLevel: 0
+  _leafUpgrades:
+  - _leafLevel: 0
+    _maxLeafs: 150
+    _timeToFullLeafs: 30
+    _upgradeCost: 50
+  - _leafLevel: 1
+    _maxLeafs: 250
+    _timeToFullLeafs: 25
+    _upgradeCost: 100
+  - _leafLevel: 2
+    _maxLeafs: 350
+    _timeToFullLeafs: 22
+    _upgradeCost: 200
+  - _leafLevel: 3
+    _maxLeafs: 450
+    _timeToFullLeafs: 20
+    _upgradeCost: 350
+  - _leafLevel: 4
+    _maxLeafs: 550
+    _timeToFullLeafs: 18
+    _upgradeCost: 300
+  _currentLeafLevelData:
+    _leafLevel: 0
+    _maxLeafs: 0
+    _timeToFullLeafs: 0
+    _upgradeCost: 0
+--- !u!4 &1805750430
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805750428}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1529.2319, y: 452.0231, z: 3.828287}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1814187453
 GameObject:
   m_ObjectHideFlags: 0
@@ -4430,7 +4502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _debugRays: 1
-  _leafs: 10000
+  _leafs: 0
   _caterPillars:
   - {fileID: 11400000, guid: cf94178b7812c2d42bb6b6892ee0c5d1, type: 2}
   _enemyCaterPillars:
