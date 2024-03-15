@@ -43,7 +43,8 @@ public class CampaignScreen : MonoBehaviour
 
     public void LoadLevelsFromSave()
     {
-        int count = SaveManager.Instance._saveData._playerData._completedLevels.Count + 1;
+        int count = SaveManager.Instance._saveData._playerData._completedLevels.Count;
+
 
         for(int i = 0; i <= count; i++)
         {
@@ -52,7 +53,7 @@ public class CampaignScreen : MonoBehaviour
             if (i == count)
                 return;
 
-            _levels[i].GetComponent<CampaignMenuLevels>().SetFlower(SaveManager.Instance._saveData.GetCompletedLevel(i + 1)._score);
+            _levels[i].GetComponent<CampaignMenuLevels>().SetFlower(SaveManager.Instance._saveData.GetCompletedLevel(i)._score);
         }
     }
 }
