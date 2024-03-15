@@ -51,6 +51,9 @@ public class CaterpillarHealthManager : MonoBehaviour
 
     void Die()
     {
+        if (gameObject.CompareTag("Enemy"))
+            GameManager.Instance.kills++;
+
         Debug.Log(gameObject.name + " died");
         Destroy(gameObject);
     }

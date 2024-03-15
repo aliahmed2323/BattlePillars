@@ -13,6 +13,8 @@ public class GameManager : Singleton<GameManager>
     public List<CaterpillarsScriptableObject> _caterPillars = new();
     public List<CaterpillarsScriptableObject> _enemyCaterPillars = new();
     public int _caterPillarType;
+    
+    public int kills;
 
     [Header("Gameplay refs")]
     [SerializeField] List<Transform> _spawnPoints = new();
@@ -43,6 +45,7 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
+        Timer.Instance.StartTimer();
         CreateCaterpillar(0);
     }
 
