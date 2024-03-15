@@ -57,7 +57,19 @@ public class SaveManager : Singleton<SaveManager>
         }
     }
 
-    
+    public bool DeductApples(int amount)
+    {
+        if (_saveData._playerData._apples >= amount)
+        {
+            _saveData._playerData._apples -= amount;
+            return true;
+        }
+        return false;
+    }
+    public int GetApples()
+    {
+        return _saveData._playerData._apples;
+    }
 
     private void OnApplicationQuit()
     {

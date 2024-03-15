@@ -40,4 +40,19 @@ public class SavesScriptableObject : ScriptableObject
         }
         return _playerData._completedLevels[0];
     }
+
+    /*public OwnedSegments GetOwnedSegment()
+    {
+        foreach()
+    }*/
+
+    public bool IsSegmentOwned( GameManager.SegmentType segmentType )
+    {
+        foreach(OwnedSegments i in _playerData._ownedSegments)
+        {
+            if (i._segmentType == segmentType)
+                return true;
+        }
+        return false;
+    }
 }
