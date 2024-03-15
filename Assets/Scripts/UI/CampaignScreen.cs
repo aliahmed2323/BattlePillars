@@ -13,18 +13,18 @@ public class CampaignScreen : MonoBehaviour
 
     private void Start()
     {
-        AnimateTree();
+        /*AnimateTree();*/
         LoadLevelsFromSave();
     }
 
     private void OnEnable()
     {
-        DOTween.PlayAll();
+        /*DOTween.PlayAll();*/
     }
 
     private void OnDisable()
     {
-        DOTween.PauseAll();
+        /*DOTween.PauseAll();*/
     }
 
     public void EnablePopup(string mapname, int level, int reward)
@@ -33,21 +33,26 @@ public class CampaignScreen : MonoBehaviour
         _popup.GetComponent<CampiagnLevelPopup>().UpdatePopup(mapname, level, reward);
     }
 
-    void AnimateTree()
+/*    void AnimateTree()
     {
         foreach(Transform child in _trees)
         {
             _treeAnim.Add(child.DOScale(1.05f, 1.4f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InSine));
         }
-    }
+    }*/
 
     public void LoadLevelsFromSave()
     {
-        int count = SaveManager.Instance._saveData._playerData._completedLevels.Count;
+        int count = SaveManager.Instance._saveData._playerData._completedLevels.Count + 1;
 
         for(int i = 0; i <= count; i++)
         {
             _levels[i].GetComponent<CampaignMenuLevels>()._isLocked = false;
+
+            if (i == count)
+                return;
+
+            _levels[i].GetComponent<CampaignMenuLevels>().SetFlower(SaveManager.Instance._saveData.GetCompletedLevel(i + 1)._score);
         }
     }
 }

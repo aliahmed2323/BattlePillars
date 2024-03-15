@@ -30,4 +30,14 @@ public class SavesScriptableObject : ScriptableObject
        public GameManager.SegmentType _segmentType;
         public int _segmentLevel;
     }
+
+    public CompletedLevels GetCompletedLevel(int _levelID)
+    {
+        foreach(CompletedLevels l in _playerData._completedLevels)
+        {
+            if (l._levelID == _levelID)
+                return l;
+        }
+        return _playerData._completedLevels[0];
+    }
 }
