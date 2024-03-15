@@ -31,6 +31,8 @@ public class SaveManager : Singleton<SaveManager>
 
     private void Start()
     {
+        Application.targetFrameRate = 30;
+
         LoadGame();
     }
 

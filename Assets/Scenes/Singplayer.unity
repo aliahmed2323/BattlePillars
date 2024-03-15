@@ -1952,6 +1952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360f9c5797280d047a2e40c797c38ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShouldPersistOnLoad: 0
   _caterPillarBuilderPanel: {fileID: 894365901}
   _mainMenuPanel: {fileID: 0}
   _gamemodeSelectionPanel: {fileID: 0}
@@ -3465,6 +3466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c1948ac6baa4345b5ab93b7a68a944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShouldPersistOnLoad: 0
 --- !u!4 &952609606
 Transform:
   m_ObjectHideFlags: 0
@@ -4892,6 +4894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5600f0c9ae85ec24f907ad86679f24c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShouldPersistOnLoad: 0
   _leafLevel: 0
   _leafUpgrades:
   - _leafLevel: 0
@@ -5439,8 +5442,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea30d73d8f8c574db0f6aa187f2922c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShouldPersistOnLoad: 0
   _debugRays: 1
-  _leafs: 10000
+  _leafs: 50
   _caterPillars:
   - {fileID: 11400000, guid: cf94178b7812c2d42bb6b6892ee0c5d1, type: 2}
   _enemyCaterPillars:
