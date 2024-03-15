@@ -13,7 +13,16 @@ MonoBehaviour:
   m_Name: Save Data
   m_EditorClassIdentifier: 
   _playerData:
-    _apples: 0
-    _unlockedModes: 
-    _completedLevels: []
-    _ownedSegments: []
+    _apples: 30
+    _unlockedModes: 0000000002000000
+    _completedLevels:
+    - _levelID: 1
+      _completionTime: 45
+      _score: 0
+    _ownedSegments:
+    - _segmentType: 5
+      _segmentLevel: 0
+    - _segmentType: 3
+      _segmentLevel: 2
+    - _segmentType: 6
+      _segmentLevel: 1

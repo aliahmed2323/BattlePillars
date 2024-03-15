@@ -53,5 +53,41 @@ public class GameOverPanel : MonoBehaviour
             _timeTakenText.text = "0" + minutesElapsed + ":" + secondsElapsed;
 
         _applesText.text = SaveManager.Instance._saveData._playerData._apples.ToString();
+
+        UpdateSave(_timeElapsed);
+    }
+
+
+    SavesScriptableObject.CompletedLevels level;
+    void UpdateSave(int timeElapsed)
+    {
+        level._levelID = PlayerPrefs.GetInt("Level");
+        level._completionTime = timeElapsed;
+
+        if (SaveManager.Instance._saveData._playerData._completedLevels.Count == 0)
+        {
+            SaveManager.Instance._saveData._playerData._completedLevels.Add(level);
+            SaveManager.Instance.SaveGame();
+            return;
+        }
+        else
+        {
+            SavesScriptableObject.CompletedLevels _foundlevel;
+
+            foreach (SavesScriptableObject.CompletedLevels i in SaveManager.Instance._saveData._playerData._completedLevels)
+            {
+                if (level._levelID == i._levelID)
+                {
+                    _foundlevel = i;
+                    SaveManager.Instance._saveData._playerData._completedLevels.Remove(_foundlevel);
+                }
+                else
+                {
+                    SaveManager.Instance._saveData._playerData._completedLevels.Add(level);
+                    return;
+                }
+            }
+        }
+        SaveManager.Instance._saveData._playerData._completedLevels.Add(level);
     }
 }

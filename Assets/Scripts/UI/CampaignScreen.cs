@@ -9,10 +9,12 @@ public class CampaignScreen : MonoBehaviour
     [SerializeField] GameObject _popup;
     public GameObject _selectedLevel;
     List<Tween> _treeAnim = new();
+    [SerializeField] GameObject[] _levels;
 
     private void Start()
     {
         AnimateTree();
+        LoadLevelsFromSave();
     }
 
     private void OnEnable()
@@ -36,6 +38,16 @@ public class CampaignScreen : MonoBehaviour
         foreach(Transform child in _trees)
         {
             _treeAnim.Add(child.DOScale(1.05f, 1.4f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InSine));
+        }
+    }
+
+    public void LoadLevelsFromSave()
+    {
+        int count = SaveManager.Instance._saveData._playerData._completedLevels.Count;
+
+        for(int i = 0; i <= count; i++)
+        {
+            _levels[i].GetComponent<CampaignMenuLevels>()._isLocked = false;
         }
     }
 }

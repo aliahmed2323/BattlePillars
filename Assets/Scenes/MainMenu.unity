@@ -586,6 +586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7841c196cffaf3f49bb3c990eed5c952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShouldPersistOnLoad: 1
   _saveData: {fileID: 11400000, guid: cd8ff02b1be2dc7489ef252737d98e75, type: 2}
   DefaultSaveLocation: /Battlepillars/Saves/
 --- !u!4 &50204333
@@ -5728,6 +5729,29 @@ MonoBehaviour:
   - {fileID: 1904778092}
   _popup: {fileID: 1439466886}
   _selectedLevel: {fileID: 0}
+  _levels:
+  - {fileID: 1450090265}
+  - {fileID: 1126240881}
+  - {fileID: 266206091}
+  - {fileID: 161647478}
+  - {fileID: 1028515702}
+  - {fileID: 929318867}
+  - {fileID: 2016837833}
+  - {fileID: 2063569105}
+  - {fileID: 1160735483}
+  - {fileID: 1408474569}
+  - {fileID: 1487625219}
+  - {fileID: 654515586}
+  - {fileID: 489783147}
+  - {fileID: 1117337942}
+  - {fileID: 1527024243}
+  - {fileID: 281364918}
+  - {fileID: 326734279}
+  - {fileID: 581395561}
+  - {fileID: 2027318150}
+  - {fileID: 584330603}
+  - {fileID: 1419558500}
+  - {fileID: 1425132366}
 --- !u!1 &574624503
 GameObject:
   m_ObjectHideFlags: 0
@@ -14047,6 +14071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360f9c5797280d047a2e40c797c38ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShouldPersistOnLoad: 0
   _caterPillarBuilderPanel: {fileID: 0}
   _mainMenuPanel: {fileID: 1987506585}
   _gamemodeSelectionPanel: {fileID: 1495653818}
