@@ -53,6 +53,10 @@ public class SaveManager : Singleton<SaveManager>
             Debug.Log("SaveData was not foud: Creating new one.");
             Directory.CreateDirectory(filePath);
             File.Create(filePath + "SaveData.json");
+            SavesScriptableObject.OwnedSegments l;
+            l._segmentType = GameManager.SegmentType.Cannon;
+            l._segmentLevel = 1;
+            _saveData._playerData._ownedSegments.Add(l);
             SaveGame();
         }
     }
