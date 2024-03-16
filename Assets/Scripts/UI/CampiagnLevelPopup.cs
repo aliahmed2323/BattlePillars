@@ -12,6 +12,7 @@ public class CampiagnLevelPopup : MonoBehaviour
 
     int _level;
 
+    int _reward;
 
     private void Start()
     {
@@ -23,11 +24,13 @@ public class CampiagnLevelPopup : MonoBehaviour
         _rewardText.text = reward.ToString();
         _bestTimeText.text = "00:00";
         _level = level;
+        _reward = reward;
     }
 
     void OnPlayButtonClick()
     {
         PlayerPrefs.SetInt("Level", _level);
+        SaveManager.Instance.AddApples(_reward);
         UIManager.Instance._segmentSelectionPanel.gameObject.SetActive(true);
     }
 }

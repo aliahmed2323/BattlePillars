@@ -13,10 +13,16 @@ public class SegmentUpgradeScreen : MonoBehaviour
     public GameManager.SegmentType _selectedSegment;
     [HideInInspector]
     public int _selectedSegmentCost;
+    [SerializeField] Text _appleText;
 
     private void Start()
     {
         _purchaseButton.onClick.AddListener(() => PurchaseSegment());
+    }
+
+    private void Update()
+    {
+        _appleText.text = SaveManager.Instance.GetApples().ToString();
     }
 
     void PurchaseSegment()

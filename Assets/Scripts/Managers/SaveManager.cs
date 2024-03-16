@@ -75,6 +75,12 @@ public class SaveManager : Singleton<SaveManager>
         return _saveData._playerData._apples;
     }
 
+    public void AddApples(int amount)
+    {
+        _saveData._playerData._apples += amount;
+    }
+
+
     private void OnApplicationQuit()
     {
         SaveGame();
