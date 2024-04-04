@@ -1958,6 +1958,7 @@ MonoBehaviour:
   _gamemodeSelectionPanel: {fileID: 0}
   _campaignScreen: {fileID: 0}
   _segmentSelectionPanel: {fileID: 0}
+  _segmentUpgradePanel: {fileID: 0}
 --- !u!1 &581385388
 GameObject:
   m_ObjectHideFlags: 0

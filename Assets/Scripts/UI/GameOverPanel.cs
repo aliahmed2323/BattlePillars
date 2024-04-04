@@ -24,7 +24,8 @@ public class GameOverPanel : MonoBehaviour
         int nextLevel = PlayerPrefs.GetInt("Level") + 1;
         PlayerPrefs.SetInt("Level", nextLevel);
         Time.timeScale = 1;
-        SceneManager.LoadScene("Singplayer");
+        PlayerPrefs.SetInt("PanelEnabler", 3);
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void EndGame(bool victory)
