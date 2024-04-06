@@ -76,8 +76,12 @@ public class GameManager : Singleton<GameManager>
 
     public void ReleaseCaterpillar()
     {
+        if (!DeductLeafs(UIManager.Instance._caterPillarBuilderPanel._currentBattlepillarCost)) return;
+
         _currentCaterpillar.GetComponent<Caterpillar>().ReleaseCaterPillar();
         Transform t = UIManager.Instance._caterPillarBuilderPanel._caterPillarPanelHead.transform.parent;
+        UIManager.Instance._caterPillarBuilderPanel._currentBattlepillarCost = 0;
+        UIManager.Instance._caterPillarBuilderPanel.ResetProgressBar();
         foreach (Transform child in t)
         {
             if (child.name != "Head")
