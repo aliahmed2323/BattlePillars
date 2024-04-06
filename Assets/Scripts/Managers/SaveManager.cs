@@ -50,15 +50,27 @@ public class SaveManager : Singleton<SaveManager>
         }
         else
         {
-            Debug.Log("SaveData was not foud: Creating new one.");
-            Directory.CreateDirectory(filePath);
-            File.Create(filePath + "SaveData.json");
-            SavesScriptableObject.OwnedSegments l;
-            l._segmentType = GameManager.SegmentType.Cannon;
-            l._segmentLevel = 1;
-            _saveData._playerData._ownedSegments.Add(l);
-            SaveGame();
+            CreateSaveFiles(filePath);
         }
+    }
+
+    void CreateSaveFiles(string filePath)
+    {
+        Debug.Log("SaveData was not foud: Creating new one.");
+        Directory.CreateDirectory(filePath);
+        File.Create(filePath + "SaveData.json");
+        SavesScriptableObject.OwnedSegments l;
+        l._segmentType = GameManager.SegmentType.Cannon;
+        l._segmentLevel = 1;
+        _saveData._playerData._ownedSegments.Add(l);
+        l._segmentType = GameManager.SegmentType.SpikeyArmor;
+        l._segmentLevel = 1;
+        _saveData._playerData._ownedSegments.Add(l);
+        l._segmentType = GameManager.SegmentType.Grenadier;
+        l._segmentLevel = 1;
+        _saveData._playerData._ownedSegments.Add(l);
+        _saveData._playerData._apples = 500;
+        SaveGame();
     }
 
     public bool DeductApples(int amount)
