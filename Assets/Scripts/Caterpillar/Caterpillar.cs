@@ -52,6 +52,7 @@ public class Caterpillar : MonoBehaviour
         Vector2 newPos = new Vector2(_extensions[_extensions.Count - 1].transform.position.x - _extensionGap, transform.position.y);
         CaterpillarsScriptableObject.Extension extension;
 
+        // Currently dont have some of these segments for enemy so resetting them to cannon incase this instance is an enemy
         GameManager.SegmentType adjustedType;
         if (type == GameManager.SegmentType.Caraspace || type == GameManager.SegmentType.Mine || type == GameManager.SegmentType.Rocketier || type == GameManager.SegmentType.Pistolier)
             adjustedType = GameManager.SegmentType.Cannon;

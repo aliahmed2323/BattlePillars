@@ -25,7 +25,10 @@ public class Canon : MonoBehaviour
             Vector3 range = transform.TransformDirection(Vector3.right) * _range;
             Debug.DrawRay(transform.position, range, Color.green);
         }
-        if (cp._enemy == null) return;
+        if (cp._enemy == null)
+        {
+            return;
+        }
 
         if (Vector2.Distance(transform.position, cp._enemy.transform.position) < _range)
             Attack();
