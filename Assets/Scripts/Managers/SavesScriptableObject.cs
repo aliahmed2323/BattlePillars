@@ -14,6 +14,7 @@ public class SavesScriptableObject : ScriptableObject
         public SaveManager.Modes[] _unlockedModes;
         public List<CompletedLevels> _completedLevels;
         public List<OwnedSegments> _ownedSegments;
+        public List<GameManager.BaseUpgrades> _baseUpgrades;
     }
 
     [System.Serializable]
@@ -51,6 +52,16 @@ public class SavesScriptableObject : ScriptableObject
         foreach(OwnedSegments i in _playerData._ownedSegments)
         {
             if (i._segmentType == segmentType)
+                return true;
+        }
+        return false;
+    }
+
+    public bool IsBaseUpgradeOwned(GameManager.BaseUpgrades type)
+    {
+        foreach (GameManager.BaseUpgrades i in _playerData._baseUpgrades)
+        {
+            if (i == type)
                 return true;
         }
         return false;

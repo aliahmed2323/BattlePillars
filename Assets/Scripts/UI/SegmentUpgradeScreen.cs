@@ -5,8 +5,15 @@ using UnityEngine.UI;
 
 public class SegmentUpgradeScreen : MonoBehaviour
 {
+    // general stuff
     public GameObject _textbox;
-    [SerializeField] Button _purchaseButton;
+    [SerializeField] Button _purchaseSegmentScreenButton;
+    [SerializeField] Button _purchaseBaseUpgradesScreenButton;
+    [SerializeField] GameObject _SegmentScreen;
+    [SerializeField] GameObject _BaseUpgradesScreen;
+
+    // Purchase Segment Screen stuff
+    [SerializeField] Button _segmentPurchaseButton;
     [HideInInspector]
     public GameObject _selectedSegmentGameObject;
     [HideInInspector]
@@ -15,14 +22,40 @@ public class SegmentUpgradeScreen : MonoBehaviour
     public int _selectedSegmentCost;
     [SerializeField] Text _appleText;
 
+    // Base Upgrade Screen Stuff
+    [SerializeField] Button _basePurchaseButton;
+    [HideInInspector]
+    public GameObject _selectedBaseUpgradeGameObject;
+    [HideInInspector]
+    public GameManager.BaseUpgrades _selectedBaseUpgrade;
+    [HideInInspector]
+    public int _selectedBaseUpgradeCost;
+
+
     private void Start()
     {
-        _purchaseButton.onClick.AddListener(() => PurchaseSegment());
+        _segmentPurchaseButton.onClick.AddListener(() => PurchaseSegment());
+        _basePurchaseButton.onClick.AddListener(() => PurchaseBaseUpgrade());
+        _purchaseSegmentScreenButton.onClick.AddListener(() => ChangeScreen(true));
+        _purchaseBaseUpgradesScreenButton.onClick.AddListener(() => ChangeScreen(false));
     }
 
     private void Update()
     {
         _appleText.text = SaveManager.Instance.GetApples().ToString();
+    }
+
+    void ChangeScreen(bool segmentSelection)
+    {
+        if(segmentSelection)
+        {
+            _SegmentScreen.SetActive(true);
+            _BaseUpgradesScreen.SetActive(false);
+            return;
+        }
+
+        _SegmentScreen.SetActive(false);
+        _BaseUpgradesScreen.SetActive(true);
     }
 
     void PurchaseSegment()
@@ -34,6 +67,15 @@ public class SegmentUpgradeScreen : MonoBehaviour
             l._segmentLevel = 1;
             SaveManager.Instance._saveData._playerData._ownedSegments.Add(l);
             _selectedSegmentGameObject.GetComponent<SegmentUpgradeButton>().RefreshPurchaseStatus();
+        }
+    }
+
+    void PurchaseBaseUpgrade()
+    {
+        if (SaveManager.Instance.DeductApples(_selectedSegmentCost))
+        {
+            SaveManager.Instance._saveData._playerData._baseUpgrades.Add(_selectedBaseUpgrade);
+            _selectedBaseUpgradeGameObject.GetComponent<BaseUpgradeButton>().RefreshPurchaseStatus();
         }
     }
 }

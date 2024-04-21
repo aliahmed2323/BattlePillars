@@ -12,6 +12,8 @@ public class LeafManager : Singleton<LeafManager>
     [SerializeField] List<LeafUpgrades> _leafUpgrades = new();
     float timeUntilLeafAdd;
 
+    public float _leafGenMultiplier = 1;
+
     [HideInInspector]
     public LeafUpgrades _currentLeafLevelData;
 
@@ -49,7 +51,7 @@ public class LeafManager : Singleton<LeafManager>
         if (GameManager.Instance.GetLeafs() >= _currentLeafLevelData._maxLeafs)
             return;
 
-            GameManager.Instance.AddLeafs(1);
+            GameManager.Instance.AddLeafs((int)(1 * _leafGenMultiplier));
         Invoke("AddLeafs", timeUntilLeafAdd);
     }
 

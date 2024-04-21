@@ -43,6 +43,13 @@ public class GameManager : Singleton<GameManager>
         Bellows = 11
     }
 
+    public enum BaseUpgrades
+    {
+        Attack,
+        Defense,
+        Production
+    }
+
     private void Start()
     {
         Timer.Instance.StartTimer();

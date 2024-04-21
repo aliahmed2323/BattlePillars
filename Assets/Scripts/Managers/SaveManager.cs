@@ -6,6 +6,7 @@ using System.IO;
 
 public class SaveManager : Singleton<SaveManager>
 {
+    public bool LoadDataFromSaveFile;
     public SavesScriptableObject _saveData;
     public string DefaultSaveLocation = "/Saves/";
     public enum Modes
@@ -33,7 +34,8 @@ public class SaveManager : Singleton<SaveManager>
     {
         Application.targetFrameRate = 30;
 
-        LoadGame();
+        if(LoadDataFromSaveFile)
+            LoadGame();
     }
 
     public void LoadGame()

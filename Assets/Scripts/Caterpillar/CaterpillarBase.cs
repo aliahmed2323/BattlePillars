@@ -10,6 +10,32 @@ public class CaterpillarBase : MonoBehaviour
     [SerializeField] Slider _healthSlider;
     [SerializeField] GameOverPanel _gmp;
 
+    [SerializeField] GameObject _attackUpgrade;
+    [SerializeField] GameObject _defenceUpgrade;
+
+    private void Start()
+    {
+        if(!_isEnemyBase)
+            AddBaseUpgrades();
+    }
+
+    void AddBaseUpgrades()
+    {
+        if (SaveManager.Instance._saveData.IsBaseUpgradeOwned(GameManager.BaseUpgrades.Attack))
+            _attackUpgrade.SetActive(true);
+
+        if (SaveManager.Instance._saveData.IsBaseUpgradeOwned(GameManager.BaseUpgrades.Production))
+        {
+            LeafManager.Instance._leafGenMultiplier = 2;
+        }
+
+        if (SaveManager.Instance._saveData.IsBaseUpgradeOwned(GameManager.BaseUpgrades.Defense))
+        {
+            _health = _health * 2;
+            _defenceUpgrade.SetActive(true);
+        }
+    }
+
     public void ReduceHealth(float amount)
     {
         _healthSlider.gameObject.SetActive(true);

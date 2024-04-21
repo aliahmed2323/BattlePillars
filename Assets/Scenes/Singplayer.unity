@@ -5326,6 +5326,7 @@ MonoBehaviour:
     _maxLeafs: 550
     _timeToFullLeafs: 18
     _upgradeCost: 300
+  _leafGenMultiplier: 1
   _currentLeafLevelData:
     _leafLevel: 0
     _maxLeafs: 0
@@ -6378,6 +6379,14 @@ PrefabInstance:
       propertyPath: _health
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 69046021, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: _attackUpgrade
+      value: 
+      objectReference: {fileID: 3150047413487468125}
+    - target: {fileID: 69046021, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: _defenceUpgrade
+      value: 
+      objectReference: {fileID: 3150047413487468126}
     - target: {fileID: 3150047413554868568, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -6436,6 +6445,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+--- !u!1 &3150047413487468125 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1819784069287999430, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+  m_PrefabInstance: {fileID: 3150047413487468124}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3150047413487468126 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1630892703815995372, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+  m_PrefabInstance: {fileID: 3150047413487468124}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7193529904255610802
 PrefabInstance:
   m_ObjectHideFlags: 0
