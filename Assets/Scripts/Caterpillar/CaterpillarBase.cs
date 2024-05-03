@@ -32,6 +32,7 @@ public class CaterpillarBase : MonoBehaviour
         if (SaveManager.Instance._saveData.IsBaseUpgradeOwned(GameManager.BaseUpgrades.Defense))
         {
             _health = _health * 2;
+            _healthSlider.maxValue = 2;
             _defenceUpgrade.SetActive(true);
         }
     }

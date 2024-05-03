@@ -44,11 +44,11 @@ public class PlayerCaterpillar : Caterpillar
             if (hit.collider.gameObject.CompareTag("Enemy") || hit.collider.gameObject.CompareTag("EnemyBase"))
                 _enemy = hit.collider.gameObject;
         }
-        // will this solve the bug?
-        if(_enemy == null)
+        // will this solve the bug? -- no just adds another bug
+        /*if (_enemy == null*//* && _extensions.Count > 1*//*)
         {
             LockCaterpillar(false);
             _canMove = true;
-        }
+        }*/
     }
 }

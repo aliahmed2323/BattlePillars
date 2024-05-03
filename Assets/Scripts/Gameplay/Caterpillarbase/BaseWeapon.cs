@@ -35,19 +35,21 @@ public class BaseWeapon : MonoBehaviour
     {
         if(collision.CompareTag("Enemy"))
         {
+            Debug.Log("trigger enter");
             _canAttack = true;
             cp = collision.gameObject.GetComponent<Caterpillar>();
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    /*private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
+            Debug.Log("trigger exit");
             _canAttack = false;
             cp = null;
         }
-    }
+    }*/
 
     void Attack()
     {
@@ -67,6 +69,11 @@ public class BaseWeapon : MonoBehaviour
     }
     void AttackAnim()
     {
-        _gun.transform.DOLocalMoveX(-0.26f, 0.18f).SetEase(Ease.InOutBack).SetLoops(2, LoopType.Yoyo);
+        _gun.transform.DOLocalMoveX(-0.06f, 0.18f).SetEase(Ease.InOutBack).SetLoops(2, LoopType.Yoyo);
+    }
+
+    void EnableAttack()
+    {
+        _canAttack = true;
     }
 }

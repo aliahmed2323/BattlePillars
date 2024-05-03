@@ -60,6 +60,7 @@ public class GameManager : Singleton<GameManager>
     {
         int randomSpawn = Random.Range(0, _spawnPoints.Count - 1);
         _currentCaterpillar = Instantiate(_caterPillars[id]._headPrefab, _spawnPoints[randomSpawn].position, Quaternion.identity);
+        /*_currentCaterpillar.SetActive(false);*/
     }
 
     /*//temp
@@ -85,6 +86,7 @@ public class GameManager : Singleton<GameManager>
     {
         if (!DeductLeafs(UIManager.Instance._caterPillarBuilderPanel._currentBattlepillarCost)) return;
 
+        /*_currentCaterpillar.SetActive(true);*/
         _currentCaterpillar.GetComponent<Caterpillar>().ReleaseCaterPillar();
         Transform t = UIManager.Instance._caterPillarBuilderPanel._caterPillarPanelHead.transform.parent;
         UIManager.Instance._caterPillarBuilderPanel._currentBattlepillarCost = 0;

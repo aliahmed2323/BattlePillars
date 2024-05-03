@@ -21,6 +21,8 @@ public class SegmentUpgradeScreen : MonoBehaviour
     [HideInInspector]
     public int _selectedSegmentCost;
     [SerializeField] Text _appleText;
+    [SerializeField] GameObject _purchaseConfirmPopup;
+    [SerializeField] Button _purchaseConfirmButton;
 
     // Base Upgrade Screen Stuff
     [SerializeField] Button _basePurchaseButton;
@@ -34,10 +36,20 @@ public class SegmentUpgradeScreen : MonoBehaviour
 
     private void Start()
     {
-        _segmentPurchaseButton.onClick.AddListener(() => PurchaseSegment());
-        _basePurchaseButton.onClick.AddListener(() => PurchaseBaseUpgrade());
+        _segmentPurchaseButton.onClick.AddListener(() => _purchaseConfirmPopup.SetActive(true));
+        _purchaseConfirmButton.onClick.AddListener(() => PurchaseConfirm());
+        _basePurchaseButton.onClick.AddListener(() => _purchaseConfirmPopup.SetActive(true));
         _purchaseSegmentScreenButton.onClick.AddListener(() => ChangeScreen(true));
         _purchaseBaseUpgradesScreenButton.onClick.AddListener(() => ChangeScreen(false));
+    }
+
+
+    void PurchaseConfirm()
+    {
+        if (_SegmentScreen.activeSelf)
+            PurchaseSegment();
+        if (_BaseUpgradesScreen.activeSelf)
+            PurchaseBaseUpgrade();
     }
 
     private void Update()
@@ -68,6 +80,7 @@ public class SegmentUpgradeScreen : MonoBehaviour
             SaveManager.Instance._saveData._playerData._ownedSegments.Add(l);
             _selectedSegmentGameObject.GetComponent<SegmentUpgradeButton>().RefreshPurchaseStatus();
         }
+        _purchaseConfirmPopup.SetActive(false);
     }
 
     void PurchaseBaseUpgrade()
@@ -77,5 +90,6 @@ public class SegmentUpgradeScreen : MonoBehaviour
             SaveManager.Instance._saveData._playerData._baseUpgrades.Add(_selectedBaseUpgrade);
             _selectedBaseUpgradeGameObject.GetComponent<BaseUpgradeButton>().RefreshPurchaseStatus();
         }
+        _purchaseConfirmPopup.SetActive(false);
     }
 }

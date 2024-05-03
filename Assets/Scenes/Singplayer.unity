@@ -6391,6 +6391,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3037537776324350851, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4a3f1389fa671b045bde5d1f78cbccf8, type: 3}
+    - target: {fileID: 3037537776324350851, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3150047413554868568, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -6457,7 +6465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9171357116359989829, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
       propertyPath: _range
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 9171357116359989829, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
       propertyPath: _bullet
@@ -6475,7 +6483,8 @@ PrefabInstance:
       propertyPath: _bulletSpeed
       value: 25
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5581059341713141228, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
 --- !u!1 &3150047413487468125 stripped
 GameObject:
@@ -6487,6 +6496,32 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1630892703815995372, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
   m_PrefabInstance: {fileID: 3150047413487468124}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &3150047413487468131
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3150047413487468125}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 9.112095, y: 1.7350636}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 19.22419, y: 12.165974}
+  m_EdgeRadius: 0
 --- !u!1001 &7193529904255610802
 PrefabInstance:
   m_ObjectHideFlags: 0
