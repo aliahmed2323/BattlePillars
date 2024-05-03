@@ -47,3 +47,9 @@ TagManager:
   - name: Sgt.Flowerpuff
     uniqueID: 2712591449
     locked: 0
+  - name: Lt.Tikki
+    uniqueID: 3784462043
+    locked: 0
+  - name: BattlePillar
+    uniqueID: 1132418693
+    locked: 0
