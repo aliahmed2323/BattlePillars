@@ -44,3 +44,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Sgt.Flowerpuff
+    uniqueID: 2712591449
+    locked: 0
