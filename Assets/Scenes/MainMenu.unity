@@ -3515,7 +3515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4077933273085058361, guid: a96b860f92f7d0a4d8e8b4c6981df5ea, type: 3}
       propertyPath: _isLocked
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4077933273085058365, guid: a96b860f92f7d0a4d8e8b4c6981df5ea, type: 3}
       propertyPath: m_Pivot.x
@@ -17734,7 +17734,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.24706306, y: 0}
   m_AnchorMax: {x: 0.75293463, y: 0.42658308}
-  m_AnchoredPosition: {x: 0, y: -29.068056}
+  m_AnchoredPosition: {x: 0, y: -29.068146}
   m_SizeDelta: {x: 0, y: -58.13614}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1499323726

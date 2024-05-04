@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5094560595159811918}
   - component: {fileID: 5094560595159811919}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Leaf_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5094560595168618673}
   - component: {fileID: 5094560595168618678}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Leaf_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5094560595222135856}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Leafs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5094560595252155201}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5094560595466292101}
   - component: {fileID: 5094560595466292100}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spikes (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5094560595494224102}
   - component: {fileID: 5094560595494224103}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eye_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,7 +412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5094560595702673714}
   - component: {fileID: 5094560595702673741}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spikes (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 5094560595739092750}
   - component: {fileID: 5094560595739092751}
   - component: {fileID: 5094560595739092748}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Segment_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -593,7 +593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5094560595740165236}
   - component: {fileID: 5094560595740165237}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LowerMouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -677,7 +677,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5094560595824985842}
   - component: {fileID: 5094560595824985869}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -761,7 +761,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5094560595878681898}
   - component: {fileID: 5094560595878681899}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -845,7 +845,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5094560595984728269}
   - component: {fileID: 5094560595984728268}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spikes (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -930,7 +930,7 @@ GameObject:
   - component: {fileID: 5094560596257606573}
   - component: {fileID: 5094560596257606546}
   - component: {fileID: 5094560596257606547}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Segment_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1026,7 +1026,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5094560596279081202}
   - component: {fileID: 5094560596279081229}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spikes (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1110,7 +1110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5094560596423726320}
   - component: {fileID: 5094560596423726323}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Belt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1195,7 +1195,7 @@ GameObject:
   - component: {fileID: 5094560596451462786}
   - component: {fileID: 5094560596451462787}
   - component: {fileID: 5094560596451462813}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1294,7 +1294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5094560596557783904}
   - component: {fileID: 5094560596557783907}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Caraspace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1378,7 +1378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5094560596695904193}
   - component: {fileID: 5094560596695904192}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Caraspace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1463,7 +1463,7 @@ GameObject:
   - component: {fileID: 5094560596745391267}
   - component: {fileID: 5094560596745391264}
   - component: {fileID: 5094560596745391265}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Segment_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1560,7 +1560,7 @@ GameObject:
   - component: {fileID: 5094560596777632081}
   - component: {fileID: 5094560596777632086}
   - component: {fileID: 5094560596777632087}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Segment_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1657,7 +1657,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5094560596834791214}
   - component: {fileID: 5094560596834791209}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1741,7 +1741,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5094560596861423615}
   - component: {fileID: 5094560596861423612}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Upper Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1826,7 +1826,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5094560596909022912}
   - component: {fileID: 5094560596909022915}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Blaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1911,7 +1911,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5094560596926760222}
   - component: {fileID: 5094560596926760217}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1995,7 +1995,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5094560596940118444}
   - component: {fileID: 5094560596940118447}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spikes (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2079,9 +2079,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5094560596943584339}
   - component: {fileID: 5094560596943584338}
-  m_Layer: 0
+  - component: {fileID: 3053849163777023782}
+  - component: {fileID: 8045258375238566636}
+  m_Layer: 9
   m_Name: Lt.Tikki-Takka
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2128,6 +2130,71 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3053849163777023782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5094560596943584336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79ca68bdef0d410419750873e052573b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _caterPillarSpeed: 5
+  _caterPillarHealth: 1
+  _caterPillarSpecialAttackRange: 18
+  _caterPillarBiteAttackRange: 12
+  _caterPillarSpecialAttackDamage: 10
+  _caterPillarBiteAttackDamage: 4
+  _caterPillarSpecialAttackCooldown: 15
+  _caterPillarBiteAttackCooldown: 4
+  _caterPillarDamageModifier: 1
+  _caterPillarDamageTakenModifier: 1
+  _dir: -1
+  _idleAnimName: Idle
+  _movementAnimName: Move
+  _canMove: 0
+  _enemy: {fileID: 0}
+  _isEnemyInRange: 0
+  _isUsingAttack1: 0
+  _isUsingAttack2: 0
+  _isAttack1Cooldown: 0
+  _isAttack2Cooldown: 0
+  _spikes:
+  - {fileID: 5094560596926760223}
+  - {fileID: 5094560595466292106}
+  - {fileID: 5094560596279081203}
+  - {fileID: 5094560595702673715}
+  - {fileID: 5094560596940118445}
+  - {fileID: 5094560595984728242}
+--- !u!61 &8045258375238566636
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5094560596943584336}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.18083, y: 1.0447931}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 19.524982, y: 12.1712475}
+  m_EdgeRadius: 0
 --- !u!1 &5094560597055753992
 GameObject:
   m_ObjectHideFlags: 0
@@ -2138,7 +2205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5094560597055753994}
   - component: {fileID: 5094560597055753995}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eye_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2222,7 +2289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5094560597190880184}
   - component: {fileID: 5094560597190880187}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Caraspace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2307,7 +2374,7 @@ GameObject:
   - component: {fileID: 5094560597220049910}
   - component: {fileID: 5094560597220049911}
   - component: {fileID: 5094560597220049905}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Segment_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
