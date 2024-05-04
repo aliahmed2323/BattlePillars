@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4132097864801602869}
   - component: {fileID: 4132097864801602870}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 2Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4132097865021424177}
   - component: {fileID: 4132097865021424178}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Misc4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 4132097865102524110}
   - component: {fileID: 4132097865102524109}
   - component: {fileID: 4132097865102524108}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Segment (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4132097865165725290}
   - component: {fileID: 4132097865165725291}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Scrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 4132097865185303897}
   - component: {fileID: 4132097865185303896}
   - component: {fileID: 4132097865185303903}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Segment (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -458,7 +458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4132097865367884518}
   - component: {fileID: 4132097865367884519}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Open
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -542,7 +542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4132097865514058116}
   - component: {fileID: 4132097865514058117}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Closed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -627,7 +627,7 @@ GameObject:
   - component: {fileID: 4132097865820862365}
   - component: {fileID: 4132097865820862364}
   - component: {fileID: 4132097865820862355}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -729,7 +729,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4132097865874197325}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -762,7 +762,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4132097866001381369}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -796,7 +796,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4132097866013211316}
   - component: {fileID: 4132097866013211317}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -883,7 +883,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4132097866018582075}
   - component: {fileID: 4132097866018582052}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eye_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -968,7 +968,7 @@ GameObject:
   - component: {fileID: 4132097866031197983}
   - component: {fileID: 4132097866031197982}
   - component: {fileID: 4132097866031197981}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Segment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1063,7 +1063,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4132097866082179718}
   - component: {fileID: 4132097866082179719}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Misc5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1147,7 +1147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4132097866110640788}
   - component: {fileID: 4132097866110640789}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Misc1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1232,7 +1232,7 @@ GameObject:
   - component: {fileID: 4132097866110912907}
   - component: {fileID: 4132097866110912906}
   - component: {fileID: 4132097866110912905}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Segment (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1327,7 +1327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4132097866144329559}
   - component: {fileID: 4132097866144329552}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eye_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1411,7 +1411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4132097866146518174}
   - component: {fileID: 4132097866146518175}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1495,9 +1495,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4132097866161093870}
   - component: {fileID: 4132097866161093871}
-  m_Layer: 0
+  - component: {fileID: 3078998686282778938}
+  - component: {fileID: 3161446774535995923}
+  m_Layer: 9
   m_Name: Geraldine The Scrap Queen
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1544,6 +1546,66 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!61 &3078998686282778938
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4132097866161093869}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.24687481, y: 0.9245105}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.470873, y: 14.534465}
+  m_EdgeRadius: 0
+--- !u!114 &3161446774535995923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4132097866161093869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65df1448d5748794ea5f782d4008efe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _caterPillarSpeed: 5
+  _caterPillarHealth: 1
+  _caterPillarSpecialAttackRange: 18
+  _caterPillarBiteAttackRange: 12
+  _caterPillarSpecialAttackDamage: 10
+  _caterPillarBiteAttackDamage: 4
+  _caterPillarSpecialAttackCooldown: 15
+  _caterPillarBiteAttackCooldown: 4
+  _caterPillarDamageModifier: 1
+  _caterPillarDamageTakenModifier: 1
+  _dir: -1
+  _idleAnimName: Idle
+  _movementAnimName: Move
+  _canMove: 0
+  _enemy: {fileID: 0}
+  _isEnemyInRange: 0
+  _isUsingAttack1: 0
+  _isUsingAttack2: 0
+  _isAttack1Cooldown: 0
+  _isAttack2Cooldown: 0
+  _cannons: {fileID: 4132097866013211275}
+  _projectile: {fileID: 4876728804993828204, guid: f344bd0bbd1f71a46a722a52d1a9ebc1, type: 3}
 --- !u!1 &4132097866194427355
 GameObject:
   m_ObjectHideFlags: 0
@@ -1554,7 +1616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4132097866194427332}
   - component: {fileID: 4132097866194427333}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Misc3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1638,7 +1700,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4132097866472647763}
   - component: {fileID: 4132097866472647772}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Misc2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1723,7 +1785,7 @@ GameObject:
   - component: {fileID: 4132097866602294273}
   - component: {fileID: 4132097866602294272}
   - component: {fileID: 4132097866602294279}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Segment (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1819,7 +1881,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4132097866673512728}
   - component: {fileID: 4132097866673512729}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wires
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1903,7 +1965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4132097866715444941}
   - component: {fileID: 4132097866715444942}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 2Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1987,7 +2049,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4132097866762811869}
   - component: {fileID: 4132097866762811870}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2071,7 +2133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4132097866818579465}
   - component: {fileID: 4132097866818579466}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2155,7 +2217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4132097866936664189}
   - component: {fileID: 4132097866936664190}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Belt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
