@@ -50,6 +50,14 @@ public class GameManager : Singleton<GameManager>
         Production
     }
 
+    public enum Boss
+    {
+        SgtFlowerPuff,
+        LtTikkiTakka,
+        Frankenpillar,
+        GeraldineTheScrapQueen
+    }
+
     private void Start()
     {
         Timer.Instance.StartTimer();

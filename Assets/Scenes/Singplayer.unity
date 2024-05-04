@@ -2845,6 +2845,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &766134014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 766134015}
+  m_Layer: 0
+  m_Name: BossSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &766134015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766134014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 55.23, y: -2.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &771680251
 GameObject:
   m_ObjectHideFlags: 0
@@ -3130,6 +3161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentLevel: 0
   _enemySpawns: {fileID: 935520546}
+  _bossSpawns: {fileID: 766134015}
   _levels:
   - level: 1
     pillar:
@@ -3416,6 +3448,11 @@ MonoBehaviour:
     - Segments: 0000000000000000000000000000000001000000
     - Segments: 01000000030000000400000000000000010000000400000001000000
     - Segments: 01000000000000000100000001000000050000000100000000000000
+  _bossGameObjects:
+  - {fileID: 7749318246486172309, guid: d73ff0643a8dbf54bb058aceba3a02ba, type: 3}
+  - {fileID: 5094560596943584336, guid: 0039290bc8de98c4b81a105f46f4b53c, type: 3}
+  - {fileID: 5828349680182852845, guid: d44541a499262154fb26bc8eb8e8d9d5, type: 3}
+  - {fileID: 4132097866161093869, guid: de5447edd48c54b4eb384fdd0b951902, type: 3}
 --- !u!4 &857339067
 Transform:
   m_ObjectHideFlags: 0

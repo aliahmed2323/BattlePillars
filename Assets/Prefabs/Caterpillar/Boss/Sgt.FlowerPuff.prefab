@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7749318245621998144}
   - component: {fileID: 7749318245621998145}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eye_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7749318245783298643}
   - component: {fileID: 7749318245783298640}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eye_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7749318245858083928}
   - component: {fileID: 7749318245858083929}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mouth_Dead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7749318245973280494}
   - component: {fileID: 7749318245973280495}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Belt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7749318246151468207}
   - component: {fileID: 7749318246151468204}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mouth_default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 7749318246183245641}
   - component: {fileID: 7749318246183245640}
   - component: {fileID: 7749318246183245638}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,9 +529,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7749318246486172306}
   - component: {fileID: 262413677}
-  m_Layer: 0
+  - component: {fileID: 1447446674115891719}
+  - component: {fileID: 8483411391349886914}
+  m_Layer: 9
   m_Name: Sgt.FlowerPuff
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -578,6 +580,59 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1447446674115891719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7749318246486172309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c897b291384f3ea44898055525ffd454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _caterPillarSpeed: 5
+  _caterPillarHealth: 1
+  _caterPillarSpecialAttackRange: 18
+  _caterPillarBiteAttackRange: 12
+  _caterPillarSpecialAttackCoolDown: 12
+  _caterPillarBiteAttackCoolDown: 3
+  _caterPillarDamageModifier: 1
+  _caterPillarDamageTakenModifier: 1
+  _dir: -1
+  _animator: {fileID: 0}
+  _idleAnimName: Idle
+  _movementAnimName: Move
+  _canMove: 0
+  _enemy: {fileID: 0}
+  _isEnemyInRange: 0
+--- !u!61 &8483411391349886914
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7749318246486172309}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.5595922, y: 2.221521}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 18.137987, y: 21.666977}
+  m_EdgeRadius: 0
 --- !u!1 &7749318246599265345
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,7 +643,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7749318246599265342}
   - component: {fileID: 7749318246599265343}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -673,7 +728,7 @@ GameObject:
   - component: {fileID: 7749318246833184498}
   - component: {fileID: 7749318246833184501}
   - component: {fileID: 7749318246833184500}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cannon_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -768,7 +823,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7749318246842581041}
   - component: {fileID: 7749318246842581040}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mouth_Hurt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -851,7 +906,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7749318246869037700}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -887,7 +942,7 @@ GameObject:
   - component: {fileID: 7749318246973018084}
   - component: {fileID: 7749318246973018087}
   - component: {fileID: 7749318246973018086}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Segment_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -983,7 +1038,7 @@ GameObject:
   - component: {fileID: 7749318247095225361}
   - component: {fileID: 7749318247095225360}
   - component: {fileID: 7749318247095225358}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Segment_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1080,7 +1135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7749318247119310079}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1115,7 +1170,7 @@ GameObject:
   - component: {fileID: 7749318247273444220}
   - component: {fileID: 7749318247273444223}
   - component: {fileID: 7749318247273444222}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cannon_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1211,7 +1266,7 @@ GameObject:
   - component: {fileID: 7749318247294610072}
   - component: {fileID: 7749318247294610075}
   - component: {fileID: 7749318247294610074}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Segment_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1307,7 +1362,7 @@ GameObject:
   - component: {fileID: 7749318247336355067}
   - component: {fileID: 7749318247336355066}
   - component: {fileID: 7749318247336355069}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Segment_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1403,7 +1458,7 @@ GameObject:
   - component: {fileID: 7749318247486340674}
   - component: {fileID: 7749318247486340677}
   - component: {fileID: 7749318247486340676}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Segment_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
