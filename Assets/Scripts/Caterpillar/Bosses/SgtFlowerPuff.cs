@@ -41,10 +41,14 @@ public class SgtFlowerPuff : Boss
         projectile1.transform.DOJump(_enemy.transform.position, 2, 1, Vector3.Distance(_cannons[0].transform.position, _enemy.transform.position) / 12).OnComplete(() => Destroy(projectile1));
         projectile2.transform.DOJump(_enemy.transform.position, 2, 1, Vector3.Distance(_cannons[1].transform.position, _enemy.transform.position) / 12).OnComplete(() => Destroy(projectile2));
 
-        float damage = _caterPillarSpecialAttackDamage / 10 * _enemy.GetComponent<Caterpillar>()._caterPillarDamageTakenModifier;
+        float timeToDeath = Vector3.Distance(_cannons[1].transform.position, _enemy.transform.position) / 12;
+
+        yield return new WaitForSeconds(timeToDeath);
+
+        float damage = _caterPillarSpecialAttackDamage / 10;
         _enemy?.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2.5f - timeToDeath);
         _animator.CrossFadeInFixedTime("Idle", 0.5f);
         _isUsingAttack1 = false;
     }
@@ -52,13 +56,14 @@ public class SgtFlowerPuff : Boss
     void AttackBite()
     {
         _animator.CrossFadeInFixedTime("AttackBite", 0.5f);
-        float damage = _caterPillarBiteAttackDamage / 10 * _enemy.GetComponent<Caterpillar>()._caterPillarDamageTakenModifier;
+        float damage = _caterPillarBiteAttackDamage / 10;
+        _enemy?.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
         Invoke(nameof(EnableAttack2), 1f);
     }
 
     void EnableAttack2()
     {
-        _animator.CrossFadeInFixedTime("Idle", 0.5f);
         _isUsingAttack2 = false;
+        _animator.CrossFadeInFixedTime("Idle", 0.5f);
     }
 }

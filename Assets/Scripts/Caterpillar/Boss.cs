@@ -12,6 +12,8 @@ public class Boss : MonoBehaviour
     public float _caterPillarBiteAttackRange = 5;
     public float _caterPillarSpecialAttackDamage = 10;
     public float _caterPillarBiteAttackDamage = 4;
+    public float _caterPillarSpecialAttackCooldown = 15;
+    public float _caterPillarBiteAttackCooldown = 4;
     public float _caterPillarDamageModifier = 1;
     public float _caterPillarDamageTakenModifier = 1;
 
@@ -37,6 +39,8 @@ public class Boss : MonoBehaviour
 
     [SerializeField]internal bool _isUsingAttack1;
     [SerializeField] internal bool _isUsingAttack2;
+    [SerializeField] internal bool _isAttack1Cooldown;
+    [SerializeField] internal bool _isAttack2Cooldown;
 
 
     protected virtual void Start()
@@ -62,7 +66,7 @@ public class Boss : MonoBehaviour
         if (_canMove)
             Move();
 
-        if(!_canMove && _isPlayingMoveAnim)
+        if(!_canMove && _isPlayingMoveAnim && !_isUsingAttack1 && !_isUsingAttack2)
         {
             _animator.CrossFadeInFixedTime(_idleAnimName, 1f);
             _isPlayingMoveAnim = false;
@@ -110,19 +114,23 @@ public class Boss : MonoBehaviour
             return;
         }
 
-        if(distance < _caterPillarSpecialAttackRange && distance > _caterPillarBiteAttackRange && !_isUsingAttack1 && !_isUsingAttack2)
+        if(distance < _caterPillarSpecialAttackRange && distance > _caterPillarBiteAttackRange && !_isUsingAttack1 && !_isUsingAttack2 && !_isAttack1Cooldown)
         {
             _canMove = false;
-            Attack1.Invoke();
             _isUsingAttack1 = true;
+            _isAttack1Cooldown = true;
+            Invoke(nameof(ResetAttack1Cooldown), _caterPillarSpecialAttackCooldown);
+            Attack1.Invoke();
             return;
         }
 
-        if (distance < _caterPillarBiteAttackRange && !_isUsingAttack1 && !_isUsingAttack2)
+        if (distance < _caterPillarBiteAttackRange && !_isUsingAttack1 && !_isUsingAttack2 && !_isAttack2Cooldown)
         {
             _canMove = false;
-            Attack2.Invoke();
             _isUsingAttack2 = true;
+            _isAttack2Cooldown = true;
+            Invoke(nameof(ResetAttack2Cooldown), _caterPillarBiteAttackCooldown);
+            Attack2.Invoke();
             return;
         }
     }
@@ -140,5 +148,14 @@ public class Boss : MonoBehaviour
     public void SetEnemyNull()
     {
         _enemy = null;
+    }
+
+    void ResetAttack1Cooldown()
+    {
+        _isAttack1Cooldown = false;
+    }
+    void ResetAttack2Cooldown()
+    {
+        _isAttack2Cooldown = false;
     }
 }

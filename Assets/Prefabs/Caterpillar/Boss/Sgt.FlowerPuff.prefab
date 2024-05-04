@@ -596,17 +596,22 @@ MonoBehaviour:
   _caterPillarHealth: 1
   _caterPillarSpecialAttackRange: 18
   _caterPillarBiteAttackRange: 12
-  _caterPillarSpecialAttackCoolDown: 12
-  _caterPillarBiteAttackCoolDown: 3
+  _caterPillarSpecialAttackDamage: 10
+  _caterPillarBiteAttackDamage: 4
   _caterPillarDamageModifier: 1
   _caterPillarDamageTakenModifier: 1
   _dir: -1
-  _animator: {fileID: 0}
   _idleAnimName: Idle
   _movementAnimName: Move
   _canMove: 0
   _enemy: {fileID: 0}
   _isEnemyInRange: 0
+  _isUsingAttack1: 0
+  _isUsingAttack2: 0
+  _cannons:
+  - {fileID: 7749318247273444225}
+  - {fileID: 7749318246833184503}
+  _projectile: {fileID: 5719167602555227677, guid: b4cdedfb49ba9d545894954ec03b87da, type: 3}
 --- !u!61 &8483411391349886914
 BoxCollider2D:
   m_ObjectHideFlags: 0
