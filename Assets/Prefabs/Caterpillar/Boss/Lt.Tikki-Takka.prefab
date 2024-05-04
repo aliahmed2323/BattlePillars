@@ -2081,6 +2081,7 @@ GameObject:
   - component: {fileID: 5094560596943584338}
   - component: {fileID: 3053849163777023782}
   - component: {fileID: 8045258375238566636}
+  - component: {fileID: 4681981459743321654}
   m_Layer: 9
   m_Name: Lt.Tikki-Takka
   m_TagString: Enemy
@@ -2142,13 +2143,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79ca68bdef0d410419750873e052573b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _caterPillarSpeed: 5
-  _caterPillarHealth: 1
+  _caterPillarSpeed: 2
+  _caterPillarHealth: 4
   _caterPillarSpecialAttackRange: 18
   _caterPillarBiteAttackRange: 12
-  _caterPillarSpecialAttackDamage: 10
-  _caterPillarBiteAttackDamage: 4
-  _caterPillarSpecialAttackCooldown: 15
+  _caterPillarSpecialAttackDamage: 4
+  _caterPillarBiteAttackDamage: 2
+  _caterPillarSpecialAttackCooldown: 10
   _caterPillarBiteAttackCooldown: 4
   _caterPillarDamageModifier: 1
   _caterPillarDamageTakenModifier: 1
@@ -2195,6 +2196,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 19.524982, y: 12.1712475}
   m_EdgeRadius: 0
+--- !u!114 &4681981459743321654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5094560596943584336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5ccd44632e5975419966d34c931bf0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 0
+  _damagePunchEffectModifier: 0
+  _healthSlider: {fileID: 0}
+  _isBoss: 1
 --- !u!1 &5094560597055753992
 GameObject:
   m_ObjectHideFlags: 0

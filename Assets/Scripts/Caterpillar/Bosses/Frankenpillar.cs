@@ -35,8 +35,16 @@ public class Frankenpillar : Boss
         GameObject l = Instantiate(_projectile, new Vector2(_enemy.transform.position.x, _enemy.transform.position.y + 4), Quaternion.identity);
         Destroy(l, 0.2f);
         yield return new WaitForSeconds(0.2f);
-        float damage = _caterPillarSpecialAttackDamage / 10;
-        _enemy?.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
+        if (_enemy.CompareTag("Player"))
+        {
+            float damage = _caterPillarSpecialAttackDamage / 10;
+            _enemy?.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
+        }
+        if (_enemy.CompareTag("PlayerBase"))
+        {
+            float damage = _caterPillarSpecialAttackDamage / 10;
+            _enemy?.GetComponent<CaterpillarBase>()?.ReduceHealth(damage);
+        }
 
         _isUsingAttack1 = false;
     }
@@ -44,8 +52,16 @@ public class Frankenpillar : Boss
     void AttackBite()
     {
         _animator.CrossFadeInFixedTime("AttackBite", 0.5f);
-        float damage = _caterPillarBiteAttackDamage / 10;
-        _enemy?.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
+        if (_enemy.CompareTag("Player"))
+        {
+            float damage = _caterPillarSpecialAttackDamage / 10;
+            _enemy?.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
+        }
+        if (_enemy.CompareTag("PlayerBase"))
+        {
+            float damage = _caterPillarSpecialAttackDamage / 10;
+            _enemy?.GetComponent<CaterpillarBase>()?.ReduceHealth(damage);
+        }
         Invoke(nameof(EnableAttack2), 1f);
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnAIManager : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class SpawnAIManager : MonoBehaviour
 
     [SerializeField] Levels[] _levels;
     [SerializeField] GameObject[] _bossGameObjects;
+    [SerializeField] Slider _boosHealthSlider;
 
     [System.Serializable]
     public struct Levels
@@ -60,21 +62,25 @@ public class SpawnAIManager : MonoBehaviour
 
     void SpawnBoss(int lvl)
     {
+        _boosHealthSlider.gameObject.SetActive(true);
+        GameObject i = null;
         switch(lvl)
         {
             case 10:
-                Instantiate(_bossGameObjects[0], new Vector3(_bossSpawns.transform.position.x, _bossSpawns.transform.position.y, _bossSpawns.transform.position.z), Quaternion.identity);
+               i = Instantiate(_bossGameObjects[0], new Vector3(_bossSpawns.transform.position.x, _bossSpawns.transform.position.y, _bossSpawns.transform.position.z), Quaternion.identity);               
                 break;
             case 20:
-                Instantiate(_bossGameObjects[1], new Vector3(_bossSpawns.transform.position.x, _bossSpawns.transform.position.y, _bossSpawns.transform.position.z), Quaternion.identity);
+                i = Instantiate(_bossGameObjects[1], new Vector3(_bossSpawns.transform.position.x, _bossSpawns.transform.position.y, _bossSpawns.transform.position.z), Quaternion.identity);
                 break;
             case 30:
-                Instantiate(_bossGameObjects[2], new Vector3(_bossSpawns.transform.position.x, _bossSpawns.transform.position.y, _bossSpawns.transform.position.z), Quaternion.identity);
+                i = Instantiate(_bossGameObjects[2], new Vector3(_bossSpawns.transform.position.x, _bossSpawns.transform.position.y, _bossSpawns.transform.position.z), Quaternion.identity);
                 break;
             case 40:
-                Instantiate(_bossGameObjects[3], new Vector3(_bossSpawns.transform.position.x, _bossSpawns.transform.position.y, _bossSpawns.transform.position.z), Quaternion.identity);
+                i = Instantiate(_bossGameObjects[3], new Vector3(_bossSpawns.transform.position.x, _bossSpawns.transform.position.y, _bossSpawns.transform.position.z), Quaternion.identity);
                 break;
         }
+        i.GetComponent<CaterpillarHealthManager>()._healthSlider = _boosHealthSlider;
+        i.GetComponent<CaterpillarHealthManager>().SetVals();
     }
 
     IEnumerator SpawnPillars()

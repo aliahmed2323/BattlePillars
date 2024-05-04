@@ -683,7 +683,7 @@ SortingGroup:
   m_GameObject: {fileID: 5828349678940489102}
   m_Enabled: 1
   m_SortingLayerID: -2074340061
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 5
 --- !u!1 &5828349678997873402
 GameObject:
@@ -1119,7 +1119,7 @@ SortingGroup:
   m_GameObject: {fileID: 5828349679316281820}
   m_Enabled: 1
   m_SortingLayerID: -2074340061
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 10
 --- !u!1 &5828349679352778125
 GameObject:
@@ -1592,7 +1592,7 @@ SortingGroup:
   m_GameObject: {fileID: 5828349679545092607}
   m_Enabled: 1
   m_SortingLayerID: -2074340061
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 7
 --- !u!1 &5828349679562377361
 GameObject:
@@ -1689,7 +1689,7 @@ SortingGroup:
   m_GameObject: {fileID: 5828349679562377361}
   m_Enabled: 1
   m_SortingLayerID: -2074340061
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 9
 --- !u!1 &5828349679666704923
 GameObject:
@@ -1786,7 +1786,7 @@ SortingGroup:
   m_GameObject: {fileID: 5828349679666704923}
   m_Enabled: 1
   m_SortingLayerID: -2074340061
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 6
 --- !u!1 &5828349679900239637
 GameObject:
@@ -2000,7 +2000,7 @@ SortingGroup:
   m_GameObject: {fileID: 5828349680020766642}
   m_Enabled: 1
   m_SortingLayerID: -2074340061
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 8
 --- !u!1 &5828349680091606358
 GameObject:
@@ -2182,6 +2182,7 @@ GameObject:
   - component: {fileID: 5828349680182852843}
   - component: {fileID: 4625188299243512910}
   - component: {fileID: 6095053441011233652}
+  - component: {fileID: -2744888866356098330}
   m_Layer: 9
   m_Name: Frankenpillar
   m_TagString: Enemy
@@ -2269,13 +2270,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee1878f48aab8824294df8d2ebade86c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _caterPillarSpeed: 5
-  _caterPillarHealth: 1
+  _caterPillarSpeed: 2
+  _caterPillarHealth: 3
   _caterPillarSpecialAttackRange: 18
   _caterPillarBiteAttackRange: 12
-  _caterPillarSpecialAttackDamage: 10
-  _caterPillarBiteAttackDamage: 4
-  _caterPillarSpecialAttackCooldown: 15
+  _caterPillarSpecialAttackDamage: 4
+  _caterPillarBiteAttackDamage: 2
+  _caterPillarSpecialAttackCooldown: 10
   _caterPillarBiteAttackCooldown: 4
   _caterPillarDamageModifier: 1
   _caterPillarDamageTakenModifier: 1
@@ -2290,3 +2291,19 @@ MonoBehaviour:
   _isAttack1Cooldown: 0
   _isAttack2Cooldown: 0
   _projectile: {fileID: 5164736786726027572}
+--- !u!114 &-2744888866356098330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5828349680182852845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5ccd44632e5975419966d34c931bf0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 0
+  _damagePunchEffectModifier: 0
+  _healthSlider: {fileID: 0}
+  _isBoss: 1

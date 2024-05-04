@@ -16,5 +16,7 @@ MonoBehaviour:
     _apples: 500
     _unlockedModes: 0000000002000000
     _completedLevels: []
-    _ownedSegments: []
+    _ownedSegments:
+    - _segmentType: 1
+      _segmentLevel: 1
     _baseUpgrades: 

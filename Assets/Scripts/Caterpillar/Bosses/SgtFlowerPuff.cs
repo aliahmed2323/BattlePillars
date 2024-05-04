@@ -45,8 +45,16 @@ public class SgtFlowerPuff : Boss
 
         yield return new WaitForSeconds(timeToDeath);
 
+        if(_enemy.CompareTag("Player"))
+        {
         float damage = _caterPillarSpecialAttackDamage / 10;
         _enemy?.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
+        }
+        if(_enemy.CompareTag("PlayerBase"))
+        {
+            float damage = _caterPillarSpecialAttackDamage / 10;
+            _enemy?.GetComponent<CaterpillarBase>()?.ReduceHealth(damage);
+        }
 
         yield return new WaitForSeconds(2.5f - timeToDeath);
         _animator.CrossFadeInFixedTime("Idle", 0.5f);
@@ -56,8 +64,16 @@ public class SgtFlowerPuff : Boss
     void AttackBite()
     {
         _animator.CrossFadeInFixedTime("AttackBite", 0.5f);
-        float damage = _caterPillarBiteAttackDamage / 10;
-        _enemy?.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
+        if (_enemy.CompareTag("Player"))
+        {
+            float damage = _caterPillarSpecialAttackDamage / 10;
+            _enemy?.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
+        }
+        if (_enemy.CompareTag("PlayerBase"))
+        {
+            float damage = _caterPillarSpecialAttackDamage / 10;
+            _enemy?.GetComponent<CaterpillarBase>()?.ReduceHealth(damage);
+        }
         Invoke(nameof(EnableAttack2), 1f);
     }
 

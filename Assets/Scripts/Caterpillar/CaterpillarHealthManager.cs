@@ -8,7 +8,7 @@ public class CaterpillarHealthManager : MonoBehaviour
 {
      public float _health;
     [SerializeField] float _damagePunchEffectModifier;
-    [SerializeField] Slider _healthSlider;
+    public Slider _healthSlider;
 
     [SerializeField] bool _isBoss = false;
 
@@ -17,7 +17,7 @@ public class CaterpillarHealthManager : MonoBehaviour
     {
         Invoke(nameof(SetVals), 0.1f);
     }
-    void SetVals()
+    public void SetVals()
     {
         if (!_isBoss)
             _health = GetComponent<Caterpillar>()._caterPillarHealth;

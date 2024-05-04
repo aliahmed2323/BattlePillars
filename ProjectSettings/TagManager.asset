@@ -50,12 +50,12 @@ TagManager:
   - name: Lt.Tikki
     uniqueID: 3784462043
     locked: 0
-  - name: BattlePillar
-    uniqueID: 1132418693
-    locked: 0
   - name: FrankenPillar
     uniqueID: 2220627235
     locked: 0
   - name: Geraldine
     uniqueID: 812760719
+    locked: 0
+  - name: BattlePillar
+    uniqueID: 1132418693
     locked: 0
