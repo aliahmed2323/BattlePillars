@@ -10,6 +10,8 @@ public class CaterpillarHealthManager : MonoBehaviour
     [SerializeField] float _damagePunchEffectModifier;
     [SerializeField] Slider _healthSlider;
 
+    [SerializeField] bool _isBoss = false;
+
 
     private void Start()
     {
@@ -17,7 +19,10 @@ public class CaterpillarHealthManager : MonoBehaviour
     }
     void SetVals()
     {
-        _health = GetComponent<Caterpillar>()._caterPillarHealth;
+        if (!_isBoss)
+            _health = GetComponent<Caterpillar>()._caterPillarHealth;
+        else
+            _health = GetComponent<Boss>()._caterPillarHealth;
         _healthSlider.maxValue = _health;
     }
 

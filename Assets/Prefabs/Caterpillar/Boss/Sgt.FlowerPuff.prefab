@@ -531,6 +531,7 @@ GameObject:
   - component: {fileID: 262413677}
   - component: {fileID: 1447446674115891719}
   - component: {fileID: 8483411391349886914}
+  - component: {fileID: 80068360791105614}
   m_Layer: 9
   m_Name: Sgt.FlowerPuff
   m_TagString: Enemy
@@ -598,6 +599,8 @@ MonoBehaviour:
   _caterPillarBiteAttackRange: 12
   _caterPillarSpecialAttackDamage: 10
   _caterPillarBiteAttackDamage: 4
+  _caterPillarSpecialAttackCooldown: 15
+  _caterPillarBiteAttackCooldown: 4
   _caterPillarDamageModifier: 1
   _caterPillarDamageTakenModifier: 1
   _dir: -1
@@ -608,6 +611,8 @@ MonoBehaviour:
   _isEnemyInRange: 0
   _isUsingAttack1: 0
   _isUsingAttack2: 0
+  _isAttack1Cooldown: 0
+  _isAttack2Cooldown: 0
   _cannons:
   - {fileID: 7749318247273444225}
   - {fileID: 7749318246833184503}
@@ -638,6 +643,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 18.137987, y: 21.666977}
   m_EdgeRadius: 0
+--- !u!114 &80068360791105614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7749318246486172309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5ccd44632e5975419966d34c931bf0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 0
+  _damagePunchEffectModifier: 0
+  _healthSlider: {fileID: 0}
 --- !u!1 &7749318246599265345
 GameObject:
   m_ObjectHideFlags: 0
