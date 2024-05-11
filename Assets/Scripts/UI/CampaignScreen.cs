@@ -45,6 +45,7 @@ public class CampaignScreen : MonoBehaviour
     {
         int count = SaveManager.Instance._saveData._playerData._completedLevels.Count;
 
+        int highestLevel = 0;
 
         for(int i = 0; i <= count; i++)
         {

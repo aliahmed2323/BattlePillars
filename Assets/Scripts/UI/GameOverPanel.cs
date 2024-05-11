@@ -13,6 +13,7 @@ public class GameOverPanel : MonoBehaviour
     [SerializeField] Text _applesText;
     [SerializeField] GameObject _panel;
     [SerializeField] Button _continueButton;
+    bool _hasWon;
 
     private void Start()
     {
@@ -33,7 +34,10 @@ public class GameOverPanel : MonoBehaviour
         int timeElapsed = Timer.Instance.EndTimer();
 
         if (victory)
+        {
             _victoryImage.SetActive(true);
+            _hasWon = true;
+        }
         else
             _defeatImage.SetActive(true);
         _panel.SetActive(true);
@@ -55,7 +59,11 @@ public class GameOverPanel : MonoBehaviour
 
         _applesText.text = SaveManager.Instance._saveData._playerData._apples.ToString();
 
-        UpdateSave(_timeElapsed);
+        if(_hasWon)
+        {
+            UpdateSave(_timeElapsed);
+            _hasWon = false;
+        }    
     }
 
 
@@ -73,20 +81,23 @@ public class GameOverPanel : MonoBehaviour
         }
         else
         {
-            SavesScriptableObject.CompletedLevels _foundlevel;
+            /*SavesScriptableObject.CompletedLevels _foundlevel;*/
+            int _foundlevelID = 0;
 
             foreach (SavesScriptableObject.CompletedLevels i in SaveManager.Instance._saveData._playerData._completedLevels)
             {
                 if (level._levelID == i._levelID)
                 {
-                    _foundlevel = i;
-                    SaveManager.Instance._saveData._playerData._completedLevels.Remove(_foundlevel);
+                    /*_foundlevel = i;*/
+                    _foundlevelID = i._levelID;
+                    /*SaveManager.Instance._saveData._playerData._completedLevels.Remove(_foundlevel);*/
+                    SaveManager.Instance._saveData._playerData._completedLevels.Remove(SaveManager.Instance._saveData._playerData._completedLevels[_foundlevelID]);
                 }
-                else
+/*                else
                 {
                     SaveManager.Instance._saveData._playerData._completedLevels.Add(level);
                     return;
-                }
+                }*/
             }
         }
         SaveManager.Instance._saveData._playerData._completedLevels.Add(level);
