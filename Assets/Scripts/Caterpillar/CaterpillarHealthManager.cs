@@ -11,7 +11,8 @@ public class CaterpillarHealthManager : MonoBehaviour
     public Slider _healthSlider;
 
     [SerializeField] bool _isBoss = false;
-
+    public delegate void OnDeath();
+    public event OnDeath onDeath;
 
     private void Start()
     {
@@ -59,6 +60,7 @@ public class CaterpillarHealthManager : MonoBehaviour
         if (gameObject.CompareTag("Enemy"))
             GameManager.Instance.kills++;
 
+       /* onDeath();*/
         Debug.Log(gameObject.name + " died");
         Destroy(gameObject);
     }

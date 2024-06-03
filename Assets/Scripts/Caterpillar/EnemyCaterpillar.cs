@@ -43,7 +43,11 @@ public class EnemyCaterpillar : Caterpillar
         {
             Debug.Log(gameObject.name + " has hit " + hit.collider.name);
             if(hit.collider.gameObject.CompareTag("Player") || hit.collider.gameObject.CompareTag("PlayerBase"))
-            _enemy = hit.collider.gameObject;
+            {
+                if (_enemy != null)
+                    ResetBattlepillarToAttackState();
+                _enemy = hit.collider.gameObject;
+            }
         }
     }
 }

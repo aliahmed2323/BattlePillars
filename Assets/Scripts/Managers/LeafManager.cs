@@ -37,6 +37,7 @@ public class LeafManager : Singleton<LeafManager>
 
     private void Awake()
     {
+        base.Awake();
         _currentLeafLevelData = GetLeafLevelData(LeafLevels.Level1);
     }
 

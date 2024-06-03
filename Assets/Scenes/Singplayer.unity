@@ -6870,7 +6870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShouldPersistOnLoad: 0
   _debugRays: 1
-  _leafs: 100
+  _leafs: 50
   _caterPillars:
   - {fileID: 11400000, guid: cf94178b7812c2d42bb6b6892ee0c5d1, type: 2}
   _enemyCaterPillars:

@@ -35,6 +35,41 @@ public class Caterpillar : MonoBehaviour
     private bool _lockCaterpillarMovement;
 
 
+/*    private GameObject m_enemy = null;
+    public GameObject _enemy
+    {
+        get { return m_enemy; }
+        set
+        {
+            if (m_enemy == _enemy) return;
+            m_enemy = _enemy;
+            if(_enemy != null)
+            {
+                ResetBattlepillarToAttackState();
+
+            }
+        }
+    }*/
+    /*    _enemy.GetComponent<CaterpillarHealthManager>().onDeath += ResetBattlepillarToAttackState
+     *    public delegate void OnEnemyChangeDelegate();
+        public event OnEnemyChangeDelegate OnEnemyChange;
+
+        public void ResetBattlepillarToAttackState()
+        {
+            if (_lockCaterpillarMovement) return; //return if movement locked
+            InvokeStopAnim();
+            _moveAnim.Invoke();
+            _canMove = true;
+        }*/
+
+    public void ResetBattlepillarToAttackState()
+    {
+        SetEnemyNull();
+        if (_lockCaterpillarMovement) return; //return if movement locked
+        _moveAnim.Invoke();
+        _canMove = true;
+    }
+
     private void Move()
     {
         Vector2 newPos = Vector2.Lerp(transform.position, new Vector2(transform.position.x + 0.5f * _dir, transform.position.y), Time.deltaTime * _caterPillarSpeed);
