@@ -64,10 +64,10 @@ public class Caterpillar : MonoBehaviour
 
     public void ResetBattlepillarToAttackState()
     {
-        SetEnemyNull();
-        if (_lockCaterpillarMovement) return; //return if movement locked
-        _moveAnim.Invoke();
+        _lockCaterpillarMovement = false;
+        _enemy = null;
         _canMove = true;
+        _moveAnim.Invoke();
     }
 
     private void Move()
@@ -121,8 +121,4 @@ public class Caterpillar : MonoBehaviour
     {
         _lockCaterpillarMovement = state;
     }
-   public void SetEnemyNull()
-    {
-        _enemy = null;
-    }    
 }

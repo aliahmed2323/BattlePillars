@@ -46,7 +46,7 @@ public class PlayerCaterpillar : Caterpillar
                 if(_enemy != null)
                     ResetBattlepillarToAttackState();
                 _enemy = hit.collider.gameObject;  //problem point
-                
+
             }
             
         }
