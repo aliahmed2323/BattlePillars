@@ -17,6 +17,8 @@ public class LeafManager : Singleton<LeafManager>
     [HideInInspector]
     public LeafUpgrades _currentLeafLevelData;
 
+    bool stopLeafGen = false;
+
     public enum LeafLevels
     {
         Level1,
@@ -35,7 +37,7 @@ public class LeafManager : Singleton<LeafManager>
         public int _upgradeCost;
     }
 
-    private void Awake()
+    private new void Awake()
     {
         base.Awake();
         _currentLeafLevelData = GetLeafLevelData(LeafLevels.Level1);
@@ -50,10 +52,21 @@ public class LeafManager : Singleton<LeafManager>
     void AddLeafs()
     {
         if (GameManager.Instance.GetLeafs() >= _currentLeafLevelData._maxLeafs)
+        {
+            stopLeafGen = true;
             return;
+        }
 
             GameManager.Instance.AddLeafs((int)(1 * _leafGenMultiplier));
         Invoke("AddLeafs", timeUntilLeafAdd);
+    }
+    private void Update()
+    {
+        if(stopLeafGen && GameManager.Instance.GetLeafs() < _currentLeafLevelData._maxLeafs)
+        {
+            Invoke("AddLeafs", timeUntilLeafAdd);
+            stopLeafGen = false;
+        }
     }
 
     // Figures out which level is currently selected and sets it to the next one

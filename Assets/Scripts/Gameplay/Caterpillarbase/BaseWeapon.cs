@@ -65,7 +65,7 @@ public class BaseWeapon : MonoBehaviour
     void DamageEnemy()
     {
             float damage = _damage / 10;
-            cp._enemy?.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
+            cp.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
     }
     void AttackAnim()
     {

@@ -29,7 +29,7 @@ public class Rocketier : MonoBehaviour
         }
         if (cp._enemy == null) return;
 
-        if (Vector2.Distance(transform.position, cp._enemy.transform.position) < _rangeMaximum && Vector2.Distance(transform.position, cp._enemy.transform.position) > _rangeMinimum)
+        if (Vector2.Distance(transform.position, cp._enemy.transform.position) < _rangeMaximum )
             Attack();
 
 
@@ -40,14 +40,14 @@ public class Rocketier : MonoBehaviour
         if (!_canAttack) return;
         cp._canMove = false;
         cp.InvokeStopAnim();
-        _canAttack = false;
-        DamageEnemy();
+        _canAttack = false;        
         _as.Play();
         GameObject cb = Instantiate(_rocket, transform.position, Quaternion.identity);
         float timeToHit = Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _rocketSpeed;
         cb.transform.DOJump(cp._enemy.transform.position, 4, 1, timeToHit).OnComplete(() =>
         {
             ExplosionEffect(cb.transform.position);
+            DamageEnemy();
             Destroy(cb);
         });
         

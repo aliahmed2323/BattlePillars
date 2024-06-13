@@ -538,7 +538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 1.5
-  _rangeMaximum: 45
+  _rangeMaximum: 28
   _rangeMinimum: 16
   _fireRate: 5
   _grenade: {fileID: 6464026510630641906}

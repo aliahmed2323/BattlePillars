@@ -29,7 +29,7 @@ public class Grenadier : MonoBehaviour
         }
         if (cp._enemy == null) return;
 
-        if (Vector2.Distance(transform.position, cp._enemy.transform.position) < _rangeMaximum && Vector2.Distance(transform.position, cp._enemy.transform.position) > _rangeMinimum)
+        if (Vector2.Distance(transform.position, cp._enemy.transform.position) < _rangeMaximum/* && Vector2.Distance(transform.position, cp._enemy.transform.position) > _rangeMinimum*/)
             Attack();
 
 
