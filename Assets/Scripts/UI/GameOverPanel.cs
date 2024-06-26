@@ -101,5 +101,11 @@ public class GameOverPanel : MonoBehaviour
             }
         }
         SaveManager.Instance._saveData._playerData._completedLevels.Add(level);
+        SaveManager.Instance.SaveGame();
+    }
+
+    private void OnDestroy()
+    {
+        SaveManager.Instance.SaveGame();
     }
 }
