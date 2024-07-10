@@ -107,9 +107,9 @@ public class GameManager : Singleton<GameManager>
         CreateCaterpillar(0);
     }
 
-    public void AddExtensionToCurrentCaterpillar(GameManager.SegmentType type)
+    public void AddExtensionToCurrentCaterpillar(GameManager.SegmentType type, int level)
     {
-        _currentCaterpillar.GetComponent<Caterpillar>().AddExtension(type, false);
+        _currentCaterpillar.GetComponent<Caterpillar>().AddExtension(type, false, level);
     }
     public int GetCurrentCaterpillarLength()
     {

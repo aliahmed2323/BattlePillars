@@ -51,10 +51,10 @@ public class CaterpillarBuilderPanel : MonoBehaviour
             UpdateProgressBar();
     }
 
-    public void AddExtension(GameManager.SegmentType type)
+    public void AddExtension(GameManager.SegmentType type, int level)
     {
         GameObject ext = Instantiate(_caterPillarPanelHead, _caterPillarPanelHead.transform.parent);
-        Sprite img = GameManager.Instance._caterPillars[GameManager.Instance._caterPillarType].GetCaterpillarExtension(type)._img;
+        Sprite img = GameManager.Instance._caterPillars[GameManager.Instance._caterPillarType].GetCaterpillarExtension(type, level)._img;
         ext.GetComponent<Image>().sprite = img;
         _progressBarSlider.maxValue = _currentBattlepillarCost;
     }
@@ -69,7 +69,7 @@ public class CaterpillarBuilderPanel : MonoBehaviour
             Debug.Log(segment.ToString());
             GameObject item = Instantiate(_extensionTypePanel, content);
             item.GetComponent<CaterpillarBuilderTypePanel>()._type = segment;
-            item.GetComponent<Image>().sprite = GameManager.Instance._caterPillars[GameManager.Instance._caterPillarType].GetCaterpillarExtension(segment)._icon;
+            item.GetComponent<Image>().sprite = GameManager.Instance._caterPillars[GameManager.Instance._caterPillarType].GetCaterpillarExtension(segment, 1)._icon;
         }
     }
 }

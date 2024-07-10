@@ -11,7 +11,7 @@ public class CaterpillarBuilderTypePanel : MonoBehaviour
     private void Start()
     {
         GetComponentInChildren<Button>().onClick.AddListener(() => AddInBuilder());
-        cost = GameManager.Instance._caterPillars[GameManager.Instance._caterPillarType].GetCaterpillarExtension(_type)._leafCost;
+        cost = GameManager.Instance._caterPillars[GameManager.Instance._caterPillarType].GetCaterpillarExtension(_type, 1)._leafCost;
     }
 
     void AddInBuilder()
@@ -22,7 +22,7 @@ public class CaterpillarBuilderTypePanel : MonoBehaviour
         /*if (!GameManager.Instance.DeductLeafs(cost)) return;*/
 
         GetComponentInParent<CaterpillarBuilderPanel>()._currentBattlepillarCost += cost;
-        GetComponentInParent<CaterpillarBuilderPanel>().AddExtension(_type);
-        GameManager.Instance.AddExtensionToCurrentCaterpillar(_type);
+        GetComponentInParent<CaterpillarBuilderPanel>().AddExtension(_type, 1);
+        GameManager.Instance.AddExtensionToCurrentCaterpillar(_type, 1);
     }
 }

@@ -13,17 +13,17 @@ public class CaterpillarsScriptableObject : ScriptableObject
     public GameObject _headPrefab;
 
     [Header("Extensions")]
-    public Extension _canon;
-    public Extension _healer;
-    public Extension _spikeArmor;
-    public Extension _pistolier;
-    public Extension _rocketier;
-    public Extension _caraspace;
-    public Extension _mine;
-    public Extension _honey;
-    public Extension _grenadier;
-    public Extension _feet;
-    public Extension _bellows;
+    public Extension[] _canon;
+    public Extension[] _healer;
+    public Extension[] _spikeArmor;
+    public Extension[] _pistolier;
+    public Extension[] _rocketier;
+    public Extension[] _caraspace;
+    public Extension[] _mine;
+    public Extension[] _honey;
+    public Extension[] _grenadier;
+    public Extension[] _feet;
+    public Extension[] _bellows;
 
 
     [System.Serializable]
@@ -36,34 +36,34 @@ public class CaterpillarsScriptableObject : ScriptableObject
         public Sprite _icon;
     }
 
-    public Extension GetCaterpillarExtension(GameManager.SegmentType type)
+    public Extension GetCaterpillarExtension(GameManager.SegmentType type, int level)
     {
         switch(type)
         {
             case GameManager.SegmentType.Cannon:
-                return _canon;
+                return _canon[level];
             case GameManager.SegmentType.HealthSnail:
-                return _healer;
+                return _healer[level];
             case GameManager.SegmentType.SpikeyArmor:
-                return _spikeArmor;
+                return _spikeArmor[level];
             case GameManager.SegmentType.Pistolier:
-                return _pistolier;
+                return _pistolier[level];
             case GameManager.SegmentType.Rocketier:
-                return _rocketier;
+                return _rocketier[level];
             case GameManager.SegmentType.Caraspace:
-                return _caraspace;
+                return _caraspace[level];
             case GameManager.SegmentType.Mine:
-                return _mine;
+                return _mine[level];
             case GameManager.SegmentType.Honey:
-                return _honey;
+                return _honey[level];
             case GameManager.SegmentType.Feet:
-                return _feet;
+                return _feet[level];
             case GameManager.SegmentType.Grenadier:
-                return _grenadier;
+                return _grenadier[level];
             case GameManager.SegmentType.Bellows:
-                return _bellows;
+                return _bellows[level];
             default: 
-                return _canon;
+                return _canon[level];
         }
     }
 

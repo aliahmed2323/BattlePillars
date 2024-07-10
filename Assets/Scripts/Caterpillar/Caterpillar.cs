@@ -82,7 +82,7 @@ public class Caterpillar : MonoBehaviour
             Move();
     }
 
-    public void AddExtension(GameManager.SegmentType type, bool isEnemy)
+    public void AddExtension(GameManager.SegmentType type, bool isEnemy, int level)
     {
         Vector2 newPos = new Vector2(_extensions[_extensions.Count - 1].transform.position.x - _extensionGap, transform.position.y);
         CaterpillarsScriptableObject.Extension extension;
@@ -95,9 +95,9 @@ public class Caterpillar : MonoBehaviour
             adjustedType = type;
 
         if (!isEnemy)
-        extension = GameManager.Instance._caterPillars[GameManager.Instance._caterPillarType].GetCaterpillarExtension(type);
+        extension = GameManager.Instance._caterPillars[GameManager.Instance._caterPillarType].GetCaterpillarExtension(type, level);
         else
-             extension = GameManager.Instance._enemyCaterPillars[0].GetCaterpillarExtension(adjustedType);
+             extension = GameManager.Instance._enemyCaterPillars[0].GetCaterpillarExtension(adjustedType, level);
 
         GameObject ext = Instantiate(extension.prefab, newPos, Quaternion.identity, transform);
         _extensions.Add(ext);

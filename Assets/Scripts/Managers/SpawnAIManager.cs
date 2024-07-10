@@ -93,7 +93,7 @@ public class SpawnAIManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
             foreach(GameManager.SegmentType type in pillar.Segments)
             {
-                ct.GetComponent<Caterpillar>().AddExtension(type, true);
+                ct.GetComponent<Caterpillar>().AddExtension(type, true, 1);
             }
             yield return new WaitForSeconds(0.1f);
             ct.GetComponent<Caterpillar>().ReleaseCaterPillar();
