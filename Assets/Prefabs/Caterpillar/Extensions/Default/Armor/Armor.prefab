@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -1444221479900534030}
   - component: {fileID: 7644533640678888710}
   m_Layer: 0
-  m_Name: spike armor (merged)
+  m_Name: Armor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

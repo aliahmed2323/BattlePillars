@@ -20,6 +20,8 @@ public class SegmentUpgradeScreen : MonoBehaviour
     public GameManager.SegmentType _selectedSegment;
     [HideInInspector]
     public int _selectedSegmentCost;
+    [HideInInspector]
+    public int _selectedSegmentUpgradeLevel;
     [SerializeField] Text _appleText;
     [SerializeField] GameObject _purchaseConfirmPopup;
     [SerializeField] Button _purchaseConfirmButton;
@@ -76,7 +78,7 @@ public class SegmentUpgradeScreen : MonoBehaviour
         {
             SavesScriptableObject.OwnedSegments l;
             l._segmentType = _selectedSegment;
-            l._segmentLevel = 1;
+            l._segmentLevel = _selectedSegmentUpgradeLevel;
             SaveManager.Instance._saveData._playerData._ownedSegments.Add(l);
             _selectedSegmentGameObject.GetComponent<SegmentUpgradeButton>().RefreshPurchaseStatus();
         }

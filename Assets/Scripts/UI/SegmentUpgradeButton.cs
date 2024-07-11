@@ -9,6 +9,7 @@ public class SegmentUpgradeButton : MonoBehaviour
     [SerializeField] string _segmentInfo;
     [SerializeField] GameManager.SegmentType _segmentType;
     [SerializeField] Text _appleText;
+    int level;
     public int _cost;
     public bool _purchased;
 
@@ -17,7 +18,18 @@ public class SegmentUpgradeButton : MonoBehaviour
         GetComponent<Button>().onClick.AddListener(() => HighlightSegment());
         RefreshPurchaseStatus();
 
-        _appleText.text = _cost.ToString();
+        level = SaveManager.Instance._saveData.OwnedSegmentLevel(_segmentType);
+        GetComponent<Image>().sprite = GameManager.Instance._caterPillars[0].GetCaterpillarExtension(_segmentType, level)._img;
+
+
+        if (!_purchased)
+            _appleText.text = _cost.ToString();
+        else
+        {
+            _cost = GameManager.Instance._caterPillars[0].GetCaterpillarExtension(_segmentType, level)._upgradeCost;
+            _appleText.text = _cost.ToString();
+        }
+
     }
 
     public void RefreshPurchaseStatus()
@@ -34,10 +46,17 @@ public class SegmentUpgradeButton : MonoBehaviour
         GetComponentInParent<SegmentUpgradeScreen>()._textbox.GetComponent<Text>().text = _segmentInfo;
 
         if (_purchased)
+        {
+            GetComponentInParent<SegmentUpgradeScreen>()._selectedSegmentUpgradeLevel = level + 1;
+            GetComponentInParent<SegmentUpgradeScreen>()._selectedSegment = _segmentType;
+            GetComponentInParent<SegmentUpgradeScreen>()._selectedSegmentCost = _cost;
+            GetComponentInParent<SegmentUpgradeScreen>()._selectedSegmentGameObject = gameObject;
             return;
+        }
 
         GetComponentInParent<SegmentUpgradeScreen>()._selectedSegment = _segmentType;
         GetComponentInParent<SegmentUpgradeScreen>()._selectedSegmentCost = _cost;
         GetComponentInParent<SegmentUpgradeScreen>()._selectedSegmentGameObject = gameObject;
+        GetComponentInParent<SegmentUpgradeScreen>()._selectedSegmentUpgradeLevel = 1;
     }
 }

@@ -57,6 +57,16 @@ public class SavesScriptableObject : ScriptableObject
         return false;
     }
 
+    public int OwnedSegmentLevel(GameManager.SegmentType segmentType)
+    {
+        foreach (OwnedSegments i in _playerData._ownedSegments)
+        {
+            if (i._segmentType == segmentType)
+                return i._segmentLevel;
+        }
+        return 1;
+    }
+
     public bool IsBaseUpgradeOwned(GameManager.BaseUpgrades type)
     {
         foreach (GameManager.BaseUpgrades i in _playerData._baseUpgrades)

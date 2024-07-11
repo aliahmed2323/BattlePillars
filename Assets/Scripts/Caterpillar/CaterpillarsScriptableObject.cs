@@ -33,6 +33,7 @@ public class CaterpillarsScriptableObject : ScriptableObject
         public Sprite _img;
         public GameObject prefab;
         public int _leafCost;
+        public int _upgradeCost;
         public Sprite _icon;
     }
 
