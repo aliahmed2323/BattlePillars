@@ -14,6 +14,7 @@ public class Pistolier : MonoBehaviour
     [SerializeField] float _bulletSpeed;
     bool _canAttack = true;
     [SerializeField] AudioSource _as;
+    [SerializeField] bool _isZapGun;
     private void Start()
     {
         cp = GetComponentInParent<Caterpillar>();
@@ -41,8 +42,11 @@ public class Pistolier : MonoBehaviour
         DamageEnemy();
         AttackAnim();
         _as.Play();
+        if(!_isZapGun)
+        {
         GameObject cb = Instantiate(_bullet, transform.position, Quaternion.identity);
         cb.transform.DOMove(cp._enemy.transform.position, Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _bulletSpeed).OnComplete(() => Destroy(cb));
+        }
         Invoke("EnableAttack", _fireRate);
     }
     void DamageEnemy()
@@ -60,6 +64,10 @@ public class Pistolier : MonoBehaviour
     }
     void AttackAnim()
     {
+        if(_isZapGun)
+        {
+            GetComponentInParent<Animator>().Play("Zap");
+        }
         transform.DOLocalMoveX(-0.26f, 0.18f).SetEase(Ease.InOutBack).SetLoops(2, LoopType.Yoyo).OnComplete(()=> {
             cp.ReleaseCaterPillar();
         });   

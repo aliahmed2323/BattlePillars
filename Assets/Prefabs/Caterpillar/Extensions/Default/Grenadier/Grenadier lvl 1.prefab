@@ -537,10 +537,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a559370487f163c48a8bd8c97cfa6516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 1.5
+  _damage: 2
   _rangeMaximum: 28
   _rangeMinimum: 16
-  _fireRate: 5
+  _fireRate: 4
   _grenade: {fileID: 6464026510630641906}
   _grenadeSpeed: 24
   _explosionEffect: {fileID: 1995445036008917209, guid: 5081f8335fb99274ab71c19d9de5c743, type: 3}

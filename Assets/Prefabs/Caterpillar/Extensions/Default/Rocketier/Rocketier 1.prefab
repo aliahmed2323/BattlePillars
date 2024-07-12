@@ -458,6 +458,7 @@ MonoBehaviour:
   _fireRate: 5
   _rocket: {fileID: 1507713158204170879, guid: f4b129fb731695343ba4f6f0443d9ddf, type: 3}
   _rocketSpeed: 24
+  _rocketAmount: 2
   _explosionEffect: {fileID: 1995445036008917209, guid: 5081f8335fb99274ab71c19d9de5c743, type: 3}
   _as: {fileID: 2085060321337826744}
 --- !u!1 &8812620284610911457

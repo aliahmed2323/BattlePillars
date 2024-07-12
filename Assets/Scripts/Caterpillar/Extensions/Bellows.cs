@@ -17,6 +17,7 @@ public class Bellows : MonoBehaviour
     [SerializeField] float _pushDistance;
     [SerializeField] float _rangeMaximum;
     [SerializeField] float _rangeMinimum;
+    [SerializeField] bool _playAnim = true;
 
     bool _canAttack = true;
 
@@ -43,7 +44,8 @@ public class Bellows : MonoBehaviour
     IEnumerator Attack()
     {
         _canAttack = false;
-        GetComponent<Animator>().Play("Shoot");
+        if(_playAnim)
+            GetComponent<Animator>().Play("Shoot");
         yield return new WaitForSeconds(0.8f);
 
         GameObject air = Instantiate(_airObject, _shootPoint.position, Quaternion.identity);

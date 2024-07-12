@@ -199,7 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthBuff: 0
   _healOverTime: 1
-  _healOverTimeValue: 0.2
+  _healOverTimeValue: 0.3
 --- !u!1 &7626567319019305387
 GameObject:
   m_ObjectHideFlags: 0

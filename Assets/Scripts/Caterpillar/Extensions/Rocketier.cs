@@ -13,6 +13,7 @@ public class Rocketier : MonoBehaviour
     [SerializeField] float _fireRate;
     [SerializeField]GameObject _rocket;
     [SerializeField] float _rocketSpeed;
+    [SerializeField] int _rocketAmount;
     [SerializeField] GameObject _explosionEffect;
     bool _canAttack = true;
     [SerializeField] AudioSource _as;
@@ -42,14 +43,19 @@ public class Rocketier : MonoBehaviour
         cp.InvokeStopAnim();
         _canAttack = false;        
         _as.Play();
-        GameObject cb = Instantiate(_rocket, transform.position, Quaternion.identity);
-        float timeToHit = Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _rocketSpeed;
-        cb.transform.DOJump(cp._enemy.transform.position, 4, 1, timeToHit).OnComplete(() =>
+
+
+        for(int i = 0; i < _rocketAmount; i++)
         {
-            ExplosionEffect(cb.transform.position);
-            DamageEnemy();
-            Destroy(cb);
-        });
+            GameObject cb = Instantiate(_rocket, transform.position, Quaternion.identity);
+            float timeToHit = Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _rocketSpeed;
+            cb.transform.DOJump(cp._enemy.transform.position, 4 + i, 1, timeToHit + Random.Range(0, 0.6f)).OnComplete(() =>
+            {
+                ExplosionEffect(cb.transform.position);
+                DamageEnemy();
+                Destroy(cb);
+            });
+        }
         
         Invoke("EnableAttack", _fireRate);
     }

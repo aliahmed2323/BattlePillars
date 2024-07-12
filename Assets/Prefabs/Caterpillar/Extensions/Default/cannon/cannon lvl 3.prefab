@@ -225,9 +225,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13fb7e2b56bf2b499d091dce7a20bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 0.5
+  _damage: 1
   _range: 15
-  _fireRate: 4
+  _fireRate: 3
   _cannonBall: {fileID: 5719167602555227677, guid: b4cdedfb49ba9d545894954ec03b87da, type: 3}
   _cannonBallSpeed: 11
   _as: {fileID: 4490869093217528998}

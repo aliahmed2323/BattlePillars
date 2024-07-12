@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a251e2dcce5644fba0ad5f1004470e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthBuff: 0.3
+  _healthBuff: 0.5
   _healOverTime: 0
   _healOverTimeValue: 0
 --- !u!1 &7904791371465184947

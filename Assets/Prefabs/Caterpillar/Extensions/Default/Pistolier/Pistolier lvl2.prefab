@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42555894de3d9d3408a160d88de432b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 0.1
+  _damage: 0.2
   _range: 9
   _fireRate: 0.2
   _bullet: {fileID: 4746714985614103024, guid: b5848f76d169bb14bbfbd1436ef20814, type: 3}

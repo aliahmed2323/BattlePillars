@@ -138,11 +138,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _airObject: {fileID: 7303357446238499362, guid: 2df31c672a47106489e5b83406ec4560, type: 3}
   _shootPoint: {fileID: 7713189977320286907}
-  _rateOfFire: 6
+  _rateOfFire: 4
   _attackSpeed: 7
-  _pushDistance: 3
+  _pushDistance: 5
   _rangeMaximum: 25
   _rangeMinimum: 5
+  _playAnim: 0
 --- !u!1 &2558728661140183082
 GameObject:
   m_ObjectHideFlags: 0

@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _honeyEffectTime: 6
-  _honeyReduceSpeedAmount: 2
+  _honeyReduceSpeedAmount: 3
   _range: 40
   _fireRate: 10
   _honey: {fileID: 4249626401797841784, guid: 2f4ad13e1b464da49ab51489fd65408b, type: 3}
