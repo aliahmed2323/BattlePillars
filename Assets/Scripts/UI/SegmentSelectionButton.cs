@@ -25,8 +25,7 @@ public class SegmentSelectionButton : MonoBehaviour
 
     void HighlightSegment()
     {
-        GetComponentInParent<SegmentSelection>().SelectSegment(_segmentType);
-        GetComponentInParent<SegmentSelection>()._segmentInfo.text = _segmentInfo;
+
         if(isSelected)
         {
             GetComponent<Image>().color = new Color32(255,255,255,255);
@@ -34,9 +33,13 @@ public class SegmentSelectionButton : MonoBehaviour
         }
         else
         {
+        if (GetComponentInParent<SegmentSelection>()._selectedSegments.Count >= 6)
+            return;
             GetComponent<Image>().color = new Color32(149, 253, 153, 255);
             isSelected = true;
         }
+        GetComponentInParent<SegmentSelection>().SelectSegment(_segmentType);
+        GetComponentInParent<SegmentSelection>()._segmentInfo.text = _segmentInfo;
 
     }
 }

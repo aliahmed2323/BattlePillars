@@ -6703,6 +6703,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _selectedSegments: 
+  _selectedSegmentImages:
+  - {fileID: 1468947527}
+  - {fileID: 866252300}
+  - {fileID: 1809350375}
+  - {fileID: 1009301188}
+  - {fileID: 1282738142}
+  - {fileID: 1493181490}
+  _defaultImage: {fileID: 21300000, guid: f6439c1272f6ee049b74f865bd77897e, type: 3}
   _segmentInfo: {fileID: 1224214048}
   _playButton: {fileID: 617520808}
 --- !u!1 &596558214
@@ -9213,7 +9221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &778661585
 RectTransform:
   m_ObjectHideFlags: 0
