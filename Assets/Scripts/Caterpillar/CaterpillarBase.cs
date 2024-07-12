@@ -10,8 +10,8 @@ public class CaterpillarBase : MonoBehaviour
     [SerializeField] Slider _healthSlider;
     [SerializeField] GameOverPanel _gmp;
 
-    [SerializeField] GameObject _attackUpgrade;
-    [SerializeField] GameObject _defenceUpgrade;
+    [SerializeField] GameObject[] _attackUpgrade;
+    [SerializeField] GameObject[] _defenceUpgrade;
 
     private void Start()
     {
@@ -22,7 +22,7 @@ public class CaterpillarBase : MonoBehaviour
     void AddBaseUpgrades()
     {
         if (SaveManager.Instance._saveData.IsBaseUpgradeOwned(GameManager.BaseUpgrades.Attack))
-            _attackUpgrade.SetActive(true);
+            _attackUpgrade[SaveManager.Instance._saveData.OwnedBaseUpgradeLevel(GameManager.BaseUpgrades.Attack)].SetActive(true);
 
         if (SaveManager.Instance._saveData.IsBaseUpgradeOwned(GameManager.BaseUpgrades.Production))
         {
@@ -33,7 +33,7 @@ public class CaterpillarBase : MonoBehaviour
         {
             _health = _health * 2;
             _healthSlider.maxValue = 2;
-            _defenceUpgrade.SetActive(true);
+            _defenceUpgrade[SaveManager.Instance._saveData.OwnedBaseUpgradeLevel(GameManager.BaseUpgrades.Defense)].SetActive(true);
         }
     }
 

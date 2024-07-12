@@ -14,7 +14,7 @@ public class SavesScriptableObject : ScriptableObject
         public SaveManager.Modes[] _unlockedModes;
         public List<CompletedLevels> _completedLevels;
         public List<OwnedSegments> _ownedSegments;
-        public List<GameManager.BaseUpgrades> _baseUpgrades;
+        public List<OwnedBaseUpgrades> _baseUpgrades;
     }
 
     [System.Serializable]
@@ -30,6 +30,13 @@ public class SavesScriptableObject : ScriptableObject
     {
        public GameManager.SegmentType _segmentType;
         public int _segmentLevel;
+    }
+
+    [System.Serializable]
+    public struct OwnedBaseUpgrades
+    {
+        public GameManager.BaseUpgrades BaseUpgrades;
+        public int Level;
     }
 
     public CompletedLevels GetCompletedLevel(int _levelID)
@@ -67,12 +74,35 @@ public class SavesScriptableObject : ScriptableObject
         return 0;
     }
 
+    public int OwnedBaseUpgradeLevel(GameManager.BaseUpgrades Type)
+    {
+        foreach (OwnedBaseUpgrades i in _playerData._baseUpgrades)
+        {
+            if (i.BaseUpgrades == Type)
+                return i.Level;
+        }
+        return 0;
+    }
+
     public bool IsBaseUpgradeOwned(GameManager.BaseUpgrades type)
     {
-        foreach (GameManager.BaseUpgrades i in _playerData._baseUpgrades)
+        foreach (OwnedBaseUpgrades i in _playerData._baseUpgrades)
         {
-            if (i == type)
+            if (i.BaseUpgrades == type)
                 return true;
+        }
+        return false;
+    }
+
+    public bool RemoveBaseUpgrade(GameManager.BaseUpgrades type)
+    {
+        for (int i = 0; i < _playerData._baseUpgrades.Count; i++)
+        {
+            if (_playerData._baseUpgrades[i].BaseUpgrades == type)
+            {
+                _playerData._baseUpgrades.RemoveAt(i);
+                return true;
+            }
         }
         return false;
     }

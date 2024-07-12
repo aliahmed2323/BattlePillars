@@ -19,4 +19,4 @@ MonoBehaviour:
     _ownedSegments:
     - _segmentType: 1
       _segmentLevel: 0
-    _baseUpgrades: 
+    _baseUpgrades: []

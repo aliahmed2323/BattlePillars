@@ -56,6 +56,7 @@ public class SegmentUpgradeButton : MonoBehaviour
             GetComponentInParent<SegmentUpgradeScreen>()._selectedSegment = _segmentType;
             GetComponentInParent<SegmentUpgradeScreen>()._selectedSegmentCost = _cost;
             GetComponentInParent<SegmentUpgradeScreen>()._selectedSegmentGameObject = gameObject;
+            GetComponentInParent<SegmentUpgradeScreen>().PurchaseConfirmationPopup("Upgrade Segment");
             return;
         }
 
@@ -63,5 +64,6 @@ public class SegmentUpgradeButton : MonoBehaviour
         GetComponentInParent<SegmentUpgradeScreen>()._selectedSegmentCost = _cost;
         GetComponentInParent<SegmentUpgradeScreen>()._selectedSegmentGameObject = gameObject;
         GetComponentInParent<SegmentUpgradeScreen>()._selectedSegmentUpgradeLevel = 0;
+        GetComponentInParent<SegmentUpgradeScreen>().PurchaseConfirmationPopup("Purchase Segment");
     }
 }

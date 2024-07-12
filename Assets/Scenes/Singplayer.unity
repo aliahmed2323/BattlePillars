@@ -7430,7 +7430,55 @@ PrefabInstance:
       propertyPath: _defenceUpgrade
       value: 
       objectReference: {fileID: 3150047413487468126}
+    - target: {fileID: 69046021, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: _attackUpgrade.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 69046021, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: _defenceUpgrade.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 69046021, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: _attackUpgrade.Array.data[0]
+      value: 
+      objectReference: {fileID: 3150047413487468125}
+    - target: {fileID: 69046021, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: _attackUpgrade.Array.data[1]
+      value: 
+      objectReference: {fileID: 3150047413487468128}
+    - target: {fileID: 69046021, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: _attackUpgrade.Array.data[2]
+      value: 
+      objectReference: {fileID: 3150047413487468127}
+    - target: {fileID: 69046021, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: _attackUpgrade.Array.data[3]
+      value: 
+      objectReference: {fileID: 3150047413487468127}
+    - target: {fileID: 69046021, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: _defenceUpgrade.Array.data[0]
+      value: 
+      objectReference: {fileID: 3150047413487468126}
+    - target: {fileID: 69046021, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: _defenceUpgrade.Array.data[1]
+      value: 
+      objectReference: {fileID: 3150047413487468130}
+    - target: {fileID: 69046021, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: _defenceUpgrade.Array.data[2]
+      value: 
+      objectReference: {fileID: 3150047413487468129}
+    - target: {fileID: 1630892703815995372, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1819784069287999430, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069779773883820194, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481014915948295905, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -7498,13 +7546,49 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5303930123545067134, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.21
+      objectReference: {fileID: 0}
     - target: {fileID: 5581059341713141228, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6776254426086123367, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6778113422780555724, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: _range
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6778113422780555724, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: _damage
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6778113422780555724, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: _fireRate
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467653859843401817, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8235607636353616584, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846002147123786549, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: _range
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846002147123786549, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: _damage
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846002147123786549, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+      propertyPath: _fireRate
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 9171357116359989829, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
       propertyPath: _range
@@ -7537,6 +7621,26 @@ GameObject:
 --- !u!1 &3150047413487468126 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1630892703815995372, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+  m_PrefabInstance: {fileID: 3150047413487468124}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3150047413487468127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2481014915948295905, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+  m_PrefabInstance: {fileID: 3150047413487468124}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3150047413487468128 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7467653859843401817, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+  m_PrefabInstance: {fileID: 3150047413487468124}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3150047413487468129 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6332987757491569906, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
+  m_PrefabInstance: {fileID: 3150047413487468124}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3150047413487468130 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2226894210763050446, guid: c48393c74b5fd424cabe7844d2a63711, type: 3}
   m_PrefabInstance: {fileID: 3150047413487468124}
   m_PrefabAsset: {fileID: 0}
 --- !u!61 &3150047413487468131
