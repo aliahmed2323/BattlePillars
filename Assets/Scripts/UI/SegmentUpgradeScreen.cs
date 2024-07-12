@@ -79,6 +79,9 @@ public class SegmentUpgradeScreen : MonoBehaviour
             SavesScriptableObject.OwnedSegments l;
             l._segmentType = _selectedSegment;
             l._segmentLevel = _selectedSegmentUpgradeLevel;
+
+            SaveManager.Instance._saveData.RemoveSegment(_selectedSegment);
+
             SaveManager.Instance._saveData._playerData._ownedSegments.Add(l);
             _selectedSegmentGameObject.GetComponent<SegmentUpgradeButton>().RefreshPurchaseStatus();
         }

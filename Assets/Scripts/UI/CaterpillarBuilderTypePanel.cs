@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class CaterpillarBuilderTypePanel : MonoBehaviour
 {
     public GameManager.SegmentType _type;
+    public int level;
     int cost;
 
     private void Start()
     {
         GetComponentInChildren<Button>().onClick.AddListener(() => AddInBuilder());
+        level = SaveManager.Instance._saveData.OwnedSegmentLevel(_type);
         cost = GameManager.Instance._caterPillars[GameManager.Instance._caterPillarType].GetCaterpillarExtension(_type, 1)._leafCost;
     }
 
@@ -22,7 +24,7 @@ public class CaterpillarBuilderTypePanel : MonoBehaviour
         /*if (!GameManager.Instance.DeductLeafs(cost)) return;*/
 
         GetComponentInParent<CaterpillarBuilderPanel>()._currentBattlepillarCost += cost;
-        GetComponentInParent<CaterpillarBuilderPanel>().AddExtension(_type, 1);
-        GameManager.Instance.AddExtensionToCurrentCaterpillar(_type, 1);
+        GetComponentInParent<CaterpillarBuilderPanel>().AddExtension(_type, level);
+        GameManager.Instance.AddExtensionToCurrentCaterpillar(_type, level);
     }
 }

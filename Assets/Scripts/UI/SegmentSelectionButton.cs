@@ -16,6 +16,11 @@ public class SegmentSelectionButton : MonoBehaviour
         GetComponent<Button>().onClick.AddListener(() => HighlightSegment() );
         if (!SaveManager.Instance._saveData.IsSegmentOwned(_segmentType))
             gameObject.SetActive(false);
+        else
+        {
+            GetComponent<Image>().sprite = UIManager.Instance._caterpillar.GetCaterpillarExtension(_segmentType, SaveManager.Instance._saveData.OwnedSegmentLevel(_segmentType))._icon;
+
+        }
     }
 
     void HighlightSegment()

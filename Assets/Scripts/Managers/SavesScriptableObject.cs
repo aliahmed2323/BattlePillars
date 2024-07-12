@@ -64,7 +64,7 @@ public class SavesScriptableObject : ScriptableObject
             if (i._segmentType == segmentType)
                 return i._segmentLevel;
         }
-        return 1;
+        return 0;
     }
 
     public bool IsBaseUpgradeOwned(GameManager.BaseUpgrades type)
@@ -73,6 +73,19 @@ public class SavesScriptableObject : ScriptableObject
         {
             if (i == type)
                 return true;
+        }
+        return false;
+    }
+
+    public bool RemoveSegment(GameManager.SegmentType type)
+    {
+       for(int i = 0; i < _playerData._ownedSegments.Count; i++)
+        {
+            if (_playerData._ownedSegments[i]._segmentType == type)
+            {
+                _playerData._ownedSegments.RemoveAt(i);
+                return true;
+            }
         }
         return false;
     }

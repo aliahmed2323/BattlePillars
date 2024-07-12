@@ -592,7 +592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShouldPersistOnLoad: 1
-  LoadDataFromSaveFile: 1
+  LoadDataFromSaveFile: 0
   _saveData: {fileID: 11400000, guid: cd8ff02b1be2dc7489ef252737d98e75, type: 2}
   DefaultSaveLocation: /Battlepillars/Saves/
 --- !u!4 &50204333
@@ -1513,6 +1513,7 @@ MonoBehaviour:
     Deals Considerable Damage to foes'
   _segmentType: 1
   _appleText: {fileID: 1410183068}
+  level: 0
   _cost: 20
   _purchased: 1
 --- !u!1 &164408660
@@ -2721,6 +2722,7 @@ MonoBehaviour:
     Lobs honey that reduces enemy speed'
   _segmentType: 8
   _appleText: {fileID: 665232780}
+  level: 0
   _cost: 80
   _purchased: 0
 --- !u!114 &261856872
@@ -5112,6 +5114,7 @@ MonoBehaviour:
     Reduces the amount of damage taken by foes'
   _segmentType: 4
   _appleText: {fileID: 691671904}
+  level: 0
   _cost: 50
   _purchased: 0
 --- !u!1 &467595117
@@ -8955,7 +8958,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0.000061035156}
-  m_SizeDelta: {x: 905.27246, y: 140.8}
+  m_SizeDelta: {x: 915.3194, y: 140.8}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &749928673
 MonoBehaviour:
@@ -13439,6 +13442,7 @@ MonoBehaviour:
   _selectedSegmentGameObject: {fileID: 0}
   _selectedSegment: 0
   _selectedSegmentCost: 0
+  _selectedSegmentUpgradeLevel: 0
   _appleText: {fileID: 1908611092}
   _purchaseConfirmPopup: {fileID: 700772856}
   _purchaseConfirmButton: {fileID: 39834266}
@@ -15554,6 +15558,7 @@ MonoBehaviour:
     Drops deadly burrs that explode on contact'
   _segmentType: 7
   _appleText: {fileID: 722276980}
+  level: 0
   _cost: 100
   _purchased: 0
 --- !u!114 &1352932502
@@ -16265,6 +16270,7 @@ MonoBehaviour:
     Battlepillar vulnerable to more damage'
   _segmentType: 9
   _appleText: {fileID: 1516780151}
+  level: 0
   _cost: 60
   _purchased: 0
 --- !u!1 &1396209020
@@ -16393,6 +16399,7 @@ MonoBehaviour:
   _campaignScreen: {fileID: 537895876}
   _segmentSelectionPanel: {fileID: 588554765}
   _segmentUpgradePanel: {fileID: 1201805279}
+  _caterpillar: {fileID: 11400000, guid: cf94178b7812c2d42bb6b6892ee0c5d1, type: 2}
 --- !u!1 &1410183066
 GameObject:
   m_ObjectHideFlags: 0
@@ -16575,6 +16582,7 @@ MonoBehaviour:
     Throws a gust of wind that pushes back enemies'
   _segmentType: 11
   _appleText: {fileID: 0}
+  level: 0
   _cost: 80
   _purchased: 0
 --- !u!114 &1411245290
@@ -17342,6 +17350,7 @@ MonoBehaviour:
     Beefs up your battlepillar by providing more HP'
   _segmentType: 6
   _appleText: {fileID: 119941313}
+  level: 0
   _cost: 60
   _purchased: 0
 --- !u!114 &1449889963
@@ -18905,6 +18914,7 @@ MonoBehaviour:
     Speeds up your caterpillar'
   _segmentType: 10
   _appleText: {fileID: 1835693146}
+  level: 0
   _cost: 40
   _purchased: 0
 --- !u!114 &1563135868
@@ -20980,6 +20990,7 @@ MonoBehaviour:
     vulnerable and slow'
   _segmentType: 5
   _appleText: {fileID: 849084578}
+  level: 0
   _cost: 120
   _purchased: 0
 --- !u!1 &1768404199 stripped
@@ -21359,6 +21370,7 @@ MonoBehaviour:
   _segmentInfo: "Spikey Armor \n Reduces the damage taken by foes"
   _segmentType: 0
   _appleText: {fileID: 1742324290}
+  level: 0
   _cost: 20
   _purchased: 0
 --- !u!1001 &1794608776
@@ -24478,6 +24490,7 @@ MonoBehaviour:
     Shoots rapid fire rounds'
   _segmentType: 3
   _appleText: {fileID: 1069327815}
+  level: 0
   _cost: 30
   _purchased: 0
 --- !u!1 &2123929742

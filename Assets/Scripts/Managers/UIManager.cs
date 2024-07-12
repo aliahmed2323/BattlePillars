@@ -11,6 +11,8 @@ public class UIManager : Singleton<UIManager>
     public SegmentSelection _segmentSelectionPanel;
     public SegmentUpgradeScreen _segmentUpgradePanel;
 
+    public CaterpillarsScriptableObject _caterpillar;
+
     public enum Screens
     {
         MainMenu = 0,

@@ -69,7 +69,7 @@ public class CaterpillarBuilderPanel : MonoBehaviour
             Debug.Log(segment.ToString());
             GameObject item = Instantiate(_extensionTypePanel, content);
             item.GetComponent<CaterpillarBuilderTypePanel>()._type = segment;
-            item.GetComponent<Image>().sprite = GameManager.Instance._caterPillars[GameManager.Instance._caterPillarType].GetCaterpillarExtension(segment, 1)._icon;
+            item.GetComponent<Image>().sprite = GameManager.Instance._caterPillars[0].GetCaterpillarExtension(segment, SaveManager.Instance._saveData.OwnedSegmentLevel(segment))._icon;
         }
     }
 }

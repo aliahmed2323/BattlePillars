@@ -9,7 +9,7 @@ public class SegmentUpgradeButton : MonoBehaviour
     [SerializeField] string _segmentInfo;
     [SerializeField] GameManager.SegmentType _segmentType;
     [SerializeField] Text _appleText;
-    int level;
+    public int level;
     public int _cost;
     public bool _purchased;
 
@@ -19,14 +19,14 @@ public class SegmentUpgradeButton : MonoBehaviour
         RefreshPurchaseStatus();
 
         level = SaveManager.Instance._saveData.OwnedSegmentLevel(_segmentType);
-        GetComponent<Image>().sprite = GameManager.Instance._caterPillars[0].GetCaterpillarExtension(_segmentType, level)._img;
+        GetComponent<Image>().sprite = UIManager.Instance._caterpillar.GetCaterpillarExtension(_segmentType, level)._icon;
 
 
         if (!_purchased)
             _appleText.text = _cost.ToString();
         else
         {
-            _cost = GameManager.Instance._caterPillars[0].GetCaterpillarExtension(_segmentType, level)._upgradeCost;
+            _cost = UIManager.Instance._caterpillar.GetCaterpillarExtension(_segmentType, level)._upgradeCost;
             _appleText.text = _cost.ToString();
         }
 
@@ -38,6 +38,9 @@ public class SegmentUpgradeButton : MonoBehaviour
         {
             _purchased = true;
             GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+            level = SaveManager.Instance._saveData.OwnedSegmentLevel(_segmentType);
+            GetComponent<Image>().sprite = UIManager.Instance._caterpillar.GetCaterpillarExtension(_segmentType, level)._icon;
+
         }
     }
 
@@ -47,6 +50,8 @@ public class SegmentUpgradeButton : MonoBehaviour
 
         if (_purchased)
         {
+            if (level >= 2)
+                return;
             GetComponentInParent<SegmentUpgradeScreen>()._selectedSegmentUpgradeLevel = level + 1;
             GetComponentInParent<SegmentUpgradeScreen>()._selectedSegment = _segmentType;
             GetComponentInParent<SegmentUpgradeScreen>()._selectedSegmentCost = _cost;
@@ -57,6 +62,6 @@ public class SegmentUpgradeButton : MonoBehaviour
         GetComponentInParent<SegmentUpgradeScreen>()._selectedSegment = _segmentType;
         GetComponentInParent<SegmentUpgradeScreen>()._selectedSegmentCost = _cost;
         GetComponentInParent<SegmentUpgradeScreen>()._selectedSegmentGameObject = gameObject;
-        GetComponentInParent<SegmentUpgradeScreen>()._selectedSegmentUpgradeLevel = 1;
+        GetComponentInParent<SegmentUpgradeScreen>()._selectedSegmentUpgradeLevel = 0;
     }
 }
