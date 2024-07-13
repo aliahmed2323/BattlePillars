@@ -10,7 +10,7 @@ public class BaseUpgradeButton : MonoBehaviour
     [SerializeField] GameManager.BaseUpgrades _type;
     [SerializeField] Text _appleText;
     [SerializeField] List<Sprite> _icons = new();
-    public int _cost;
+    public int[] _cost;
     int level;
     public bool _purchased;
 
@@ -22,7 +22,7 @@ public class BaseUpgradeButton : MonoBehaviour
         level = SaveManager.Instance._saveData.OwnedBaseUpgradeLevel(_type);
         GetComponent<Image>().sprite = _icons[level];
 
-        _appleText.text = _cost.ToString();
+        _appleText.text = _cost[0].ToString();
     }
 
     public void RefreshPurchaseStatus()
@@ -33,6 +33,7 @@ public class BaseUpgradeButton : MonoBehaviour
             GetComponent<Image>().color = new Color32(255, 255, 255, 255);
 
             level = SaveManager.Instance._saveData.OwnedBaseUpgradeLevel(_type);
+            _appleText.text = _cost[level].ToString();
             GetComponent<Image>().sprite = _icons[level];
         }
     }
@@ -47,14 +48,14 @@ public class BaseUpgradeButton : MonoBehaviour
                 return;
             GetComponentInParent<SegmentUpgradeScreen>()._selectedBaseUpgradeLevel = level + 1;
             GetComponentInParent<SegmentUpgradeScreen>()._selectedBaseUpgrade = _type;
-            GetComponentInParent<SegmentUpgradeScreen>()._selectedBaseUpgradeCost = _cost;
+            GetComponentInParent<SegmentUpgradeScreen>()._selectedBaseUpgradeCost = _cost[level + 1];
             GetComponentInParent<SegmentUpgradeScreen>()._selectedBaseUpgradeGameObject = gameObject;
             GetComponentInParent<SegmentUpgradeScreen>().PurchaseConfirmationPopup("Upgrade Base Attatchment");
             return;
         }
 
         GetComponentInParent<SegmentUpgradeScreen>()._selectedBaseUpgrade = _type;
-        GetComponentInParent<SegmentUpgradeScreen>()._selectedBaseUpgradeCost = _cost;
+        GetComponentInParent<SegmentUpgradeScreen>()._selectedBaseUpgradeCost = _cost[0];
         GetComponentInParent<SegmentUpgradeScreen>()._selectedBaseUpgradeGameObject = gameObject;
         GetComponentInParent<SegmentUpgradeScreen>()._selectedBaseUpgradeLevel = 0;
         GetComponentInParent<SegmentUpgradeScreen>().PurchaseConfirmationPopup("Purchase Base Attatchment");

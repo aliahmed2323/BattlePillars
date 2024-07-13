@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEditor;
 
 public class BaseWeapon : MonoBehaviour
 {
-    Caterpillar cp;
+    public Caterpillar cp;
     [SerializeField] float _damage;
     [SerializeField] float _range;
     [Tooltip("Delay between every attack")]

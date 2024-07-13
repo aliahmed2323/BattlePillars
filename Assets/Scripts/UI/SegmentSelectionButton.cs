@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SegmentSelectionButton : MonoBehaviour
 {
-    [SerializeField] GameManager.SegmentType _segmentType;
+    [SerializeField] internal GameManager.SegmentType _segmentType;
     [TextArea]
     [SerializeField] string _segmentInfo;
     bool isSelected;
@@ -13,14 +13,7 @@ public class SegmentSelectionButton : MonoBehaviour
 
      void Start()
     {
-        GetComponent<Button>().onClick.AddListener(() => HighlightSegment() );
-        if (!SaveManager.Instance._saveData.IsSegmentOwned(_segmentType))
-            gameObject.SetActive(false);
-        else
-        {
-            GetComponent<Image>().sprite = UIManager.Instance._caterpillar.GetCaterpillarExtension(_segmentType, SaveManager.Instance._saveData.OwnedSegmentLevel(_segmentType))._icon;
-
-        }
+        GetComponent<Button>().onClick.AddListener(() => HighlightSegment());
     }
 
     void HighlightSegment()

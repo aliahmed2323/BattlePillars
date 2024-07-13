@@ -12,10 +12,12 @@ public class SegmentSelection : MonoBehaviour
     [SerializeField] Sprite _defaultImage;
     public Text _segmentInfo;
     [SerializeField] Button _playButton;
+    [SerializeField] GameObject[] _segmentScrollViewObjects;
 
     private void Start()
     {
         _playButton.onClick.AddListener(() => StartGame());
+        UpdateOwnedSegmentsInScrollView();
     }
 
     private void UpdateSegmentImages()
@@ -29,6 +31,26 @@ public class SegmentSelection : MonoBehaviour
                 _selectedSegmentImages[i].sprite = _defaultImage;
             }
             
+        }
+    }
+
+    private void OnEnable()
+    {
+        UpdateOwnedSegmentsInScrollView();
+    }
+
+    public void UpdateOwnedSegmentsInScrollView()
+    {
+        foreach(GameObject g in _segmentScrollViewObjects)
+        {
+            if (!SaveManager.Instance._saveData.IsSegmentOwned(g.GetComponent<SegmentSelectionButton>()._segmentType))
+                g.SetActive(false);
+            else
+            {
+                g.SetActive(true);
+                g.GetComponent<Image>().sprite = UIManager.Instance._caterpillar.GetCaterpillarExtension(g.GetComponent<SegmentSelectionButton>()._segmentType, SaveManager.Instance._saveData.OwnedSegmentLevel(g.GetComponent<SegmentSelectionButton>()._segmentType))._icon;
+
+            }
         }
     }
 

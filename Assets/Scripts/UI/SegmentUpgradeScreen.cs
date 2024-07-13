@@ -99,7 +99,7 @@ public class SegmentUpgradeScreen : MonoBehaviour
 
     void PurchaseBaseUpgrade()
     {
-        if (SaveManager.Instance.DeductApples(_selectedSegmentCost))
+        if (SaveManager.Instance.DeductApples(_selectedBaseUpgradeCost))
         {
             SavesScriptableObject.OwnedBaseUpgrades b = new();
             b.BaseUpgrades = _selectedBaseUpgrade;

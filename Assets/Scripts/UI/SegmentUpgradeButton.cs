@@ -39,6 +39,8 @@ public class SegmentUpgradeButton : MonoBehaviour
             _purchased = true;
             GetComponent<Image>().color = new Color32(255, 255, 255, 255);
             level = SaveManager.Instance._saveData.OwnedSegmentLevel(_segmentType);
+            _cost = UIManager.Instance._caterpillar.GetCaterpillarExtension(_segmentType, level)._upgradeCost;
+
             GetComponent<Image>().sprite = UIManager.Instance._caterpillar.GetCaterpillarExtension(_segmentType, level)._icon;
 
         }

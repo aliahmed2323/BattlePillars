@@ -592,7 +592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShouldPersistOnLoad: 1
-  LoadDataFromSaveFile: 1
+  LoadDataFromSaveFile: 0
   _saveData: {fileID: 11400000, guid: cd8ff02b1be2dc7489ef252737d98e75, type: 2}
   DefaultSaveLocation: /Battlepillars/Saves/
 --- !u!4 &50204333
@@ -2421,7 +2421,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.000030517578, y: 0.000061035156}
-  m_SizeDelta: {x: 584.01135, y: 140.8}
+  m_SizeDelta: {x: 543.35767, y: 140.8}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &235596766
 MonoBehaviour:
@@ -6713,6 +6713,18 @@ MonoBehaviour:
   _defaultImage: {fileID: 21300000, guid: f6439c1272f6ee049b74f865bd77897e, type: 3}
   _segmentInfo: {fileID: 1224214048}
   _playButton: {fileID: 617520808}
+  _segmentScrollViewObjects:
+  - {fileID: 1882322012}
+  - {fileID: 704482721}
+  - {fileID: 1460158239}
+  - {fileID: 1804935797}
+  - {fileID: 875892013}
+  - {fileID: 2022753148}
+  - {fileID: 2032030551}
+  - {fileID: 716240098}
+  - {fileID: 1707071007}
+  - {fileID: 908076863}
+  - {fileID: 284641929}
 --- !u!1 &596558214
 GameObject:
   m_ObjectHideFlags: 0
@@ -11676,7 +11688,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 223b8499320095b4f9ab7c43e1e3fb31, type: 3}
   - {fileID: 21300000, guid: 8d6245c20b7925e458d1598bdead71be, type: 3}
   - {fileID: 21300000, guid: 4cdb232ccd748c644822800dbc3ac3e4, type: 3}
-  _cost: 150
+  _cost: 460000005a00000078000000
   _purchased: 0
 --- !u!1 &1069327813
 GameObject:
@@ -19393,7 +19405,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ce450cc8199040a47b7a27772c6b16a4, type: 3}
   - {fileID: 21300000, guid: 3713463ffcc6caf47b2404b37b275b7f, type: 3}
   - {fileID: 21300000, guid: 6cb5fcccced36ee449c6454eb0cc2208, type: 3}
-  _cost: 75
+  _cost: 32000000460000005a000000
   _purchased: 0
 --- !u!1 &1623894576 stripped
 GameObject:
@@ -19795,7 +19807,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 82a885679e769cf48a1c2a70d76c5c80, type: 3}
   - {fileID: 21300000, guid: 97a323988a187004e998f10e6badaeb2, type: 3}
   - {fileID: 21300000, guid: 2860da3937506014fa802e5624177021, type: 3}
-  _cost: 75
+  _cost: 3c0000005000000064000000
   _purchased: 0
 --- !u!1 &1667589331
 GameObject:
@@ -23886,7 +23898,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2085215306
 RectTransform:
   m_ObjectHideFlags: 0
