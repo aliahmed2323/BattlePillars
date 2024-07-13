@@ -18,203 +18,203 @@ MonoBehaviour:
   _headPrefab: {fileID: 1676660589421364698, guid: 5ba3dbf864574c24d93f7e7beb6c8a7b, type: 3}
   _canon:
   - _name: Cannon
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: 6aee4c1db5e90734587fc913810d8099, type: 3}
     prefab: {fileID: 8803275453571237709, guid: 1a1d35bb48f359e49a4db678731d1f50, type: 3}
     _leafCost: 50
     _upgradeCost: 80
     _icon: {fileID: 21300000, guid: 67f72127b1aa8bc4c84e2f4c5de8e8c3, type: 3}
   - _name: Cannon
-    _img: {fileID: 21300000, guid: 0cba0d74b5657b845b8f375f6d370b00, type: 3}
+    _img: {fileID: 21300000, guid: a2f85457d53c4f94d8d3c00203b18aa1, type: 3}
     prefab: {fileID: 8803275453571237709, guid: 9fe6e8fd398783e4a882b5694c0aaef9, type: 3}
     _leafCost: 70
     _upgradeCost: 100
     _icon: {fileID: 21300000, guid: 0cba0d74b5657b845b8f375f6d370b00, type: 3}
   - _name: Cannon
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: 4022ee42154112643ac8f6ddea1ae793, type: 3}
     prefab: {fileID: 8803275453571237709, guid: d4c988c53128fb94a94083cf247c244a, type: 3}
     _leafCost: 90
     _upgradeCost: 150
     _icon: {fileID: 21300000, guid: 8910962e0b7fc784886240e53ae32b22, type: 3}
   _healer:
   - _name: Healer
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: 1cb45988a0a432445887eee9c1afa4e6, type: 3}
     prefab: {fileID: 811595614745786998, guid: 512c4ceef39649d48a137aa24059997f, type: 3}
     _leafCost: 40
     _upgradeCost: 40
     _icon: {fileID: 21300000, guid: b435a8900b6d8084c8839da457188752, type: 3}
   - _name: Healer
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: e8192421e0df36348a7d9a61bcbe52d5, type: 3}
     prefab: {fileID: 811595614745786998, guid: 4fdc4675b3fbf5641a47d906cd08e7ec, type: 3}
     _leafCost: 60
     _upgradeCost: 60
     _icon: {fileID: 21300000, guid: f7dd05657c4841a4e990c7fe92cf44a2, type: 3}
   - _name: Healer
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: 7f54b014c994cbb4abd7014cd222c47d, type: 3}
     prefab: {fileID: 811595614745786998, guid: 558856dfa9162e04a83884e76b20ba70, type: 3}
     _leafCost: 70
     _upgradeCost: 70
     _icon: {fileID: 21300000, guid: 3e336853600ceb24ea471a27bf29de6d, type: 3}
   _spikeArmor:
   - _name: Armor
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: 017893687c6092841a7a7d722abe1c0c, type: 3}
     prefab: {fileID: 2161034570853745996, guid: 49caf11120f569249b22c55ab3f45383, type: 3}
     _leafCost: 60
     _upgradeCost: 60
     _icon: {fileID: 21300000, guid: 41b6fecc0c68cbe4da2b61cb8a250f1a, type: 3}
   - _name: Armor
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: c47a7010ebf88d14180195cac20dfc46, type: 3}
     prefab: {fileID: 2161034570853745996, guid: 1ba6fa67dac52f04b98cd841f800fb3a, type: 3}
     _leafCost: 85
     _upgradeCost: 85
     _icon: {fileID: 21300000, guid: dedfbed3c67df6c48ba78f054b89555b, type: 3}
   - _name: Armor
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: a7a270761cabd174685199e19f96377f, type: 3}
     prefab: {fileID: 2161034570853745996, guid: 1b4b6a4887acabe469e304d1cc548939, type: 3}
     _leafCost: 100
     _upgradeCost: 100
     _icon: {fileID: 21300000, guid: 77d71b6368c00e348824366e3d834743, type: 3}
   _pistolier:
   - _name: Pistolier
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: 40da64070771dd948b3a87085e316df1, type: 3}
     prefab: {fileID: 8803275453571237709, guid: a9270ed01fcc12b42a6f4abe4705e640, type: 3}
     _leafCost: 40
     _upgradeCost: 80
     _icon: {fileID: 21300000, guid: a8327ba614dfd2b42b2159fb25311709, type: 3}
   - _name: Pistolier
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: db7b04883d41d9f42994195eef42b66e, type: 3}
     prefab: {fileID: 8803275453571237709, guid: ae4e49f79920662419a28ee1da516aac, type: 3}
     _leafCost: 70
     _upgradeCost: 110
     _icon: {fileID: 21300000, guid: ef3ecd3c09466ac47a15804dae03a384, type: 3}
   - _name: Pistolier
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: ea04017a8ee789141912ab9fa7f69c67, type: 3}
     prefab: {fileID: 8803275453571237709, guid: b1ef0bf6743adf24e9de7d4ebc38827f, type: 3}
     _leafCost: 90
     _upgradeCost: 160
     _icon: {fileID: 21300000, guid: 41c58bbcd1b61ea4cbe823c8f99870f1, type: 3}
   _rocketier:
   - _name: Rocketier
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: 46ff436462d8ace4db53578243fe69d5, type: 3}
     prefab: {fileID: 8803275453571237709, guid: 8c0a3fa07c531f940b034a7e5253558b, type: 3}
     _leafCost: 90
     _upgradeCost: 120
     _icon: {fileID: 21300000, guid: bd2dc358bf03dcf499b8cd476c579522, type: 3}
   - _name: Rocketier
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: c025c64a57cc5a54f83de1d63a5f8ea9, type: 3}
     prefab: {fileID: 8803275453571237709, guid: ef65f8526fe76a14793c9898b2fb81ba, type: 3}
     _leafCost: 140
     _upgradeCost: 170
     _icon: {fileID: 21300000, guid: 7208fcf1c2234c641a594d1720a323f5, type: 3}
   - _name: Rocketier
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: 5d0b7b3ed046e864c9146c70c879896a, type: 3}
     prefab: {fileID: 8803275453571237709, guid: 46d3f768f2c3e3643a190cf79362d793, type: 3}
     _leafCost: 180
     _upgradeCost: 220
     _icon: {fileID: 21300000, guid: ef298c71d9fc80c4f8c7f7c2b67ba769, type: 3}
   _caraspace:
   - _name: Caraspace
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: 099d96019cfb69d408a295ad1c2f25a7, type: 3}
     prefab: {fileID: 811595614745786998, guid: b17e69617ce31034ca80b1e4a0097ae1, type: 3}
     _leafCost: 50
     _upgradeCost: 50
     _icon: {fileID: 21300000, guid: 6528cce7e8c7abd4ead79224406351f5, type: 3}
   - _name: Caraspace
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: b853219a5995ee540898015d39f8286a, type: 3}
     prefab: {fileID: 811595614745786998, guid: d67c1fd4d3191fe4ea7c90892c770397, type: 3}
     _leafCost: 70
     _upgradeCost: 70
     _icon: {fileID: 21300000, guid: f4ce532a8800cf94ca7ab2c41a4278cb, type: 3}
   - _name: Caraspace
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: c1151d8c7bd13c340ac044cfac0ae8b3, type: 3}
     prefab: {fileID: 811595614745786998, guid: 9740d9dd8b868354eaf59f552c73ff8a, type: 3}
     _leafCost: 80
     _upgradeCost: 80
     _icon: {fileID: 21300000, guid: ae934f6bbd9055f4ba0d9382a7e6f841, type: 3}
   _mine:
   - _name: Mine
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: 5f59eba5b64f65f418c6e87e68823614, type: 3}
     prefab: {fileID: 811595614745786998, guid: 4781a2bf546d54a40a797f114064cdc8, type: 3}
     _leafCost: 60
     _upgradeCost: 60
     _icon: {fileID: 21300000, guid: 4dc3b0b484a7e5f47acdcfe6ac11f335, type: 3}
   - _name: Mine
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: 3c2b3cf6b71a1564f902d67b44f55ca0, type: 3}
     prefab: {fileID: 811595614745786998, guid: 897367aa8d8a07942a15a2d963dd6c4e, type: 3}
     _leafCost: 70
     _upgradeCost: 70
     _icon: {fileID: 21300000, guid: 58d22c34a1ea257489b02d79deed3e42, type: 3}
   - _name: Mine
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: 6b7522284924d7c43bbaacd3e3ac26fd, type: 3}
     prefab: {fileID: 811595614745786998, guid: 62285c6254bfa6848aca73a67d8944ad, type: 3}
     _leafCost: 80
     _upgradeCost: 80
     _icon: {fileID: 21300000, guid: c1394453966c60044a5b34bb3a50838c, type: 3}
   _honey:
   - _name: Honey
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: c6f7e4a1db016a64db6d75b04d396131, type: 3}
     prefab: {fileID: 811595614745786998, guid: 470dc7d822755c14db4335147541432e, type: 3}
     _leafCost: 60
     _upgradeCost: 60
     _icon: {fileID: 21300000, guid: c40dc510bab49af48b5422ac445c7a9c, type: 3}
   - _name: Honey
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: 685594845d8d16a4ab3adb7217d53e8a, type: 3}
     prefab: {fileID: 811595614745786998, guid: ada75198d404f5d4fb6baf3e40607795, type: 3}
     _leafCost: 80
     _upgradeCost: 80
     _icon: {fileID: 21300000, guid: 3dd7f06244e3de34581f23f64aac8a4c, type: 3}
   - _name: Honey
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: 13a64555c04627743bcf585a86b5d6f4, type: 3}
     prefab: {fileID: 811595614745786998, guid: 6f6c2df935e92ce45b90e41281d7d90f, type: 3}
     _leafCost: 90
     _upgradeCost: 90
     _icon: {fileID: 21300000, guid: 19dd43cfb727b7547a8e0abf4af6789c, type: 3}
   _grenadier:
   - _name: Grenadier
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: e296d614cd472a248940202b79f44230, type: 3}
     prefab: {fileID: 8803275453571237709, guid: c966ea8577fdd1847bbdd2886e2fb899, type: 3}
     _leafCost: 80
     _upgradeCost: 80
     _icon: {fileID: 21300000, guid: ede4975fdbf31a945a3a6cf54262425c, type: 3}
   - _name: Grenadier
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: 840bab428ba0665439b2a39d1fcbc0d0, type: 3}
     prefab: {fileID: 8803275453571237709, guid: 65d303fe97616b74c95a9bceb5fee809, type: 3}
     _leafCost: 100
     _upgradeCost: 150
     _icon: {fileID: 21300000, guid: 2e1917bbc53f4d843b8bae99123cb1de, type: 3}
   - _name: Grenadier
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: e373c3fd9be047c48b53b5b688234a29, type: 3}
     prefab: {fileID: 8803275453571237709, guid: c5cee2093ef70e64eb82f7b1632f0440, type: 3}
     _leafCost: 150
     _upgradeCost: 200
     _icon: {fileID: 21300000, guid: ef3757fdec651f541ad279b6ff80b526, type: 3}
   _feet:
   - _name: Feet
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: d9b7c54799837d448acbb9dbc264085b, type: 3}
     prefab: {fileID: 811595614745786998, guid: 765a24ac0aee8e54eb5e9644bce8226e, type: 3}
     _leafCost: 30
     _upgradeCost: 30
     _icon: {fileID: 21300000, guid: 4e6bc072254d9ea4692f77f8e880dbbf, type: 3}
   - _name: Feet
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: b840c0045d485fc459b1603d9d9c541a, type: 3}
     prefab: {fileID: 811595614745786998, guid: 1644ac97a969c4b43b47032dde40fbfa, type: 3}
     _leafCost: 40
     _upgradeCost: 40
     _icon: {fileID: 21300000, guid: 12138deb615320a4ca0be2135763e321, type: 3}
   - _name: Feet
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: 8375390e9c4cfe34faeba4d164cf9dfa, type: 3}
     prefab: {fileID: 811595614745786998, guid: e75e3128132219245ba8cdcf73efffa4, type: 3}
     _leafCost: 60
     _upgradeCost: 60
     _icon: {fileID: 21300000, guid: 70be91f2460360c40a1f822e4157adf2, type: 3}
   _bellows:
   - _name: Bellows
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: 285b249e4dff35546844ffc60d78e44b, type: 3}
     prefab: {fileID: 811595614745786998, guid: 5f8e2c55d1aee914eacaeec1afa87723, type: 3}
     _leafCost: 80
     _upgradeCost: 140
     _icon: {fileID: 21300000, guid: 23353a768c682b2469452f9183720f63, type: 3}
   - _name: Bellows
-    _img: {fileID: 0}
+    _img: {fileID: 21300000, guid: e9d8ed8e4c6252d469900978359cd069, type: 3}
     prefab: {fileID: 811595614745786998, guid: cef5be034579dc944a20aa281c89d0b4, type: 3}
     _leafCost: 110
     _upgradeCost: 170

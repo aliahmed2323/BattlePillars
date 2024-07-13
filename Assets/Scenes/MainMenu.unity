@@ -592,7 +592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShouldPersistOnLoad: 1
-  LoadDataFromSaveFile: 0
+  LoadDataFromSaveFile: 1
   _saveData: {fileID: 11400000, guid: cd8ff02b1be2dc7489ef252737d98e75, type: 2}
   DefaultSaveLocation: /Battlepillars/Saves/
 --- !u!4 &50204333
