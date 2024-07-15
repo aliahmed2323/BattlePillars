@@ -18,8 +18,10 @@ public class Caterpillar : MonoBehaviour
 
     [SerializeField] float _extensionGap;
 
-    [HideInInspector]
+    
     public bool _canMove;
+
+    public bool _hasReachBase;
 
     [HideInInspector]
     public delegate void MoveAnim();
@@ -29,10 +31,24 @@ public class Caterpillar : MonoBehaviour
     public delegate void StopMoveAnim();
     public event StopMoveAnim _stopMoveAnim;
 
-    public GameObject _enemy;
+    private GameObject enemy;
+    public GameObject _enemy { 
+        get
+        {
+            return enemy;
+        } 
+        set 
+        {
+            enemy = value;
+            if (_hasReachBase) return;
+            if (_lockCaterpillarMovement) return;
+            _canMove = true;
+        } }
+
+
     public bool _isEnemyInRange;
 
-    private bool _lockCaterpillarMovement;
+    [SerializeField]private bool _lockCaterpillarMovement;
 
 
 /*    private GameObject m_enemy = null;
@@ -64,10 +80,8 @@ public class Caterpillar : MonoBehaviour
 
     public void ResetBattlepillarToAttackState()
     {
-        _lockCaterpillarMovement = false;
         _enemy = null;
-        _canMove = true;
-        _moveAnim.Invoke();
+        ReleaseCaterPillar();
     }
 
     private void Move()
@@ -107,6 +121,7 @@ public class Caterpillar : MonoBehaviour
 
     public void ReleaseCaterPillar()
     {
+        if (_hasReachBase) return;
         if (_lockCaterpillarMovement) return; //return if movement locked
         _moveAnim.Invoke();
         _canMove = true;

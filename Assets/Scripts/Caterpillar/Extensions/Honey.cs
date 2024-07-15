@@ -56,6 +56,7 @@ public class Honey : MonoBehaviour
 
     void EnableAttack()
     {
+        cp.ReleaseCaterPillar();
         _canAttack = true;
     }
 }

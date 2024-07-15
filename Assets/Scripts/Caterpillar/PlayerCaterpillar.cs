@@ -22,18 +22,33 @@ public class PlayerCaterpillar : Caterpillar
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("EnemyBase"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             _enemy = collision.gameObject;
             _canMove = false;
             InvokeStopAnim();
             LockCaterpillar(true);
         }
+
+        if(collision.gameObject.CompareTag("EnemyBase"))
+        {
+            _enemy = collision.gameObject;
+            _canMove = false;
+            InvokeStopAnim();
+            LockCaterpillar(true);
+            _hasReachBase = true;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("EnemyBase"))
+        if(collision.gameObject.CompareTag("EnemyBase"))
+        {
             LockCaterpillar(false);
+        }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            LockCaterpillar(false);
+        }
     }
 
     void CheckForEnemy()
@@ -43,7 +58,7 @@ public class PlayerCaterpillar : Caterpillar
         {
             if (hit.collider.gameObject.CompareTag("Enemy") || hit.collider.gameObject.CompareTag("EnemyBase"))
             {
-                if(_enemy != null)
+                if (_enemy != null)
                     ResetBattlepillarToAttackState();
                 _enemy = hit.collider.gameObject;  //problem point
 

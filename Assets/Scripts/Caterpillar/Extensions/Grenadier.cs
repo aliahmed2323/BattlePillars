@@ -45,13 +45,14 @@ public class Grenadier : MonoBehaviour
         GameObject cb = Instantiate(_grenade, _grenade.transform.position, Quaternion.identity);
         _grenade.SetActive(false);
         float timeToHit = Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _grenadeSpeed;
+        Destroy(cb, timeToHit);
         cb.transform.DOJump(cp._enemy.transform.position, 4, 1, timeToHit).OnComplete(() =>
         {
             ExplosionEffect(cb.transform.position);
-            Destroy(cb);
         });
 
         Invoke("EnableAttack", _fireRate);
+        Invoke(nameof(EnableMovement), 0.6f);
     }
     void DamageEnemy()
     {
@@ -73,9 +74,15 @@ public class Grenadier : MonoBehaviour
         DamageEnemy();
         Destroy(e, 1.1f);
     }
+
+    void EnableMovement()
+    {
+        cp.ReleaseCaterPillar();
+        _grenade.SetActive(true);
+    }
+
     void EnableAttack()
     {
         _canAttack = true;
-        _grenade.SetActive(true);
     }
 }

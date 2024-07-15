@@ -81,5 +81,6 @@ public class Rocketier : MonoBehaviour
     void EnableAttack()
     {
         _canAttack = true;
+        cp.ReleaseCaterPillar();
     }
 }

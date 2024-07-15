@@ -45,9 +45,12 @@ public class CaterpillarHealthManager : MonoBehaviour
 
     public void AddHealth(float amount)
     {
-        _healthSlider.gameObject.SetActive(true);
+        
         _health += amount;
         _healthSlider.value = Mathf.Lerp(_health - amount, _health, Time.deltaTime * 3);
+
+        if(GetComponent<Caterpillar>()._caterPillarHealth >= _health)
+            _healthSlider.gameObject.SetActive(false);
     }
 
     void HurtAnim()
@@ -60,7 +63,7 @@ public class CaterpillarHealthManager : MonoBehaviour
         if (gameObject.CompareTag("Enemy"))
             GameManager.Instance.kills++;
 
-       /* onDeath();*/
+        /*onDeath.Invoke();*/
         Debug.Log(gameObject.name + " died");
         Destroy(gameObject);
     }

@@ -22,18 +22,33 @@ public class EnemyCaterpillar : Caterpillar
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("PlayerBase"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             _enemy = collision.gameObject;
             _canMove = false;
             InvokeStopAnim();
             LockCaterpillar(true);
         }
+
+        if (collision.gameObject.CompareTag("PlayerBase"))
+        {
+            _enemy = collision.gameObject;
+            _canMove = false;
+            InvokeStopAnim();
+            LockCaterpillar(true);
+            _hasReachBase = true;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("PlayerBase"))
+        if (collision.gameObject.CompareTag("PlayerBase"))
+        {
             LockCaterpillar(false);
+        }
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            LockCaterpillar(false);
+        }
     }
 
     void CheckForEnemy()

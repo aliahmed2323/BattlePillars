@@ -59,8 +59,8 @@ public class BaseWeapon : MonoBehaviour
         DamageEnemy();
         AttackAnim();
         _as.Play();
-        GameObject cb = Instantiate(_bullet, _projectileTransform.position, Quaternion.identity);
-        cb.transform.DOMove(cp._enemy.transform.position, Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _bulletSpeed).OnComplete(() => Destroy(cb));
+/*        GameObject cb = Instantiate(_bullet, _projectileTransform.position, Quaternion.identity);
+        cb.transform.DOMove(cp._enemy.transform.position, Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _bulletSpeed).OnComplete(() => Destroy(cb));*/
         Invoke("EnableAttack", _fireRate);
     }
     void DamageEnemy()
