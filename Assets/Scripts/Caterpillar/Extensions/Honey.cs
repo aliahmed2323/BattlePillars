@@ -28,6 +28,7 @@ public class Honey : MonoBehaviour
             Debug.DrawRay(transform.position, range, Color.green);
         }
         if (cp._enemy == null) return;
+        if (cp._enemy.CompareTag("EnemyBase")) return;
 
         if (Vector2.Distance(transform.position, cp._enemy.transform.position) < _range)
             Attack();

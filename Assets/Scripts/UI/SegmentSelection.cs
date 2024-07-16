@@ -13,6 +13,8 @@ public class SegmentSelection : MonoBehaviour
     public Text _segmentInfo;
     [SerializeField] Button _playButton;
     [SerializeField] GameObject[] _segmentScrollViewObjects;
+    [HideInInspector]
+    public bool _isEndless;
 
     private void Start()
     {
@@ -83,7 +85,10 @@ public class SegmentSelection : MonoBehaviour
             segmentinfo = segmentinfo + ((int)item).ToString() +":";
         });
         PlayerPrefs.SetString("SegmentInfo", segmentinfo);
-        SceneManager.LoadScene("Singplayer");
+        if(!_isEndless)
+            SceneManager.LoadScene("Singplayer");
+        else
+            SceneManager.LoadScene("Endless");
     }
 
 }

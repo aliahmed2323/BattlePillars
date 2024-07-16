@@ -49,11 +49,11 @@ public class Rocketier : MonoBehaviour
         {
             GameObject cb = Instantiate(_rocket, transform.position, Quaternion.identity);
             float timeToHit = Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _rocketSpeed;
+            Destroy(cb, timeToHit + 0.1f);
             cb.transform.DOJump(cp._enemy.transform.position, 4 + i, 1, timeToHit + Random.Range(0, 0.6f)).OnComplete(() =>
             {
                 ExplosionEffect(cb.transform.position);
                 DamageEnemy();
-                Destroy(cb);
             });
         }
         

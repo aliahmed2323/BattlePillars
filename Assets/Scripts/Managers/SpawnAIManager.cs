@@ -21,7 +21,7 @@ public class SpawnAIManager : MonoBehaviour
 
     public int _currentLevel;
     bool _isBossBattle = false;
-
+    [SerializeField] bool _isEndless;
     [SerializeField] Transform _enemySpawns;
     [SerializeField] Transform _bossSpawns;
 
@@ -45,7 +45,10 @@ public class SpawnAIManager : MonoBehaviour
 
     private void Start()
     {
-        _currentLevel = PlayerPrefs.GetInt("Level");
+        if (!_isEndless)
+            _currentLevel = PlayerPrefs.GetInt("Level");
+        else
+            _currentLevel = 1;
 
         int[] bossLevels = { 10, 20, 30, 40, 50 };
 
@@ -99,5 +102,11 @@ public class SpawnAIManager : MonoBehaviour
             ct.GetComponent<Caterpillar>().ReleaseCaterPillar();
             yield return new WaitForSeconds(15f);
         }
+        if(_isEndless)
+        {
+            _currentLevel++;
+            StartCoroutine(SpawnPillars());
+        }
     }
+
 }

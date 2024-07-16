@@ -20214,7 +20214,7 @@ MonoBehaviour:
   _segmentType: 8
   _segmentInfo: 'Honey
 
-    Lobs honey that reduces enemies speed and rate of fire'
+    Lobs honey that reduces enemies speed'
 --- !u!114 &1707071010
 MonoBehaviour:
   m_ObjectHideFlags: 0

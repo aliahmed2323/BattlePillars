@@ -373,6 +373,7 @@ MonoBehaviour:
   _fireRate: 5
   _rocket: {fileID: 1507713158204170879, guid: f4b129fb731695343ba4f6f0443d9ddf, type: 3}
   _rocketSpeed: 24
+  _rocketAmount: 0
   _explosionEffect: {fileID: 1995445036008917209, guid: 5081f8335fb99274ab71c19d9de5c743, type: 3}
   _as: {fileID: 2085060321337826744}
 --- !u!1 &8812620284610911457
@@ -418,7 +419,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: de4c580f9bd5f4847902c54e999e6b0b, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

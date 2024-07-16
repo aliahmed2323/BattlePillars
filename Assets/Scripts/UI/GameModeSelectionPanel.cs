@@ -16,11 +16,13 @@ public class GameModeSelectionPanel : MonoBehaviour
 
     void LoadEndless()
     {
+        UIManager.Instance._segmentSelectionPanel._isEndless = true;
         UIManager.Instance._segmentSelectionPanel.gameObject.SetActive(true);
     }
 
     void LoadCampaign()
     {
+        UIManager.Instance._segmentSelectionPanel._isEndless = false;
         UIManager.Instance._campaignScreen.gameObject.SetActive(true);
     }
 }

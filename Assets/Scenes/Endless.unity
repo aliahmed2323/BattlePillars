@@ -3257,7 +3257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentLevel: 0
-  _isEndless: 0
+  _isEndless: 1
   _enemySpawns: {fileID: 935520546}
   _bossSpawns: {fileID: 766134015}
   _levels:
@@ -7819,10 +7819,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8381592383802794173, guid: 7b9380d141383c64aace486109e6c48e, type: 3}
+      propertyPath: m_MaxValue
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8941323717150030848, guid: 7b9380d141383c64aace486109e6c48e, type: 3}
       propertyPath: _gmp
       value: 
       objectReference: {fileID: 697124443}
+    - target: {fileID: 8941323717150030848, guid: 7b9380d141383c64aace486109e6c48e, type: 3}
+      propertyPath: _health
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b9380d141383c64aace486109e6c48e, type: 3}
 --- !u!1 &7193529904255610803 stripped

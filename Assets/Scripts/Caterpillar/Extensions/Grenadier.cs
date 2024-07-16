@@ -45,7 +45,8 @@ public class Grenadier : MonoBehaviour
         GameObject cb = Instantiate(_grenade, _grenade.transform.position, Quaternion.identity);
         _grenade.SetActive(false);
         float timeToHit = Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _grenadeSpeed;
-        Destroy(cb, timeToHit);
+        Destroy(cb, timeToHit + 0.1f);
+
         cb.transform.DOJump(cp._enemy.transform.position, 4, 1, timeToHit).OnComplete(() =>
         {
             ExplosionEffect(cb.transform.position);

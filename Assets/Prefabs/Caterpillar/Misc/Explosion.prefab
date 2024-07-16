@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 1995445036008917211}
   - component: {fileID: 1995445036008917208}
   - component: {fileID: 6019446802357924884}
-  - component: {fileID: -3661676957401744908}
+  - component: {fileID: -3213067662969150603}
   m_Layer: 0
   m_Name: Explosion
   m_TagString: Untagged
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _as: {fileID: 878089646927765123}
---- !u!114 &-3661676957401744908
+--- !u!114 &-3213067662969150603
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _destroyType: 0
   _destroyAfterTime: 1
-  _timeToDestroySelf: 1.1
+  _timeToDestroySelf: 1.2
 --- !u!1 &1995445036307905544
 GameObject:
   m_ObjectHideFlags: 0
