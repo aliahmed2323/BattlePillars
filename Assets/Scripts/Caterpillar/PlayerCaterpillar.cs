@@ -60,7 +60,11 @@ public class PlayerCaterpillar : Caterpillar
             {
                 if (_enemy != null)
                     ResetBattlepillarToAttackState();
+                if(enemy != null)
+                    _enemy.GetComponent<CaterpillarHealthManager>().onDeath -= ResetBattlepillarToAttackState;
+
                 _enemy = hit.collider.gameObject;  //problem point
+                _enemy.GetComponent<CaterpillarHealthManager>().onDeath += ResetBattlepillarToAttackState;
 
             }
             

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerData:
     _apples: 600
-    _unlockedModes: 0000000001000000
+    _unlockedModes: 0000000002000000
     _completedLevels: []
     _ownedSegments:
     - _segmentType: 1

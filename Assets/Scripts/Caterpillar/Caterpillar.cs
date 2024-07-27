@@ -31,7 +31,7 @@ public class Caterpillar : MonoBehaviour
     public delegate void StopMoveAnim();
     public event StopMoveAnim _stopMoveAnim;
 
-    private GameObject enemy;
+    public GameObject enemy;
     public GameObject _enemy { 
         get
         {
@@ -90,11 +90,13 @@ public class Caterpillar : MonoBehaviour
         transform.position = newPos;
     }
 
+    Vector2 _currentPos;
     protected virtual void Update()
     {
         if (_canMove)
             Move();
     }
+
 
     public void AddExtension(GameManager.SegmentType type, bool isEnemy, int level)
     {

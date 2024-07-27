@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using System;
 
 public class CaterpillarHealthManager : MonoBehaviour
 {
@@ -11,8 +12,7 @@ public class CaterpillarHealthManager : MonoBehaviour
     public Slider _healthSlider;
 
     [SerializeField] bool _isBoss = false;
-    public delegate void OnDeath();
-    public event OnDeath onDeath;
+    public Action onDeath;
 
     private void Start()
     {
@@ -63,7 +63,7 @@ public class CaterpillarHealthManager : MonoBehaviour
         if (gameObject.CompareTag("Enemy"))
             GameManager.Instance.kills++;
 
-        /*onDeath.Invoke();*/
+        onDeath?.Invoke();
         Debug.Log(gameObject.name + " died");
         Destroy(gameObject);
     }
