@@ -146,7 +146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23350453}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.26, y: -6.4, z: 0}
+  m_LocalPosition: {x: 31.46, y: -7.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3258,7 +3258,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentLevel: 0
   _isEndless: 0
-  _enemySpawns: {fileID: 935520546}
+  _enemySpawns:
+  - {fileID: 1881222743}
+  - {fileID: 23350454}
+  - {fileID: 1293750162}
   _bossSpawns: {fileID: 766134015}
   _levels:
   - level: 1
@@ -5037,7 +5040,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293750161}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.23, y: -4.9, z: 0}
+  m_LocalPosition: {x: 32.46, y: -5.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6805,7 +6808,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881222742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.260006, y: -7.7, z: 0}
+  m_LocalPosition: {x: 32.06, y: -8.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -22,7 +22,7 @@ public class SpawnAIManager : MonoBehaviour
     public int _currentLevel;
     bool _isBossBattle = false;
     [SerializeField] bool _isEndless;
-    [SerializeField] Transform _enemySpawns;
+    [SerializeField] Transform[] _enemySpawns;
     [SerializeField] Transform _bossSpawns;
 
     [SerializeField] Levels[] _levels;
@@ -91,8 +91,8 @@ public class SpawnAIManager : MonoBehaviour
         Debug.Log("Spawning battlepillars for level: " + _currentLevel);
         foreach(Pillars pillar in _levels[_currentLevel-1].pillar)
         {
-            int randSpawn = Random.Range(0, 2);
-            GameObject ct = Instantiate(GameManager.Instance.enemycaterpillar, _enemySpawns.transform.GetChild(randSpawn).position, Quaternion.identity);
+            int randSpawn = Random.Range(0, 3);
+            GameObject ct = Instantiate(GameManager.Instance.enemycaterpillar, _enemySpawns[randSpawn].transform.position, Quaternion.identity);
             yield return new WaitForSeconds(1f);
             foreach(GameManager.SegmentType type in pillar.Segments)
             {

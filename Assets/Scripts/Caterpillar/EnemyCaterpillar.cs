@@ -16,7 +16,7 @@ public class EnemyCaterpillar : Caterpillar
     protected override void Update()
     {
         base.Update();
-        if (_enemy == null)
+        if (ReferenceEquals(_enemy, null))
             CheckForEnemy();
     }
 
@@ -24,10 +24,15 @@ public class EnemyCaterpillar : Caterpillar
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            if (enemy != null)
+                _enemy.GetComponent<CaterpillarHealthManager>().onDeath -= ResetBattlepillarToAttackState;
+
             _enemy = collision.gameObject;
             _canMove = false;
             InvokeStopAnim();
             LockCaterpillar(true);
+            base._isEnemyInRange = true;
+            _enemy.GetComponent<CaterpillarHealthManager>().onDeath += ResetBattlepillarToAttackState;
         }
 
         if (collision.gameObject.CompareTag("PlayerBase"))
@@ -57,16 +62,25 @@ public class EnemyCaterpillar : Caterpillar
         if (hit)
         {
             Debug.Log(gameObject.name + " has hit " + hit.collider.name);
-            if(hit.collider.gameObject.CompareTag("Player") || hit.collider.gameObject.CompareTag("PlayerBase"))
+            if(hit.collider.gameObject.CompareTag("Player"))
             {
-                if (_enemy != null)
-                    ResetBattlepillarToAttackState();
-
+                /*if (_enemy != null)
+                    ResetBattlepillarToAttackState();*/
                 if (enemy != null)
                     _enemy.GetComponent<CaterpillarHealthManager>().onDeath -= ResetBattlepillarToAttackState;
 
+                base._isEnemyInRange = true;
                 _enemy = hit.collider.gameObject;  //problem point
                 _enemy.GetComponent<CaterpillarHealthManager>().onDeath += ResetBattlepillarToAttackState;
+
+            }
+
+            if (hit.collider.gameObject.CompareTag("PlayerBase"))
+            {
+              /*  if (_enemy != null)
+                    ResetBattlepillarToAttackState();*/
+
+                _enemy = hit.collider.gameObject;  //problem point
 
             }
         }

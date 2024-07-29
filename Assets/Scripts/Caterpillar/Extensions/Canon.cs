@@ -34,7 +34,7 @@ public class Canon : MonoBehaviour
             Attack();
         
     }
-
+    GameObject cb;
     void Attack()
     {
         if (!_canAttack) return;
@@ -44,8 +44,12 @@ public class Canon : MonoBehaviour
         DamageEnemy();
         AttackAnim();
         _as.Play();
-        GameObject cb = Instantiate(_cannonBall, transform.position, Quaternion.identity);
-        cb.transform.DOJump(cp._enemy.transform.position, 2, 1, Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _cannonBallSpeed).OnComplete(() => Destroy(cb));
+        if (cp._enemy == null)
+            return;
+        cb = Instantiate(_cannonBall, transform.position, Quaternion.identity);
+        float travelTime = Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _cannonBallSpeed;
+        cb.transform.DOJump(cp._enemy.transform.position, 2, 1, travelTime);
+        Invoke(nameof(EnableMovement), travelTime);
         Invoke("EnableAttack", _fireRate);
     }
     void DamageEnemy()
@@ -55,6 +59,9 @@ public class Canon : MonoBehaviour
             float damage = (_damage / 10);
             cp._enemy?.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
         }
+        if (cp.enemy == null)
+            return;
+
         if (cp._enemy.CompareTag("EnemyBase") || cp._enemy.CompareTag("PlayerBase"))
         {
             float damage = _damage / 10;
@@ -67,6 +74,13 @@ public class Canon : MonoBehaviour
         transform.DOLocalMoveX(-0.26f, 0.3f).SetEase(Ease.InOutBack).SetLoops(2, LoopType.Yoyo).OnComplete(()=> {
             cp.ReleaseCaterPillar();
         });   
+    }
+
+    void EnableMovement()
+    {
+       /* cp._canMove = true;
+        cp.ReleaseCaterPillar();*/
+        Destroy(cb);
     }
 
     void EnableAttack()

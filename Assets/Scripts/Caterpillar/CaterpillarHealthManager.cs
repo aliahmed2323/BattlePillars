@@ -63,8 +63,12 @@ public class CaterpillarHealthManager : MonoBehaviour
         if (gameObject.CompareTag("Enemy"))
             GameManager.Instance.kills++;
 
-        onDeath?.Invoke();
         Debug.Log(gameObject.name + " died");
+
+        if(GetComponent<Caterpillar>()._enemy != null)
+            if(GetComponent<Caterpillar>()._enemy.CompareTag("Enemy") || GetComponent<Caterpillar>()._enemy.CompareTag("Player"))
+                GetComponent<Caterpillar>()._enemy.GetComponent<CaterpillarHealthManager>().onDeath -= GetComponent<Caterpillar>().ResetBattlepillarToAttackState;
+        onDeath?.Invoke();
         Destroy(gameObject);
     }
 }

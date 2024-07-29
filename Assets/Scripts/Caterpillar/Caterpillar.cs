@@ -40,9 +40,9 @@ public class Caterpillar : MonoBehaviour
         set 
         {
             enemy = value;
-            if (_hasReachBase) return;
+/*            if (_hasReachBase) return;
             if (_lockCaterpillarMovement) return;
-            _canMove = true;
+            _canMove = true;*/
         } }
 
 
@@ -81,6 +81,7 @@ public class Caterpillar : MonoBehaviour
     public void ResetBattlepillarToAttackState()
     {
         _enemy = null;
+        /*_isEnemyInRange = false;*/
         ReleaseCaterPillar();
     }
 
@@ -95,6 +96,12 @@ public class Caterpillar : MonoBehaviour
     {
         if (_canMove)
             Move();
+
+        if (_isEnemyInRange && ReferenceEquals(_enemy, null))
+        {
+            _isEnemyInRange = false;
+            ResetBattlepillarToAttackState();
+        }
     }
 
 
@@ -125,8 +132,8 @@ public class Caterpillar : MonoBehaviour
     {
         if (_hasReachBase) return;
         if (_lockCaterpillarMovement) return; //return if movement locked
-        _moveAnim.Invoke();
         _canMove = true;
+        _moveAnim.Invoke();
     }
 
     public void InvokeStopAnim()

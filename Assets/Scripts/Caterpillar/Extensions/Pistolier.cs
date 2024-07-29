@@ -51,11 +51,17 @@ public class Pistolier : MonoBehaviour
     }
     void DamageEnemy()
     {
+        if (cp.enemy == null)
+            return;
+
         if (cp._enemy.CompareTag("Enemy") || cp._enemy.CompareTag("Player"))
         {
             float damage = (_damage / 10);
             cp._enemy?.GetComponent<CaterpillarHealthManager>()?.DecreaseHealth(damage);
         }
+        if (cp.enemy == null)
+            return;
+
         if (cp._enemy.CompareTag("EnemyBase") || cp._enemy.CompareTag("PlayerBase"))
         {
             float damage = (_damage / 10);

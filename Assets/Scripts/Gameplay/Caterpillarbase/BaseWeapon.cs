@@ -27,7 +27,7 @@ public class BaseWeapon : MonoBehaviour
         }
         if (cp == null) return;
 
-        if (Vector2.Distance(transform.position, cp._enemy.transform.position) < _range)
+        if (Vector2.Distance(transform.position, cp.transform.position) < _range)
             Attack();
 
     }
