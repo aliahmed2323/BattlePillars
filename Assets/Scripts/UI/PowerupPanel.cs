@@ -24,6 +24,7 @@ public class PowerupPanel : MonoBehaviour
     [SerializeField] Text _ownedLarryText;
 
     bool _isOpen = false;
+    bool _canOpen = true;
     private void Start()
     {
         RefreshOwnedPowerups();
@@ -56,6 +57,10 @@ public class PowerupPanel : MonoBehaviour
 
     void OnPowerUpClick(GameManager.Powerup type)
     {
+        if (!_canOpen) return;
+        _canOpen = false;
+        Invoke(nameof(EnableCanOpen), 1f);
+        PowerUpPanel(false);
         switch(type)
         {
             case GameManager.Powerup.MrLeaf:
@@ -68,6 +73,11 @@ public class PowerupPanel : MonoBehaviour
                 WizardPowerUp();
                 break;
         }
+    }
+
+    void EnableCanOpen()
+    {
+        _canOpen = true;
     }
 
     void MrLeafPowerUp()
