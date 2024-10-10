@@ -9,8 +9,10 @@ public class SegmentUpgradeScreen : MonoBehaviour
     public GameObject _textbox;
     [SerializeField] Button _purchaseSegmentScreenButton;
     [SerializeField] Button _purchaseBaseUpgradesScreenButton;
+    [SerializeField] Button _purchasePowerupScreenButton;
     [SerializeField] GameObject _SegmentScreen;
     [SerializeField] GameObject _BaseUpgradesScreen;
+    [SerializeField] GameObject _PowerupScreen;
 
     // Purchase Segment Screen stuff
     [SerializeField] Button _segmentPurchaseButton;
@@ -38,14 +40,24 @@ public class SegmentUpgradeScreen : MonoBehaviour
     [HideInInspector]
     public int _selectedBaseUpgradeCost;
 
+    // Purchase Powerup
+    [SerializeField] Button _powerupPurchaseButton;
+    [HideInInspector]
+    public GameObject _selectedPowerUpGameObject;
+    [HideInInspector]
+    public GameManager.Powerup _selectedPowerUp;
+    [HideInInspector]
+    public int _selectedPowerUpCost;
+
 
     private void Start()
     {
         _segmentPurchaseButton.onClick.AddListener(() => _purchaseConfirmPopup.SetActive(true));
         _purchaseConfirmButton.onClick.AddListener(() => PurchaseConfirm());
         _basePurchaseButton.onClick.AddListener(() => _purchaseConfirmPopup.SetActive(true));
-        _purchaseSegmentScreenButton.onClick.AddListener(() => ChangeScreen(true));
-        _purchaseBaseUpgradesScreenButton.onClick.AddListener(() => ChangeScreen(false));
+        _purchaseSegmentScreenButton.onClick.AddListener(() => ChangeScreen(0));
+        _purchaseBaseUpgradesScreenButton.onClick.AddListener(() => ChangeScreen(1));
+        _purchasePowerupScreenButton.onClick.AddListener(() => ChangeScreen(2));
     }
 
 
@@ -61,6 +73,8 @@ public class SegmentUpgradeScreen : MonoBehaviour
             PurchaseSegment();
         if (_BaseUpgradesScreen.activeSelf)
             PurchaseBaseUpgrade();
+        if (_PowerupScreen.activeSelf)
+            PurchasePowerup();
     }
 
     private void Update()
@@ -68,17 +82,26 @@ public class SegmentUpgradeScreen : MonoBehaviour
         _appleText.text = SaveManager.Instance.GetApples().ToString();
     }
 
-    void ChangeScreen(bool segmentSelection)
+    void ChangeScreen(int type)
     {
-        if(segmentSelection)
+        switch(type)
         {
-            _SegmentScreen.SetActive(true);
-            _BaseUpgradesScreen.SetActive(false);
-            return;
+            case 0:
+                _SegmentScreen.SetActive(true);
+                _BaseUpgradesScreen.SetActive(false);
+                _PowerupScreen.SetActive(false);
+                break;
+            case 1:
+                _SegmentScreen.SetActive(false);
+                _BaseUpgradesScreen.SetActive(true);
+                _PowerupScreen.SetActive(false);
+                break;
+            case 2:
+                _SegmentScreen.SetActive(false);
+                _BaseUpgradesScreen.SetActive(false);
+                _PowerupScreen.SetActive(true);
+                break;
         }
-
-        _SegmentScreen.SetActive(false);
-        _BaseUpgradesScreen.SetActive(true);
     }
 
     void PurchaseSegment()
@@ -109,6 +132,16 @@ public class SegmentUpgradeScreen : MonoBehaviour
 
             SaveManager.Instance._saveData._playerData._baseUpgrades.Add(b);
             _selectedBaseUpgradeGameObject.GetComponent<BaseUpgradeButton>().RefreshPurchaseStatus();
+        }
+        _purchaseConfirmPopup.SetActive(false);
+    }
+
+    void PurchasePowerup()
+    {
+        if (SaveManager.Instance.DeductApples(_selectedPowerUpCost))
+        {
+            SaveManager.Instance._saveData.AddPowerup(_selectedPowerUp);
+            _selectedPowerUpGameObject.GetComponent<PowerupButton>().RefreshPurchaseStatus();
         }
         _purchaseConfirmPopup.SetActive(false);
     }

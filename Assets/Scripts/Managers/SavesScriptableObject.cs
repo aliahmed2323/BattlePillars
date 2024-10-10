@@ -8,13 +8,16 @@ public class SavesScriptableObject : ScriptableObject
     public PlayerData _playerData;
 
     [System.Serializable]
-   public struct PlayerData
+    public struct PlayerData
     {
         public int _apples;
         public SaveManager.Modes[] _unlockedModes;
         public List<CompletedLevels> _completedLevels;
         public List<OwnedSegments> _ownedSegments;
         public List<OwnedBaseUpgrades> _baseUpgrades;
+        public int _ownedMrLeaf;
+        public int _ownedLarry;
+        public int _ownedWizard;
     }
 
     [System.Serializable]
@@ -28,7 +31,7 @@ public class SavesScriptableObject : ScriptableObject
     [System.Serializable]
     public struct OwnedSegments
     {
-       public GameManager.SegmentType _segmentType;
+        public GameManager.SegmentType _segmentType;
         public int _segmentLevel;
     }
 
@@ -41,7 +44,7 @@ public class SavesScriptableObject : ScriptableObject
 
     public CompletedLevels GetCompletedLevel(int _levelID)
     {
-        foreach(CompletedLevels l in _playerData._completedLevels)
+        foreach (CompletedLevels l in _playerData._completedLevels)
         {
             if (l._levelID == _levelID)
                 return l;
@@ -54,9 +57,9 @@ public class SavesScriptableObject : ScriptableObject
         foreach()
     }*/
 
-    public bool IsSegmentOwned( GameManager.SegmentType segmentType )
+    public bool IsSegmentOwned(GameManager.SegmentType segmentType)
     {
-        foreach(OwnedSegments i in _playerData._ownedSegments)
+        foreach (OwnedSegments i in _playerData._ownedSegments)
         {
             if (i._segmentType == segmentType)
                 return true;
@@ -109,7 +112,7 @@ public class SavesScriptableObject : ScriptableObject
 
     public bool RemoveSegment(GameManager.SegmentType type)
     {
-       for(int i = 0; i < _playerData._ownedSegments.Count; i++)
+        for (int i = 0; i < _playerData._ownedSegments.Count; i++)
         {
             if (_playerData._ownedSegments[i]._segmentType == type)
             {
@@ -118,5 +121,56 @@ public class SavesScriptableObject : ScriptableObject
             }
         }
         return false;
+    }
+
+    public int GetOwnedPowerup(GameManager.Powerup type)
+    {
+        switch (type)
+        {
+            case GameManager.Powerup.MrLeaf:
+                return _playerData._ownedMrLeaf;
+            case GameManager.Powerup.LarryTheBird:
+                return _playerData._ownedLarry;
+            case GameManager.Powerup.WizardTurtle:
+                return _playerData._ownedWizard;
+            default:
+                return 0;
+        }
+    }
+
+    public void AddPowerup(GameManager.Powerup type)
+    {
+        switch (type)
+        {
+            case GameManager.Powerup.MrLeaf:
+                _playerData._ownedMrLeaf++;
+                break;
+            case GameManager.Powerup.LarryTheBird:
+                _playerData._ownedLarry++;
+                break; 
+            case GameManager.Powerup.WizardTurtle:
+                _playerData._ownedWizard++;
+                break;
+            default:
+                return;
+        }
+    }
+
+    public void ReducePowerup(GameManager.Powerup type)
+    {
+        switch (type)
+        {
+            case GameManager.Powerup.MrLeaf:
+                _playerData._ownedMrLeaf--;
+                break;
+            case GameManager.Powerup.LarryTheBird:
+                _playerData._ownedLarry--;
+                break;
+            case GameManager.Powerup.WizardTurtle:
+                _playerData._ownedWizard--;
+                break;
+            default:
+                return;
+        }
     }
 }

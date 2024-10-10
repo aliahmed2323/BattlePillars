@@ -49,6 +49,12 @@ public class GameManager : Singleton<GameManager>
         Defense,
         Production
     }
+    public enum Powerup
+    {
+        MrLeaf,
+        LarryTheBird,
+        WizardTurtle
+    }
 
     public enum Boss
     {
