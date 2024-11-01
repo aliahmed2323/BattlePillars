@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8674130281399033721}
   - component: {fileID: 3846027476896874444}
+  - component: {fileID: -7428430658044600437}
   m_Layer: 0
   m_Name: CannonBall
   m_TagString: Untagged
@@ -84,3 +85,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-7428430658044600437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5719167602555227677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9ccaf209d057164f913bacfb3a9b9f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destroyType: 0
+  _destroyAfterTime: 1
+  _timeToDestroySelf: 12

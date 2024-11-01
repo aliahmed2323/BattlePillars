@@ -52,21 +52,21 @@ public class Caterpillar : MonoBehaviour
     [SerializeField]private bool _lockCaterpillarMovement;
 
 
-/*    private GameObject m_enemy = null;
-    public GameObject _enemy
-    {
-        get { return m_enemy; }
-        set
+    /*    private GameObject m_enemy = null;
+        public GameObject _enemy
         {
-            if (m_enemy == _enemy) return;
-            m_enemy = _enemy;
-            if(_enemy != null)
+            get { return m_enemy; }
+            set
             {
-                ResetBattlepillarToAttackState();
+                if (m_enemy == _enemy) return;
+                m_enemy = _enemy;
+                if(_enemy != null)
+                {
+                    ResetBattlepillarToAttackState();
 
+                }
             }
-        }
-    }*/
+        }*/
     /*    _enemy.GetComponent<CaterpillarHealthManager>().onDeath += ResetBattlepillarToAttackState
      *    public delegate void OnEnemyChangeDelegate();
         public event OnEnemyChangeDelegate OnEnemyChange;
@@ -82,23 +82,46 @@ public class Caterpillar : MonoBehaviour
     public void ResetBattlepillarToAttackState()
     {
         _enemy = null;
-        /*_isEnemyInRange = false;*/
+        _isEnemyInRange = false;  // Reset range check
+
         ReleaseCaterPillar();
 
-/*        if(gameObject.CompareTag("Player"))
+        // Check for closest enemy on the right (if Player)
+        if (gameObject.CompareTag("Player"))
         {
             enemy = GameObject
-    .FindGameObjectsWithTag("Enemy")
-    .Where(enemy =>
-    {
-        Vector2 directionToEnemy = (enemy.transform.position - gameObject.transform.position).normalized;
-        return Vector2.Dot(gameObject.transform.forward, directionToEnemy) > 0; // Filter objects in front
-    })
-    .OrderBy(enemy => Vector2.Distance(gameObject.transform.position, enemy.transform.position))
-    .FirstOrDefault();
-        }*/
-    }
+                .FindGameObjectsWithTag("Enemy")
+                .Where(enemy =>
+                {
+                    Vector2 directionToEnemy = (enemy.transform.position - gameObject.transform.position).normalized;
+                    return Vector2.Dot(gameObject.transform.right, directionToEnemy) > 0;
+                })
+                .OrderBy(enemy => Vector2.Distance(gameObject.transform.position, enemy.transform.position))
+                .FirstOrDefault();
+        }
 
+        // Check for closest player on the left (if Enemy)
+        if (gameObject.CompareTag("Enemy"))
+        {
+            _enemy = GameObject
+                .FindGameObjectsWithTag("Player")
+                .Where(player =>
+                {
+                    Vector2 directionToPlayer = (player.transform.position - gameObject.transform.position).normalized;
+                    return Vector2.Dot(gameObject.transform.right, directionToPlayer) < 0;
+                })
+                .OrderBy(player => Vector2.Distance(gameObject.transform.position, player.transform.position))
+                .FirstOrDefault();
+        }
+
+        if (_enemy != null)
+        {
+            _enemy.GetComponent<CaterpillarHealthManager>().onDeath += ResetBattlepillarToAttackState;
+            // Check distance only if enemy is assigned
+            if (Vector2.Distance(gameObject.transform.position, _enemy.transform.position) < 3)
+                _isEnemyInRange = true;
+        }
+    }
     private void Move()
     {
         Vector2 newPos = Vector2.Lerp(transform.position, new Vector2(transform.position.x + 0.5f * _dir, transform.position.y), Time.deltaTime * _caterPillarSpeed);

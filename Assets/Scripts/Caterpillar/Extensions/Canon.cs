@@ -38,17 +38,18 @@ public class Canon : MonoBehaviour
     void Attack()
     {
         if (!_canAttack) return;
+        if (cp._enemy == null)
+            return;
         cp._canMove = false;
         cp.InvokeStopAnim();
         _canAttack = false;
         DamageEnemy();
         AttackAnim();
         _as.Play();
-        if (cp._enemy == null)
-            return;
         cb = Instantiate(_cannonBall, transform.position, Quaternion.identity);
         float travelTime = Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _cannonBallSpeed;
         cb.transform.DOJump(cp._enemy.transform.position, 2, 1, travelTime);
+        cb.GetComponent<ProjectileDestroyer>().DestroySelfInTime(travelTime);
         Invoke(nameof(EnableMovement), travelTime);
         Invoke("EnableAttack", _fireRate);
     }
@@ -80,7 +81,7 @@ public class Canon : MonoBehaviour
     {
        /* cp._canMove = true;
         cp.ReleaseCaterPillar();*/
-        Destroy(cb);
+        /*Destroy(cb);*/
     }
 
     void EnableAttack()

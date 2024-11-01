@@ -129,6 +129,7 @@ MonoBehaviour:
   _health: 0
   _damagePunchEffectModifier: 0.02
   _healthSlider: {fileID: 80892713548655934}
+  _isBoss: 0
 --- !u!61 &7992991511848416619
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -142,7 +143,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07966113, y: 0.33690786}
+  m_Offset: {x: 0.4513433, y: 0.33690786}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -153,7 +154,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5119114, y: 9.897437}
+  m_Size: {x: 3.5739202, y: 9.897437}
   m_EdgeRadius: 0
 --- !u!114 &9148627577343691822
 MonoBehaviour:
@@ -175,8 +176,10 @@ MonoBehaviour:
   _dir: 1
   _extensionGap: 1.3
   _canMove: 0
-  _enemy: {fileID: 0}
+  _hasReachBase: 0
+  enemy: {fileID: 0}
   _isEnemyInRange: 0
+  _lockCaterpillarMovement: 0
 --- !u!50 &-5194381585998151656
 Rigidbody2D:
   serializedVersion: 4
@@ -207,7 +210,7 @@ SortingGroup:
   m_GameObject: {fileID: 1676660589421364698}
   m_Enabled: 1
   m_SortingLayerID: 1132418693
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
 --- !u!1 &1676660589829998004
 GameObject:

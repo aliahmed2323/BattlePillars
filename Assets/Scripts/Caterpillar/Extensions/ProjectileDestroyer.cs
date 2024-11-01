@@ -30,4 +30,9 @@ public class ProjectileDestroyer : MonoBehaviour
             if (collision.CompareTag("Enemy") && _destroyType == DestroyType.Enemy)
                 Destroy(gameObject);
     }
+
+    public void DestroySelfInTime(float time)
+    {
+        Destroy(gameObject, time);
+    }
 }
