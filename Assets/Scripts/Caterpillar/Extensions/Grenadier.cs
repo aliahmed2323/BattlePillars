@@ -41,6 +41,7 @@ public class Grenadier : MonoBehaviour
         cp._canMove = false;
         cp.InvokeStopAnim();
         _canAttack = false;
+        _as.Play();
         
         GameObject cb = Instantiate(_grenade, _grenade.transform.position, Quaternion.identity);
         _grenade.SetActive(false);

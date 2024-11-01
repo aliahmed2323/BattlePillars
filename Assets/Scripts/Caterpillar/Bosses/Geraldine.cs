@@ -8,6 +8,9 @@ public class Geraldine : Boss
     [Header("Sgt.Flowerpuff Dependencies")]
     [SerializeField] GameObject _cannons;
     [SerializeField] GameObject _projectile;
+
+    [SerializeField] AudioSource _as;
+    [SerializeField] AudioClip[] _clips;
     protected override void Start()
     {
         base.Start();
@@ -29,6 +32,8 @@ public class Geraldine : Boss
     }
     IEnumerator FireCannon()
     {
+        _as.clip = _clips[1];
+        _as.Play();
         _cannons.transform.DOLocalMoveX(-0.26f, 0.3f).SetEase(Ease.InOutBack).SetLoops(2, LoopType.Yoyo);
 
         GameObject projectile1 = Instantiate(_projectile, _cannons.transform.position, Quaternion.identity);
@@ -56,6 +61,8 @@ public class Geraldine : Boss
 
     void AttackBite()
     {
+        _as.clip = _clips[0];
+        _as.Play();
         _animator.CrossFadeInFixedTime("AttackBite", 0.5f);
         if (_enemy.CompareTag("Player"))
         {

@@ -7,6 +7,9 @@ public class Frankenpillar : Boss
 {
     [Header("Frankenpillar Dependencies")]
     [SerializeField] GameObject _projectile;
+
+    [SerializeField] AudioSource _as;
+    [SerializeField] AudioClip[] _clips;
     protected override void Start()
     {
         base.Start();
@@ -31,7 +34,8 @@ public class Frankenpillar : Boss
     {
         _animator.CrossFadeInFixedTime("Lightning", 0.2f);
         yield return new WaitForSeconds(0.5f);
-
+        _as.clip = _clips[1];
+        _as.Play();
         GameObject l = Instantiate(_projectile, new Vector2(_enemy.transform.position.x, _enemy.transform.position.y + 4), Quaternion.identity);
         Destroy(l, 0.2f);
         yield return new WaitForSeconds(0.2f);
@@ -51,6 +55,8 @@ public class Frankenpillar : Boss
 
     void AttackBite()
     {
+        _as.clip = _clips[0];
+        _as.Play();
         _animator.CrossFadeInFixedTime("AttackBite", 0.5f);
         if (_enemy.CompareTag("Player"))
         {

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class Caterpillar : MonoBehaviour
 {
@@ -83,6 +84,19 @@ public class Caterpillar : MonoBehaviour
         _enemy = null;
         /*_isEnemyInRange = false;*/
         ReleaseCaterPillar();
+
+/*        if(gameObject.CompareTag("Player"))
+        {
+            enemy = GameObject
+    .FindGameObjectsWithTag("Enemy")
+    .Where(enemy =>
+    {
+        Vector2 directionToEnemy = (enemy.transform.position - gameObject.transform.position).normalized;
+        return Vector2.Dot(gameObject.transform.forward, directionToEnemy) > 0; // Filter objects in front
+    })
+    .OrderBy(enemy => Vector2.Distance(gameObject.transform.position, enemy.transform.position))
+    .FirstOrDefault();
+        }*/
     }
 
     private void Move()

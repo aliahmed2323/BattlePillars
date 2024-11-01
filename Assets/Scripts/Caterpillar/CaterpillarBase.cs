@@ -9,6 +9,7 @@ public class CaterpillarBase : MonoBehaviour
     [SerializeField] bool _isEnemyBase;
     [SerializeField] Slider _healthSlider;
     [SerializeField] GameOverPanel _gmp;
+    [SerializeField] AudioSource _as;
 
     [SerializeField] GameObject[] _attackUpgrade;
     [SerializeField] GameObject[] _defenceUpgrade;
@@ -42,6 +43,7 @@ public class CaterpillarBase : MonoBehaviour
         _healthSlider.gameObject.SetActive(true);
         _health -= amount;
         _healthSlider.value = _health;
+
         if (_health <= 0)
             Die();
     }
@@ -50,6 +52,7 @@ public class CaterpillarBase : MonoBehaviour
     {
         _gmp.gameObject.SetActive(true);
         Time.timeScale = 0;
+        _as.Play();
         if (_isEnemyBase)
             _gmp.EndGame(true);
         else

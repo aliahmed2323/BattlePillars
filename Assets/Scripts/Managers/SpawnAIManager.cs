@@ -29,6 +29,9 @@ public class SpawnAIManager : MonoBehaviour
     [SerializeField] GameObject[] _bossGameObjects;
     [SerializeField] Slider _boosHealthSlider;
 
+    [SerializeField] AudioClip _bossMusicClip;
+    [SerializeField] AudioSource _as;
+
     [System.Serializable]
     public struct Levels
     {
@@ -65,6 +68,8 @@ public class SpawnAIManager : MonoBehaviour
 
     void SpawnBoss(int lvl)
     {
+        _as.clip = _bossMusicClip;
+        _as.Play();
         _boosHealthSlider.gameObject.SetActive(true);
         GameObject i = null;
         switch(lvl)

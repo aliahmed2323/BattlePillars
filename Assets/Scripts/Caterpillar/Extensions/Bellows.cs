@@ -19,6 +19,8 @@ public class Bellows : MonoBehaviour
     [SerializeField] float _rangeMinimum;
     [SerializeField] bool _playAnim = true;
 
+    [SerializeField] AudioSource _as;
+
     bool _canAttack = true;
 
     private void Start()
@@ -47,7 +49,7 @@ public class Bellows : MonoBehaviour
         if(_playAnim)
             GetComponent<Animator>().Play("Shoot");
         yield return new WaitForSeconds(0.8f);
-
+        _as.Play();
         GameObject air = Instantiate(_airObject, _shootPoint.position, Quaternion.identity);
         air.GetComponent<ProjectileDestroyer>()._destroyType = ProjectileDestroyer.DestroyType.Enemy;
         air.GetComponent<SpriteRenderer>().DOFade(0, 0);

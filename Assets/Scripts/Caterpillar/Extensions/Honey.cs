@@ -15,6 +15,7 @@ public class Honey : MonoBehaviour
     [SerializeField] GameObject _honey;
     [SerializeField] float _honeySpeed;
     [SerializeField] GameObject _honeyObject;
+    [SerializeField] AudioSource _as;
     bool _canAttack = true;
     private void Start()
     {
@@ -43,6 +44,7 @@ public class Honey : MonoBehaviour
         _canAttack = false;
         GameObject cb = Instantiate(_honey, transform.position, Quaternion.identity);
         cb.transform.DOJump(cp._enemy.transform.position, 2, 1, Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _honeySpeed);
+        _as.Play();
         Destroy(cb, (Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _honeySpeed) - 0.2f);
         Invoke("EnableAttack", _fireRate);
         Invoke(nameof(CreateHoneyOnEnemy), (Vector3.Distance(cb.transform.position, cp._enemy.transform.position) / _honeySpeed) - 0.2f);

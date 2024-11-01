@@ -9,6 +9,9 @@ public class SgtFlowerPuff : Boss
     [Header("Sgt.Flowerpuff Dependencies")]
     [SerializeField] GameObject[] _cannons;
     [SerializeField] GameObject _projectile;
+
+    [SerializeField] AudioSource _as;
+    [SerializeField] AudioClip[] _clips;
     protected override void Start()
     {
         base.Start();
@@ -28,10 +31,13 @@ public class SgtFlowerPuff : Boss
     {
         _animator.CrossFadeInFixedTime("AttackCannon", 0.5f);
         StartCoroutine(FireCannon());
+
     }
     IEnumerator FireCannon()
     {
         yield return new WaitForSeconds(1.5f);
+        _as.clip = _clips[1];
+        _as.Play();
         _cannons[0].transform.DOLocalMoveX(-0.26f, 0.3f).SetEase(Ease.InOutBack).SetLoops(2, LoopType.Yoyo);
         _cannons[1].transform.DOLocalMoveX(-0.26f, 0.3f).SetEase(Ease.InOutBack).SetLoops(2, LoopType.Yoyo);
 
@@ -63,6 +69,8 @@ public class SgtFlowerPuff : Boss
 
     void AttackBite()
     {
+        _as.clip = _clips[0];
+        _as.Play();
         _animator.CrossFadeInFixedTime("AttackBite", 0.5f);
         if (_enemy.CompareTag("Player"))
         {

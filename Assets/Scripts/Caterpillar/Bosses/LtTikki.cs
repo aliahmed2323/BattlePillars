@@ -6,6 +6,9 @@ public class LtTikki : Boss
 {
     [Header("Lt.Tikki-Takka Dependencies")]
     [SerializeField] GameObject[] _spikes;
+
+    [SerializeField] AudioSource _as;
+    [SerializeField] AudioClip[] _clips;
     protected override void Start()
     {
         base.Start();
@@ -29,7 +32,9 @@ public class LtTikki : Boss
     List<Vector2> spikePos = new();
     IEnumerator LaunchSpikes()
     {
-        foreach(GameObject spike in _spikes)
+        _as.clip = _clips[1];
+        _as.Play();
+        foreach (GameObject spike in _spikes)
         {
             spikePos.Add(spike.transform.position);
             spike.transform.DOJump(_enemy.transform.position, 4, 1, 1.5f);
@@ -69,6 +74,8 @@ public class LtTikki : Boss
 
     void AttackBite()
     {
+        _as.clip = _clips[0];
+        _as.Play();
         _animator.CrossFadeInFixedTime("AttackBite", 0.5f);
         if (_enemy.CompareTag("Player"))
         {
